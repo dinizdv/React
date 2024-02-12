@@ -2,9 +2,9 @@ import RoutesApp from './routes' // function
 
 function App (){
     return(
-        <div>
-            <RoutesApp/>
-        </div>
+            <>
+                <RoutesApp/>
+            </>
     )
 }
 // npm install react-router-dom
