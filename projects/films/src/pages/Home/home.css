@@ -1,0 +1,39 @@
+.films-list {
+    max-width: 800px;
+    margin: 14px auto;
+}
+
+.films-list article {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;   
+}
+.films-list article h1 {
+    text-align: center;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+.films-list img {
+    width: 900px;
+    max-width: 100%;
+    max-height: 348px;
+    object-fit: cover;
+    display: block; /* join <img> with <a> */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.films-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: dodgerblue;
+    color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
