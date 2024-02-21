@@ -5,7 +5,8 @@ import './home.css'
 
 function Home () {
     // useState -> re-renders the functional component
-    // const [films, setFilms] = useState([]) // [] -> initial value of the films (this will be changed with setFilmes)
+    const [films, setFilms] = useState([]) // [] -> initial value of the films (this will be changed with setFilmes)
+    const [loading, setLoading] = useState(true) // true => initial state
 
     useEffect(() => {
         // useEffect -> side effects
@@ -20,11 +21,21 @@ function Home () {
 
             setFilms(response.data.results.slice(0,10)) // 10 first films
             // updating the state of the films
+            setLoading(false) //quick message before loading movies
         }
 
         loadFilms() // calling the async function
 
     }, []) // [] -> the effect will only run once
+
+
+    if (loading){
+        return(
+            <div className="loading">
+                <h1>Loading films...</h1>
+            </div>
+        )
+    }
 
     return(
         <div className="container">
