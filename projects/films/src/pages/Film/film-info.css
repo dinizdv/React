@@ -1,0 +1,48 @@
+.film-info {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    padding: 0 14px;
+}
+.film-info h1, .film-info h3 {
+    margin: 14px 0;
+}
+.film-info img {
+    width: 800px;
+    max-width: 100%;
+}
+/* vote average */
+.film-info span {
+    margin: 8px 0;
+}
+
+.area-buttons button, a {
+    margin:14px 14px 14px 0;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.area-buttons #buttonSave {
+    border: 2px solid green;
+    color: green;
+    background-color: #fff;
+}
+.area-buttons a {
+    text-decoration: none;
+    color: dodgerblue;
+    border: 2px solid dodgerblue;
+    background-color: #fff;
+}
+.area-buttons a:hover {
+    color: #fff; /* Altere para a cor desejada */
+    background-color: dodgerblue;
+}
+.area-buttons #buttonSave:hover {
+    background-color: green;
+    color: #fff;
+}

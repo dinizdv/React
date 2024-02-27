@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 
 import api from '../../services/api'
+import './film-info.css'
 
 function Film () {
     const {id} = useParams()
@@ -52,6 +53,11 @@ function Film () {
             <span>{film.overview}</span>
             <span>Vote average: {film.vote_average} / 10</span> 
             {/* ***arredondar o vote_average */}
+
+            <div className="area-buttons">
+                <button id="buttonSave">Save</button>
+                <a href="#">Trailer</a>
+            </div>
         </div>
     )
 }
