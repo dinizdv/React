@@ -1,11 +1,11 @@
 import {useEffect, useState} from 'react'
-import {useParams} from 'react-router-dom'
-
+import {useParams, useNavigate} from 'react-router-dom'
 import api from '../../services/api'
 import './film-info.css'
 
 function Film () {
     const {id} = useParams()
+    const navigate = useNavigate()
     const [film, setFilm] = useState({})
     const [loading, setLoading] = useState(true)
 
@@ -23,6 +23,8 @@ function Film () {
             })
             .catch(() => {
                 console.log("Does not exist") // the film with this id does not exist
+                navigate("/", {replace: true}) // redirect home without having to click a link or button
+                return
             })
     } 
     
@@ -32,7 +34,7 @@ function Film () {
             console.log("Disassembled component") // when you come home
         }
 
-    },    [])
+    }, [navigate, id])
 
     // loading only works while the films do not appear
 
@@ -56,7 +58,8 @@ function Film () {
 
             <div className="area-buttons">
                 <button id="buttonSave">Save</button>
-                <a href="#">Trailer</a>
+                {/* search in youtube */}
+                <a target="_blank" rel="external" href={`https://youtube.com/results?search_query=${film.title} Trailer`}>Trailer</a>
             </div>
         </div>
     )
