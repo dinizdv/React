@@ -4,7 +4,7 @@ import api from '../../services/api'
 import './film-info.css'
 
 function Film () {
-    const {id} = useParams()
+    const {id} = useParams() // get the film id and make it available
     const navigate = useNavigate()
     const [film, setFilm] = useState({})
     const [loading, setLoading] = useState(true)
@@ -14,7 +14,7 @@ function Film () {
             await api.get(`/movie/${id}`, {
                 params:{
                     api_key: "376586d56c257fd50e1c2b37bb7af55e", // prove to the server that you have permission to access the requested resources 
-                }
+                }   
             })
 
             .then ((response) => {
@@ -36,8 +36,24 @@ function Film () {
 
     }, [navigate, id])
 
-    // loading only works while the films do not appear
+    function saveFilm(){
+        const myList = localStorage.getItem("@filmsFlix") // @filmsFlix -> localStorage key
 
+        let savedFilms = JSON.parse(myList) || [] // JSON to string (list) or empty array (undefined)
+
+        const hasFilms = savedFilms.some((savedFilm) => savedFilm.id === film.id) // current film (id) === 
+
+        if (hasFilms){
+            alert("This film is already on the 'Favorites'.")
+            return
+        }
+
+        savedFilms.push(film)
+        localStorage.setItem("@filmsFlix", JSON.stringify(savedFilms)) // stringiy (string because of the array)
+        alert("Saved successfully to 'Favorites'.")
+    }
+    
+    // loading only works while the films do not appear
     if (loading){
         return(
             <div className="film-info">
@@ -57,9 +73,9 @@ function Film () {
             {/* ***arredondar o vote_average */}
 
             <div className="area-buttons">
-                <button id="buttonSave">Save</button>
+                <button id="buttonSave" onClick={saveFilm}>Save</button>
                 {/* search in youtube */}
-                <a target="_blank" rel="external" href={`https://youtube.com/results?search_query=${film.title} Trailer`}>Trailer</a>
+                <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${film.title} Trailer`}>Trailer</a>
             </div>
         </div>
     )
