@@ -49,7 +49,7 @@ function Film () {
         }
 
         savedFilms.push(film)
-        localStorage.setItem("@filmsFlix", JSON.stringify(savedFilms)) // stringiy (string because of the array)
+        localStorage.setItem("@filmsFlix", JSON.stringify(savedFilms))
         alert("Saved successfully to 'Favorites'.")
     }
     
