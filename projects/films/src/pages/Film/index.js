@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
 import api from '../../services/api'
 import './film-info.css'
+import {toast} from 'react-toastify'
 
 function Film () {
     const {id} = useParams() // get the film id and make it available
@@ -44,13 +45,13 @@ function Film () {
         const hasFilms = savedFilms.some((savedFilm) => savedFilm.id === film.id) // current film (id) === 
 
         if (hasFilms){
-            alert("This film is already on the 'Favorites'.")
+            toast.warn("This film is already on the 'My Favorites Films'.")
             return
         }
 
         savedFilms.push(film)
         localStorage.setItem("@filmsFlix", JSON.stringify(savedFilms))
-        alert("Saved successfully to 'Favorites'.")
+        toast.success("Saved successfully to 'My Favorites Films'.")
     }
     
     // loading only works while the films do not appear
