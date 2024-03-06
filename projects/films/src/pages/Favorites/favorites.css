@@ -52,6 +52,7 @@ body {
     background-color: crimson;
     color: #fff;
     border: 2px solid #121212;
+    cursor: pointer;
   }
 
   @media (max-width: 768px){

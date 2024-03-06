@@ -11,10 +11,21 @@ function Favorites(){
         setFilms(JSON.parse(myList) || [])
     }, [])
 
+    function handleFilm(id){
+        let filterFilms = films.filter((item) => {
+            return(item.id != id) // return all movies (except current id movie)
+
+        })
+        setFilms(filterFilms)
+        localStorage.setItem("@filmsFlix", JSON.stringify(filterFilms)) // array to string and placing in the localStorage
+    }
+
+
     return(
         <div className="myFilms">
-            <h1>Favorites Films</h1>
-        
+            <h1>My Favorites Films</h1>
+            {films.length === 0 && <span>You do not have favorite films.</span>}
+            {/* if you do not have any films in your favorites */}
         <ul>
             {films.map((item) => {
                 return(
@@ -22,7 +33,7 @@ function Favorites(){
                         <span>{item.title}</span>
                         <div>
                             <Link to={`/film/${item.id}`}>See details</Link>
-                            <button>Delete</button>
+                            <button onClick={() => handleFilm (item.id)}>Delete</button>
                         </div>
                     </li>
                 )
