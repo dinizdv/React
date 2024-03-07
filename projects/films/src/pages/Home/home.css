@@ -2,19 +2,24 @@ body {
     background-color: #121212;
 }
 .films-list {
-    max-width: 800px;
+    max-width: 845px;
     margin: 14px auto;
     height: calc(100vh - 70px); /* total viewport - height fixed header */
+}
+.films-list .theatres {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+    background-color: dodgerblue;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
 }
 
 .films-list article {
     width: 100%;
     background-color: #242424;
     padding: 14px 20px;
-}
-.films-list article:first-of-type {
-    border-top-left-radius: .4rem;
-    border-top-right-radius: .4rem;
 }
 
 .films-list article:last-of-type {
@@ -26,13 +31,14 @@ body {
     border-color: #ffffff4d;
 }
 
-.films-list article h1 {
+.films-list article .title {
     text-align: center;
     display: block;
     margin-bottom: 12px;
     font-size: 1.5rem;
     color: #fff;
 }
+
 .films-list img {
     width: 900px;
     max-width: 100%;
@@ -41,6 +47,7 @@ body {
     display: block; /* join <img> with <a> */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    transition: all 0.5s;
 }
 
 .films-list a {
@@ -53,8 +60,9 @@ body {
     margin-bottom: 32px;
     font-size: 1.5rem;
     text-decoration: none;
-    background-color: dodgerblue;
-    color: #fff;
+    background-color: gold;
+    color: #121212;
+    font-weight: 600;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 8px;
@@ -62,8 +70,7 @@ body {
     letter-spacing: 1px;
 }
 .films-list a:hover {
-    letter-spacing: 3px;
-    text-shadow: -2px 2px 2px #121212;
+    font-weight: 800;
 }
 
 
@@ -75,7 +82,11 @@ body {
 }
 
 @media (max-width: 768px){
-    .films-list article:first-of-type, .films-list article:last-of-type {
+    .films-list article:last-of-type {
+        border-radius: 0;
+    }
+    .films-list .theatres {
+        font-size: 2rem;
         border-radius: 0;
     }
 }

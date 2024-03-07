@@ -40,10 +40,11 @@ function Home () {
     return(
         <div className="container">
             <div className="films-list">
+                <h1 className="theatres">Films in Theatres</h1>
                 {films.map((film) => { // for each film in films (10)
                     return(
                         <article key={film.id}> 
-                            <h1>{film.title}</h1>
+                            <h2 className="title">{film.title}</h2>
                             <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title}/> {/* concatenation */}
                             <Link to={`/film/${film.id}`} className="access">Access</Link>
                             <hr/>
