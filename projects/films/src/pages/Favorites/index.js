@@ -25,7 +25,7 @@ function Favorites(){
 
     return(
         <div className="myFilms">
-            <h1>My Favorites Films</h1>
+            <h1>My Favorite Films</h1>
             {films.length === 0 && <span>You do not have favorite films.</span>}
             {/* if you do not have any films in your favorites */}
         <ul>

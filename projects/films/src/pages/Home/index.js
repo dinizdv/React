@@ -45,7 +45,8 @@ function Home () {
                         <article key={film.id}> 
                             <h1>{film.title}</h1>
                             <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title}/> {/* concatenation */}
-                            <Link to={`/film/${film.id}`}>Access</Link>
+                            <Link to={`/film/${film.id}`} className="access">Access</Link>
+                            <hr/>
                         </article>
                     )
                 })}
@@ -53,5 +54,6 @@ function Home () {
         </div>
     )
 }
+
 
 export default Home

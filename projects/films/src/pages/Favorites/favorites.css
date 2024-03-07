@@ -11,14 +11,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #242424;
+    padding: 16px;
+    border-radius: .4rem;
   }
   
   .myFilms h1{
     margin-bottom: 14px;
+    color: #fff;
   }
   
   .myFilms span{
     font-size: 18px;
+    color: #fff;
   }
   
   .myFilms ul{
@@ -51,10 +56,15 @@ body {
     border-radius: 4px;
     background-color: crimson;
     color: #fff;
-    border: 2px solid #121212;
+    border: none;
     cursor: pointer;
+    transition: all .3s;
+    font-family: Mulish;
   }
 
+  .myFilms button:hover {
+    background-color: rgba(220, 20, 60, 0.7); /* crimson with 0.7 opacity */
+  }
   @media (max-width: 768px){
     .myFilms {
         max-width: 90%;

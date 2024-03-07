@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 70px); /* total viewport - height of the fixed header */
+}
+.container h1 {
+    font-size: 8rem;
+}
+.container h2 {
+    color: crimson;
+}
+.container .seeAll {
+    color: dodgerblue;
+}

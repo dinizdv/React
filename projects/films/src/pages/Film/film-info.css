@@ -4,18 +4,26 @@
     flex-direction: column;
     max-width: 800px;
     width: 100%;
-    padding: 0 14px;
+    padding: 0 15px;
+    border-radius: .4rem;
+    background-color: #242424;
 }
 .film-info h1, .film-info h3 {
     margin: 14px 0;
+    color: #fff;
 }
 .film-info img {
     width: 800px;
     max-width: 100%;
+    border-radius: .4rem;
 }
 /* vote average */
 .film-info span {
     margin: 8px 0;
+    color: #ffffff5d;
+}
+.film-info .voteAverage {
+    color: gold;
 }
 
 .area-buttons button, a {
@@ -26,23 +34,27 @@
     padding: 10px;
     cursor: pointer;
     transition: all .3s;
+    border: none;
 }
 .area-buttons #buttonSave {
-    border: 2px solid green;
-    color: green;
-    background-color: #fff;
+    color: #fff;
+    background-color: green;
+    padding: 11px 10px;
 }
 .area-buttons a {
     text-decoration: none;
-    color: dodgerblue;
-    border: 2px solid dodgerblue;
-    background-color: #fff;
-}
-.area-buttons a:hover {
-    color: #fff; /* Altere para a cor desejada */
+    color: #fff;
     background-color: dodgerblue;
 }
+.area-buttons a:hover {
+    background-color: rgba(30, 143, 255, 0.7);
+}
 .area-buttons #buttonSave:hover {
-    background-color: green;
-    color: #fff;
+    background-color: rgba(0, 128, 0, 0.7);
+}
+
+@media (max-width: 768px){
+    .film-info {
+        border-radius: 0;
+    }
 }

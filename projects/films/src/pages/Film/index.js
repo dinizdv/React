@@ -70,8 +70,7 @@ function Film () {
 
             <h3>Synopsis</h3>
             <span>{film.overview}</span>
-            <span>Vote average: {film.vote_average} / 10</span> 
-            {/* ***arredondar o vote_average */}
+            <span className="voteAverage">Vote average: {film.vote_average.toFixed(2)} / 10</span> 
 
             <div className="area-buttons">
                 <button id="buttonSave" onClick={saveFilm}>Save</button>

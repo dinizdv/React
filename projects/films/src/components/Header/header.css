@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: #121212;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.brand {
+    text-decoration: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: dodgerblue;
+    transition: all .5s;
+}
+.brand:hover {
+    filter: drop-shadow(0 0 8px blue);
+}
+
+.favorites {
+    cursor: pointer;
+    padding: 5px 14px;
+    background-color: transparent;
+    border-radius: .4rem;
+    color: dodgerblue;
+    transition: all .4s;
+    color: dodgerblue;
+    border-color: transparent;
+    box-shadow: 0 0 10px 2.5px rgba(30, 143, 255, 0.7);
+}
+.favorites:hover {
+    padding: 5px 28px;
+}
+
+@media (max-width: 768px){
+    .brand {
+        font-size: 1.5rem;
+    }
+    .favorites {
+        padding: 4px 12px;
+    }
+    .favorites:hover {
+        padding: 4px 12px;
+    }    
+}
