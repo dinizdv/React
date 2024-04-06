@@ -1,16 +1,39 @@
 /* general CSS */
 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root {
+    /* colors */
+    --bg-dark: #121212;
+    --text-dark: #121212;
+    --primary-color: #f7f7f7;
+    --secondary-color: #676767;
+    --tertiary-color: #0a6beb;
+
+    /* font-size */
+    --fs-lg: 4.4rem; /* font-size large */
+    --fs-md: 1.2rem; /* font-size medium */
+    --fs-sm: 1rem; /* font-size small */
+
+    /* transitions */
+    --transition-4: all .4s;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Inconsolata;
 }
 
 body {
-    background: #121212;
-    color: #dedede;
+    background: var(--bg-dark);
+    color: var(--primary-color);
     width: 100%;
-    font-family: 'Courier New', Courier, monospace;
+}
+
+input, button {
+    outline: none;
 }
 
 button {
