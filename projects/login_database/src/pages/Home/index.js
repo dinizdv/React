@@ -4,15 +4,27 @@ import '../../index.css'
 
 import { Link } from 'react-router-dom'
 
+import { auth } from '../../firebaseConnection'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import { useNavigate } from 'react-router-dom'
+
 export default function Home(){
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    function handleLogin(e){
+    const navigate = useNavigate() // indirect navigation
+
+    async function handleLogin(e){
         e.preventDefault(); /* does not refresh the page */
         if (email !== '' && password !== ''){
-            alert('ok')
+            await signInWithEmailAndPassword(auth, email, password)
+            .then(() => {
+                navigate('/admin', {replace: true})
+            }) .catch ((error) => {
+                console.log(error)
+            })
+
         } else {
             alert('Fill in the blank fields!')
         }
@@ -26,7 +38,7 @@ export default function Home(){
         <form className="form" onSubmit={handleLogin}>
             <input type="text" placeholder="your email..." value={email} onChange={(e) => setEmail(e.target.value)}/>
             
-            <input type="password" autoComplete={false} placeholder="your password..." value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" placeholder="your password..." value={password} onChange={(e) => setPassword(e.target.value)} />
         
             <button type="submit">Access</button>
         </form>
