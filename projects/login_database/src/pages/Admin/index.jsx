@@ -1,14 +1,43 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './admin.css'
-import { auth } from '../../firebaseConnection'
+import { auth, db } from '../../firebaseConnection'
 import { signOut } from 'firebase/auth'
+import { addDoc, collection } from 'firebase/firestore'
 
 export default function Admin(){
   const [taskInput, setTaskInput] = useState('')
+  const [user, setUser] = useState({})
 
-  function handleRegister(e){
+    useEffect(() => {
+      async function loadTasks(){
+      const userDetail = localStorage.getItem("@detailUser") // localStorage key
+      setUser(JSON.parse(userDetail)) // data: uid, email
+      }
+    
+      loadTasks()
+    }, [])
+
+    async function handleRegister(e){
     e.preventDefault()
-    alert("Oi")
+    
+    if (taskInput === ''){
+      alert('Type you task...')
+      return
+  }
+
+  await addDoc(collection(db, "tasks"), {
+    task: taskInput, // textarea value
+    created: new Date(), 
+    userUid: user?.uid // ? prevent crashing (because returns '')
+  })
+  .then(() => {
+    console.log('Registered task.')
+    setTaskInput('') // cleaning textarea
+  })
+  .catch((error) => {
+    console.log(`Error: ${error}`)
+  })
+
   }
 
   async function handleLogout(){
