@@ -2,18 +2,55 @@ import { useState, useEffect } from 'react'
 import './admin.css'
 import { auth, db } from '../../firebaseConnection'
 import { signOut } from 'firebase/auth'
-import { addDoc, collection } from 'firebase/firestore'
+import { 
+  addDoc, 
+  collection,
+  onSnapshot, // real time db
+  query, // 
+  orderBy, // desc or ask
+  where 
+
+} from 'firebase/firestore'
 
 export default function Admin(){
   const [taskInput, setTaskInput] = useState('')
   const [user, setUser] = useState({})
+  const [tasks, setTasks] = useState([])
 
     useEffect(() => {
       async function loadTasks(){
       const userDetail = localStorage.getItem("@detailUser") // localStorage key
       setUser(JSON.parse(userDetail)) // data: uid, email
+  
+      if (userDetail){
+        const data = JSON.parse(userDetail)
+
+        const taskRef = collection(db, "tasks") // tasks collection
+        const q = query(taskRef, orderBy("created", "desc"), where("userUid", "==", data?.uid))
+        // created (date), descending
+        // where => login user == login user db
+
+          const unsub = onSnapshot(q,(snapshot) => {
+            // snapshot = each document of the 'tasks' collection
+            let list = []
+
+            snapshot.forEach((doc) => {
+              list.push({
+                id: doc.id,
+                task: doc.data().task,
+                userUid: doc.data().userUid
+              })
+            })
+
+            console.log(list)
+            setTasks(list)
+            
+        })
       }
-    
+
+    }
+  
+
       loadTasks()
     }, [])
 
@@ -31,6 +68,7 @@ export default function Admin(){
     userUid: user?.uid // ? prevent crashing (because returns '')
   })
   .then(() => {
+    // implemente: react-toastify
     console.log('Registered task.')
     setTaskInput('') // cleaning textarea
   })
