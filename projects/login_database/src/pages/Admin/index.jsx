@@ -8,9 +8,12 @@ import {
   onSnapshot, // real time db
   query, // 
   orderBy, // desc or ask
-  where 
+  where,
+  doc,
+  deleteDoc 
 
 } from 'firebase/firestore'
+import { toast } from 'react-toastify'
 
 export default function Admin(){
   const [taskInput, setTaskInput] = useState('')
@@ -58,7 +61,7 @@ export default function Admin(){
     e.preventDefault()
     
     if (taskInput === ''){
-      alert('Type you task...')
+      toast.error('Type your task...')
       return
   }
 
@@ -68,8 +71,7 @@ export default function Admin(){
     userUid: user?.uid // ? prevent crashing (because returns '')
   })
   .then(() => {
-    // implemente: react-toastify
-    console.log('Registered task.')
+    toast.success('Task registered successfully.')
     setTaskInput('') // cleaning textarea
   })
   .catch((error) => {
@@ -82,6 +84,12 @@ export default function Admin(){
     await signOut(auth)
   }
 
+  async function deleteTask(id){
+    const docRef = doc(db, "tasks", id) // doc id
+      toast.info('Task deleted.')
+      await deleteDoc(docRef) // delete doc id
+  }
+
   return(
     <div className="admin-container">
       <h1>My tasks</h1>
@@ -91,14 +99,15 @@ export default function Admin(){
         <button className="btn-register" type="submit">Register task</button>
       </form>
 
-      <article className="list">
-        <p>Javascript and react today</p>
-
-        <div>
-          <button className="btn-edit">Edit task</button>
-          <button className="btn-delete">Complete task</button>
-        </div>
-      </article>
+      {tasks.map((item) => (
+          <article key={item.id} className="list">
+            <p>{item.task}</p>
+            <div>
+              <button className="btn-edit">Edit task</button>
+              <button onClick={ () => deleteTask(item.id) } className="btn-delete">Complete task</button>
+            </div>
+          </article>
+      ))}
       
       <div className="container-btn">
         <button className="btn-logout" onClick={handleLogout}>Logout</button>
