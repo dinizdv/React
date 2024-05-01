@@ -1,9 +1,9 @@
 # To-Do List Project
 
-✔️ **About the project:** This responsive React project consists of a To-Do List, which are stored in the firebase database. The application uses an authentication system (registration and login) so that each user has their own account. Users can create, edit and delete their tasks.
+✔️ **About the project:** This responsive React project consists of a To-Do List, which are stored in the Firebase database. The application uses an authentication system (registration and login) so that each user has their own account. Users can create, edit and delete their tasks.
 <hr>
 
-🚀 **Libraries and services** were used in the project:
+🚀 **Libraries and services** that were used in the project:
 - ***React-router:*** for component routes.
 - ***React-toastify:*** for personalized notifications.
 - ***Firebase:*** project database plataform. 
