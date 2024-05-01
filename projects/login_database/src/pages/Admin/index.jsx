@@ -10,14 +10,15 @@ import {
   orderBy, // desc or ask
   where,
   doc,
-  deleteDoc 
-
+  deleteDoc,
+  updateDoc
 } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 
 export default function Admin(){
   const [taskInput, setTaskInput] = useState('')
   const [user, setUser] = useState({})
+  const [edit, setEdit] = useState({})
   const [tasks, setTasks] = useState([])
 
     useEffect(() => {
@@ -53,16 +54,22 @@ export default function Admin(){
 
     }
   
-
       loadTasks()
     }, [])
 
     async function handleRegister(e){
     e.preventDefault()
     
+    // blank fields
     if (taskInput === ''){
       toast.error('Type your task...')
       return
+  }
+
+  // update task
+  if (edit?.id){
+    handleUpdateTask()    
+    return
   }
 
   await addDoc(collection(db, "tasks"), {
@@ -80,14 +87,39 @@ export default function Admin(){
 
   }
 
+  // logout
   async function handleLogout(){
     await signOut(auth)
   }
 
+  // delete task
   async function deleteTask(id){
     const docRef = doc(db, "tasks", id) // doc id
       toast.info('Task deleted.')
       await deleteDoc(docRef) // delete doc id
+  }
+
+  // edit task
+  function editTask(item){
+    setTaskInput(item.task) // clicked = task text to textarea
+    setEdit(item)
+  }
+
+  async function handleUpdateTask(){
+    const docRef = doc(db, "tasks", edit?.id)
+    await updateDoc(docRef, {
+      task: taskInput
+    })
+    .then(() => {
+      toast.success('Task update')
+      setTaskInput('') // cleaning textarea
+      setEdit({}) // if not editing task
+    })
+    .catch((error) => {
+      toast.error(`Error when updating: ${error}`)
+      setTaskInput('') // cleaning textarea
+      setEdit({}) // if not editing task
+    })
   }
 
   return(
@@ -96,14 +128,18 @@ export default function Admin(){
       <form className="form" onSubmit={handleRegister}>
         <textarea placeholder="Type your task..." value={taskInput} onChange={(e) => setTaskInput(e.target.value)}/>
 
-        <button className="btn-register" type="submit">Register task</button>
+        {Object.keys(edit).length > 0 ?(
+          <button className="btn-register" id="btn-editTask" type="submit">Edit task</button> // button was clicked
+        ) : (
+          <button className="btn-register" type="submit">Register task</button>
+        )}
       </form>
 
       {tasks.map((item) => (
           <article key={item.id} className="list">
             <p>{item.task}</p>
             <div>
-              <button className="btn-edit">Edit task</button>
+              <button onClick={ () => editTask(item) } className="btn-edit">Edit task</button>
               <button onClick={ () => deleteTask(item.id) } className="btn-delete">Complete task</button>
             </div>
           </article>

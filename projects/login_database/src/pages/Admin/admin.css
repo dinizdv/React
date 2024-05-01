@@ -77,3 +77,12 @@ textarea {
     background-color: rgba(255, 0, 0, 0.8);
     color: #fff;
 }
+
+/* 'register task' to 'edit task' */
+#btn-editTask {
+    background-color: #01b872!important;
+}
+
+#btn-editTask:hover {
+    background-color: #05905c!important;
+}
