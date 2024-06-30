@@ -1,30 +1,39 @@
-import { useState } from 'react'
-import './signin.css'
-import { Link } from 'react-router-dom'
+import { useState } from "react";
+import "./signin.css";
+import { Link } from "react-router-dom";
 
+export default function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-export default function SignIn(){
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+  return (
+    <div className="container-center">
+      <div className="login">
+        <form>
+          <h1>Login page</h1>
+          <input
+            type="text"
+            placeholder="your_email@gmail.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-    return(
-        <div className="container-center">
-            <div className="login">
-                <div className="login-area">
-                    <i class="logo-login fa-regular fa-calendar-check"></i>
-                </div>   
+          <input
+            type="password"
+            placeholder="*********"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-                <form>
-                    <h1>Login</h1>    
-                    <input type="text" placeholder='your_email@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <button type="submit" className="btnAccess">
+            Access
+          </button>
+        </form>
 
-                    <input type="password" placeholder='*********' value={password} onChange={(e) => setPassword(e.target.value)} />
-
-                    <button type="submit">Access</button>
-                </form> 
-
-                <Link to="/register">Create an account</Link>
-            </div>            
-        </div>
-    )
+        <Link to="/register" className="createAccount">
+          Create an account
+        </Link>
+      </div>
+    </div>
+  );
 }

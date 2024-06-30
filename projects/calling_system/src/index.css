@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
 :root {
-  --bg: #EFEFEF;
+  --primary-color: #FDFFE2;
+  --secondary-color: #83B4FF;
+  --tertiary-color: #5A72A0;
+  --bg: #1A2130;
+  --input-box-shadow:#9b9b9b; 
 }
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 html, body, #root {
@@ -16,6 +20,14 @@ html, body, #root {
 body {
   background-color: var(--bg);
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lexend, Arial, Helvetica, sans-serif;
+}
+
+a, label, p, button, ul, input {
+  font-family: Manrope;
+} 
 
 a {
   text-decoration: none;
@@ -27,4 +39,9 @@ ul {
 
 button, a {
   cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
 }

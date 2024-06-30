@@ -4,29 +4,17 @@
     justify-content: center;
     align-items: center;
     padding: 0 .8rem;
-    background-color: #121212;
+    background-color: var(--bg);
 }
 
 .login {
-    background-color: aliceblue;
-    width: 600px;
+    background-color: var(--primary-color);
+    width: 540px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.login-area {
-    background-color: darkblue;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.login-area .logo-login {
-    font-size: 6rem;
-    padding: 1.2rem;
-    color: #fff;
+    border-radius: .5rem;
 }
 
 form {
@@ -39,7 +27,7 @@ form {
 form h1 {
     text-align: center;
     margin-bottom: 1rem;
-    color: #121212;
+    color: var(--bg);
 }
 
 .login input {
@@ -48,20 +36,31 @@ form h1 {
     border-radius: .3rem;
     padding: .7rem;
     font-size: 1rem;
-    background-color: #fff;
+    background-color: var(--primary-color);
     border: 0;
-    box-shadow: 0 0 6px #adadad;
+    box-shadow: 0 0 .3rem var(--input-box-shadow); 
+    transition: all .4s; /* for input padding + color */
+    font-weight: 500;
 }
 
-form button {
+.login input:focus {
+    box-shadow: 0 0 .3rem var(--tertiary-color);
+    color: var(--tertiary-color);
+}
+
+form .btnAccess {
     height: 3rem;
     border: 0;
-    background-color: #121212;
-    color: #fff;
+    background-color: var(--bg);
+    color: var(--primary-color);
     font-size: 1.2rem;
     border-radius: .3rem;
 }
 
-.login a {
+
+
+.login .createAccount {
     margin: 1.5rem 0;
+    color: var(--tertiary-color);
+    font-weight: 500;
 }
