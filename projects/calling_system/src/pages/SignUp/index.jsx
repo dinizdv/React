@@ -6,10 +6,18 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  function handleSubmit(e){
+    e.preventDefault()
+
+    if(name !== '' && email !== '' && password !== ''){
+      alert('Register.')
+    }
+  }
+
   return (
     <div className="container-center">
       <div className="login">
-        <form>
+        <form onSubmit={handleSubmit}>
           <h1>Register account</h1>
           <input
             type="text"
