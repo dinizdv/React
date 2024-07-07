@@ -1,6 +1,6 @@
 import { useState, createContext, useEffect } from 'react'
 import { auth, db } from '../services/firebaseConnection'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -13,10 +13,33 @@ function AuthProvider({ children }){
 
     const navigate = useNavigate()
 
-    function signIn(email, password){
-        console.log(email)
-        console.log(password)
-        alert('logged with success')
+    async function signIn(email, password){
+        setLoadingAuth(true)
+
+        await signInWithEmailAndPassword(auth, email, password)
+        .then( async (value) => {
+            let uid = value.user.uid
+            const docRef = doc(db, "users", uid)
+            const docSnap = await getDoc(docRef) // get data
+
+            let data = {
+                uid: uid,
+                name: docSnap.data().name,
+                email: value.user.email,
+                avatarUrl: docSnap.data().avatarUrl
+            }
+
+            setUser(data)
+            storageUser(data)
+            setLoadingAuth(false)
+            toast(`👋 Welcome back, ${data.name}!`)
+            navigate('/dashboard')
+        })
+        .catch((error) => {
+            console.log(error)
+            setLoadingAuth(false)
+            toast.error('An error has occurred!')
+        })
     }
 
     // register new user
@@ -39,7 +62,7 @@ function AuthProvider({ children }){
                     avatarUrl: null
                 }
 
-                setUser(data) // conains user data (!= firebase)
+                setUser(data) // contains user data (!= firebase)
                 storageUser(data) // to localStorage
                 setLoadingAuth(false)
                 navigate('/dashboard')
