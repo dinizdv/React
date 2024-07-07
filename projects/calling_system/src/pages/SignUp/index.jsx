@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/auth";
+
 
 export default function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { signUp, loadingAuth } = useContext(AuthContext)
 
-  function handleSubmit(e){
+  async function handleSubmit(e){
     e.preventDefault()
 
     if(name !== '' && email !== '' && password !== ''){
-      alert('Register.')
+      await signUp(email, password, name)
     }
   }
 
@@ -41,7 +44,7 @@ export default function SignUp() {
           />
 
           <button type="submit" className="btnAccess">
-            Register
+            {loadingAuth ? 'Loading...' : 'Register'}
           </button>
         </form>
 
