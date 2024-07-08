@@ -66,7 +66,7 @@ form .btnAccess {
 }
 
 .fa-user-check, .fa-address-card {
-    padding-left: 12px;
+    margin-left: 12px;
 }
 .login-page {
     margin-bottom: 16px;

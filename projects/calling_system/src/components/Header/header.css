@@ -1,0 +1,81 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+    box-shadow: 1px 0 8px var(--secondary-color);
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    overflow: auto;
+}
+
+.container-userAvatar {
+    height: 100px;
+    margin-block: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-userAvatar img {
+    height: inherit;
+    filter: drop-shadow(0 2px 4px var(--tertiary-color));
+    -webkit-filter: drop-shadow(0 2px 4px var(--tertiary-color));
+}
+
+.userAvatar {
+    border-radius: 50%;
+}
+
+.icons-sidebar {
+    margin-right: 10px;
+}
+
+
+
+.sidebar a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--secondary-color);
+    align-items: center;
+    transition: ease-in-out .3s;
+}
+
+.sidebar a:hover {
+    color: var(--primary-color);
+    margin-left: 16px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+}
+
+@media (max-width: 768px){
+    .sidebar{
+        width: 100%;
+        height: auto;
+        position: relative; /* sidebar above dashboard */
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .sidebar a {
+        float: left; /* in row */
+    }
+    
+    .container-userAvatar {
+        display: none;
+    }
+
+    .sidebar a:hover {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 400px){
+    .sidebar a {
+        float: none;
+    }
+}
