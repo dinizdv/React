@@ -21,7 +21,7 @@ export default function SignIn() {
     <div className="container-center">
       <div className="login">
         <form onSubmit={handleSignIn}>
-          <h1>Login page</h1>
+          <h1>Login page<i class="fa-solid fa-user-check"></i></h1>
           <input
             type="text"
             placeholder="your_email@gmail.com"

@@ -21,7 +21,7 @@ export default function SignUp() {
     <div className="container-center">
       <div className="login">
         <form onSubmit={handleSubmit}>
-          <h1>Register account</h1>
+          <h1>Register account<i class="fa-solid fa-address-card"></i></h1>
           <input
             type="text"
             placeholder="Your name"
