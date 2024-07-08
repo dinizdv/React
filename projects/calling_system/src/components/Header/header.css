@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     background-color: var(--bg-primary);
-    box-shadow: 1px 0 8px var(--secondary-color);
+    border-right: 1px solid var(--secondary-color);
     position: fixed;
     width: 200px;
     height: 100vh;
@@ -46,7 +46,7 @@
 }
 
 .content {
-    margin-left: 200px;
+    margin-inline: 240px 40px;
     padding: 1px 16px;
 }
 

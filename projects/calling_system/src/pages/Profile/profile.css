@@ -1,0 +1,104 @@
+.container-profile {
+    display: flex;
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    padding: 20px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.container-img-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    height: 280px;
+    cursor: pointer;
+}
+
+.container-img-profile img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px var(--bg);
+    margin-bottom: 16px;
+}
+
+.container-img-profile input {
+    margin-top: auto;
+    display: none;
+}
+
+.container-img-profile .icon-upload {
+    position: absolute;
+    color: var(--tertiary-color);
+    transition: all .4s;
+    opacity: .5;
+    font-size: 20px;
+}
+
+.container-img-profile .icon-upload:hover {
+    opacity: 1;
+    transform: scale(1.6);
+}
+
+.form-profile input, textarea, select {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    max-width: 600px;
+    transition: all .4s;
+}
+
+.form-profile label {
+    margin-block: 8px 6px;
+    color: var(--secondary-color);
+}
+
+.form-profile input:disabled{
+    cursor: not-allowed;
+    background-color: var(--primary-color);
+}
+
+.form-profile input:focus {
+    box-shadow: 0 0 4px var(--tertiary-color);
+    color: var(--tertiary-color);
+}
+
+
+.form-profile .btn-save {
+    width: 200px;
+    max-width: 600px;
+    padding: 8px 20px;
+    margin-block: 8px;
+    border-radius: 6px;
+    font-size: 20px;
+    border: 1px solid var(--btn-save);
+    color: var(--btn-save);
+    background: transparent;
+    transition: all .4s;
+}
+
+.form-profile .btn-save:hover {
+    background-color: var(--btn-save);
+    color: var(--primary-color);
+}
+
+.logout-btn {
+    padding: 8px 20px;
+    border: 1px solid var(--btn-logout);
+    color: var(--btn-logout);
+    background: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s;
+    margin: 8px 0 16px auto;
+}
+
+.logout-btn:hover {
+    background-color: var(--btn-logout);
+    color: var(--primary-color);
+}

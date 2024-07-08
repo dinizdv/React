@@ -4,7 +4,9 @@
   --secondary-color: #83B4FF;
   --tertiary-color: #5A72A0;
   --bg: #1A2130;
-  --input-box-shadow:#9b9b9b; 
+  --input-box-shadow:#9b9b9b;
+  --btn-save: #00b570; 
+  --btn-logout: #c80d5e;
 }
 
 *{
