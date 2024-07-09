@@ -10,6 +10,7 @@
 }
 
 .container-userAvatar {
+    width: auto;
     height: 100px;
     margin-block: 24px;
     display: flex;
@@ -17,9 +18,9 @@
 }
 
 .container-userAvatar img {
+    width: 100px;
     height: inherit;
-    filter: drop-shadow(0 2px 4px var(--tertiary-color));
-    -webkit-filter: drop-shadow(0 2px 4px var(--tertiary-color));
+    border: 2px solid var(--secondary-color);
 }
 
 .userAvatar {
