@@ -1,3 +1,121 @@
-h1,h2,h3,h4,h5,h6{
-    color: aliceblue;
+.container-newCall {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 24px;
+}
+
+.container-newCall .newCall {
+    border-radius: 5px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--newCall);
+    color: var(--primary-color);
+    transition: all .4s;
+}
+
+.container-newCall .newCall:hover {
+    background-color: var(--newCallHover);
+}
+
+.newCall i {
+    margin-right: 5px;
+}
+
+table {
+    border: 1px solid var(--secondary-color);
+    margin-bottom: 24px;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-size: 24px;
+    margin: 8px 0 12px;
+}
+
+table tr {
+    border: 1px solid var(--secondary-color);
+    padding: 6px;    
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+table td {
+    font-weight: 300;
+    color: var(--primary-color);
+}
+
+table td .action {
+    border: 0;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+table td .action i {
+    vertical-align: middle;
+} 
+
+#search {
+    margin-right: 8px;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+#edit {
+    color: var(--bg);
+    background-color: var(--secondary-color);
+}
+
+/* responsive table */
+@media (max-width: 840px){
+    table {
+        border: 0;
+    }
+
+    table thead {
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 1px solid var(--secondary-color);
+        display: block;
+    }
+
+    table td {
+        display: block; /* break line */
+        font-size: 14px;
+        text-align: right;
+    }
+
+    table td:not(:last-child){
+        border-bottom: 1px solid var(--secondary-color);
+    }
+
+    table td:last-child{
+        padding-bottom: 6px; /* fixing padding */
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+    }
 }
