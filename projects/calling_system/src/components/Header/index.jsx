@@ -23,6 +23,7 @@ export default function Header(){
                 <Link to='/profile'>
                     <i className="icons-sidebar fa-solid fa-gear"></i>profile
                 </Link>
+                <div className="hr-mobile"></div>
             </div>
         </div>
     )

@@ -45,6 +45,9 @@
     transform: scale(1.6);
 }
 
+.form-profile {
+    margin-top: 0;
+}
 
 .form-profile input, textarea, select {
     margin-bottom: 16px;
@@ -53,10 +56,11 @@
     border-radius: 6px;
     max-width: 600px;
     transition: all .4s;
+    font-size: 16px;
 }
 
 .form-profile label {
-    margin-block: 8px 6px;
+    margin-block: 12px 8px;
     color: var(--secondary-color);
 }
 
@@ -108,9 +112,32 @@
     color: var(--primary-color);
 }
 
-@media (max-width: 400px){
-.container-img-profile img {
-    width: 180px;
-    height: 180px;
-}   
+@media (max-width: 768px){
+    .container-img-profile {
+        width: 110%; /* 110 because of the padding */
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 300px){
+    .container-profile {
+        padding: 6px;
+    }
+    .container-img-profile img {
+            width: 60%;
+            height: 50%;
+    }
+ 
+    .form-profile .btn-save {
+       width: auto;
+       font-size: 12px;
+    }
+    .logout-btn {
+        width: auto;
+        font-size: 12px;
+        margin: 0;
+    }
 }

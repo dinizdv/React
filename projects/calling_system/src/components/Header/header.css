@@ -51,11 +51,16 @@
     padding: 1px 16px;
 }
 
+.hr-mobile {
+    display: none;
+}
+
 @media (max-width: 768px){
     .sidebar{
         width: 100%;
         height: auto;
         position: relative; /* sidebar above dashboard */
+        border-right: none;
     }
 
     .content {
@@ -63,7 +68,7 @@
     }
 
     .sidebar a {
-        float: left; /* in row */
+        float: none; 
     }
     
     .container-userAvatar {
@@ -73,10 +78,15 @@
     .sidebar a:hover {
         margin-left: 0;
     }
-}
 
-@media (max-width: 400px){
-    .sidebar a {
-        float: none;
+    .hr-mobile {
+        display: block;
+        width: auto;
+        height: 1px;
+        background-color: var(--secondary-color);
+        box-shadow: 0 2px 8px var(--secondary-color);
+        margin-top: 6px;
+        margin-inline: 16px;
     }
+
 }
