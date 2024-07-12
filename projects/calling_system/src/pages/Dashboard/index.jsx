@@ -22,7 +22,7 @@ export default function Dashboard(){
 
             <>
             <div className="container-newCall">
-                <Link to='newCall' className="newCall">
+                <Link to='/newCall' className="newCall">
                     <i class="fa-solid fa-plus"></i>
                     New call
                 </Link>

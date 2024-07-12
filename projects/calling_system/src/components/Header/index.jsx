@@ -15,13 +15,13 @@ export default function Header(){
                 </div>
 
                 <Link to='/dashboard'>
-                    <i className="icons-sidebar fa-solid fa-house"></i>calls
+                    <i className="icons-sidebar fa-solid fa-house"></i>Calls
                 </Link>
                 <Link to='/customers'>
-                    <i className="icons-sidebar fa-solid fa-users"></i>clients
+                    <i className="icons-sidebar fa-solid fa-users"></i>Clients
                 </Link>
                 <Link to='/profile'>
-                    <i className="icons-sidebar fa-solid fa-gear"></i>profile
+                    <i className="icons-sidebar fa-solid fa-gear"></i>Profile
                 </Link>
                 <div className="hr-mobile"></div>
             </div>

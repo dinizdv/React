@@ -37,7 +37,7 @@ table caption {
 }
 
 table tr {
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--primary-color);
     padding: 6px;    
 }
 
@@ -48,7 +48,8 @@ table th, table td {
 
 table th {
     text-transform: uppercase;
-    color: var(--secondary-color);
+    color: var(--bg);
+    background-color: var(--primary-color);
 }
 
 table td {
@@ -80,7 +81,7 @@ table td .action i {
 }
 
 /* responsive table */
-@media (max-width: 840px){
+@media (max-width: 1020px){
     table {
         border: 0;
     }
@@ -93,7 +94,7 @@ table td .action i {
     }
 
     table tr {
-        border-bottom: 1px solid var(--secondary-color);
+        border-bottom: 1px solid var(--primary-color);
         display: block;
     }
 
@@ -104,7 +105,7 @@ table td .action i {
     }
 
     table td:not(:last-child){
-        border-bottom: 1px solid var(--secondary-color);
+        border-bottom: 1px solid var(--primary-color);
     }
 
     table td:last-child{

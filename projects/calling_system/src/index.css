@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
 :root {
-  --primary-color: #FDFFE2;
+  --primary-color: #ffffff;
   --secondary-color: #83B4FF;
   --tertiary-color: #5A72A0;
   --bg: #1A2130;
@@ -39,6 +39,6 @@ button, a {
   outline: none;
 }
 
-input {
+input, select, textarea {
   outline: none;
 }

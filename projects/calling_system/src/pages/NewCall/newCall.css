@@ -1,0 +1,24 @@
+form textarea {
+    resize: none;
+    height: 120px;
+}
+
+form input[type='radio']{
+    margin: 8px 0 16px 0;
+    accent-color: var(--btn-save);
+    background-color: none;
+}
+
+form input[type='radio']:focus {
+    box-shadow: none; /* default value */
+}
+
+form input[type='radio']:not(:first-child){
+    margin-left: 28px;
+}
+
+.status span {
+    padding-left: 8px;
+    color: var(--primary-color);
+    font-weight: 300;
+}
