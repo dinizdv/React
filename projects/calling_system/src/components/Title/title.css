@@ -11,3 +11,10 @@
 .title span {
     margin-left: 8px;
 }
+
+@media(max-width: 768px){
+    .title {
+        padding: 10px;
+        margin: 16px 0 12px 0;
+    }
+}

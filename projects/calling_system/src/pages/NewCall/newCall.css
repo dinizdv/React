@@ -3,22 +3,24 @@ form textarea {
     height: 120px;
 }
 
-form input[type='radio']{
-    margin: 8px 0 16px 0;
-    accent-color: var(--btn-save);
-    background-color: none;
+.status {
+    display: flex;
+    gap: 24px;
 }
+
 
 form input[type='radio']:focus {
     box-shadow: none; /* default value */
-}
-
-form input[type='radio']:not(:first-child){
-    margin-left: 28px;
 }
 
 .status span {
     padding-left: 8px;
     color: var(--primary-color);
     font-weight: 300;
+}
+
+@media (max-width: 440px){
+    .status {
+        display: block;
+    }
 }

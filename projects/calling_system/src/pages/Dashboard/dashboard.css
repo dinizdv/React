@@ -4,7 +4,7 @@
     margin-bottom: 24px;
 }
 
-.container-newCall .newCall {
+.newCall {
     border-radius: 5px;
     padding: 8px;
     justify-content: center;
@@ -14,12 +14,28 @@
     transition: all .4s;
 }
 
-.container-newCall .newCall:hover {
+.newCall:hover {
     background-color: var(--newCallHover);
 }
 
 .newCall i {
     margin-right: 5px;
+}
+
+/* if firebase has no data */
+.container-notFound {   
+    margin-top: 26px;
+}
+
+/* if firebase has no data */
+.newCallNoFound {
+    margin-left: 16px;
+}
+
+span.noCallsFound, span.searchingCalls {
+    color: var(--primary-color);
+    font-weight: 300;
+    font-size: 20px;
 }
 
 table {
@@ -118,5 +134,13 @@ table td .action i {
         font-weight: bold;
         color: var(--secondary-color);
         text-transform: uppercase;
+    }
+}
+
+@media (max-width: 426px){
+    .newCallNoFound {   
+        display: block;
+        margin: 12px 0 0 0;
+        width: 110px;
     }
 }

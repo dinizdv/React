@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { AuthContext } from '../../contexts/auth'
 import { db } from '../../services/firebaseConnection'
-import { collection, getDoc, getDocs, doc } from 'firebase/firestore'
+import { collection, getDoc, getDocs, doc, addDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 import Header from '../../components/Header'
 import Title from '../../components/Title'
@@ -63,6 +63,28 @@ export default function NewCall(){
         console.log(customers[e.target.value].companyName)
     }
 
+    async function handleRegister(e){
+        e.preventDefault()
+        // register a new call
+        await addDoc(collection(db, 'calls'), {
+            created: new Date(),
+            client: customers[customerSelected].companyName,
+            clientId: customers[customerSelected].id,
+            subject: subject,
+            complement: complement,
+            status: status,
+            userId: user.uid // who registered
+        })
+        .then((e) => {
+            toast.success('Call registered')
+            setComplement('')
+            setCustomerSelected(0)
+        })
+        .catch((error) => {
+            toast.error('Error ', error)
+        })
+    }
+
     return(
         <div>
             <Header/>
@@ -73,13 +95,14 @@ export default function NewCall(){
                 </Title>
 
                 <div className="container-profile">
-                    <form className="form-profile">
+                    <form className="form-profile" onSubmit={handleRegister}>
                         <label>Clients</label>
                         {
                             loadCustomer ? (
                                 <input type="text" disabled='true' value={'Loading...'} />
                             ) : (
                                 <select value={customerSelected} onChange={handleChangeCustomer}>
+                                    <option value='' disabled selected>Select an company</option>
                                     {customers.map((client, index) => {
                                         return(
                                             <option key={index} value={index}>
@@ -100,23 +123,28 @@ export default function NewCall(){
 
                         <label>Status</label>
                         <div className="status">
-                            <input type="radio" name="radio" value='Opened' 
-                            onChange={handleOptionChange}
-                            check={ status === 'Opened' }
-                            />
-                            <span>Opened</span>
+                            <div className="container-spanInput">
+                                <input type="radio" name="radio" value='Opened'
+                                onChange={handleOptionChange}
+                                check={ status === 'Opened' }
+                                />
+                                <span>Opened</span>
+                            </div>
 
-                            <input type="radio" name="radio" value='Progress' 
-                            onChange={handleOptionChange}
-                            check={ status === 'Progress' }
-                            />
-                            <span>In progress</span>
-
-                            <input type="radio" name="radio" value='Served' 
-                            onChange={handleOptionChange}
-                            check={ status === 'Served' }
-                            />
-                            <span>Served</span>
+                            <div className="container-spanInput">
+                                <input type="radio" name="radio" value='Progress'
+                                onChange={handleOptionChange}
+                                check={ status === 'Progress' }
+                                />
+                                <span>In progress</span>
+                            </div>
+                            <div className="container-spanInput">
+                                <input type="radio" name="radio" value='Served'
+                                onChange={handleOptionChange}
+                                check={ status === 'Served' }
+                                />
+                                <span>Served</span>
+                            </div>
                         </div>
 
                         <label htmlFor="">Complement</label>
