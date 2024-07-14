@@ -21,6 +21,7 @@
     width: 100px;
     height: inherit;
     border: 2px solid var(--secondary-color);
+    object-fit: cover;
 }
 
 .userAvatar {

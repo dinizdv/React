@@ -8,6 +8,11 @@ form textarea {
     gap: 24px;
 }
 
+form input[type='radio']{
+    margin: 8px 0 16px 0;
+    accent-color: var(--secondary-color);
+    background-color: none;
+}
 
 form input[type='radio']:focus {
     box-shadow: none; /* default value */
