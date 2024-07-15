@@ -14,6 +14,8 @@ export default function Dashboard(){
     const [calls, setCalls] = useState([])
     const [isEmpty, setIsEmpty] = useState(false)
     const [loading, setLoading] = useState(true)
+    const [lastDocs, setLastDocs] = useState()
+    const [loadingMore, setLoadingMore] = useState(false)
     // const { logout } = useContext(AuthContext)
 
     // async function handleLogout(){
@@ -52,10 +54,26 @@ export default function Dashboard(){
                     complement: doc.data().complement
                 })
             })
+
+            // get last doc
+            const lastDoc = querySnapshot.docs[querySnapshot.docs.length - 1]
+
             setCalls(calls => [...calls, ...list]) // current calls '[]' => create a new array with: ...current calls + list (new calls){two arrays in one array}
+            setLastDocs(lastDoc)
+
         } else {
             setIsEmpty(true)
         }
+
+        setLoadingMore(false)
+    }
+
+    async function handleMore(){
+        setLoadingMore(true)
+
+        const q = query(listRef, orderBy('created', 'desc'), startAfter(lastDocs), limit(5))
+        const querySnapshot = await getDocs(q) // current docs + docs 
+        await updateState(querySnapshot)
     }
 
     if (loading){
@@ -120,7 +138,7 @@ export default function Dashboard(){
                             <td data-label='Client'>{item.client}</td>
                             <td data-label='Subject'>{item.subject}</td>
                             <td data-label='Status'>
-                                <span className="badge">
+                                <span className="badge" style={{backgroundColor: item.status === 'Opened' ? '#00b570' : '#9b9b9b'}}>
                                     {item.status}
                                 </span>
                             </td>
@@ -139,6 +157,9 @@ export default function Dashboard(){
                     })}
                 </tbody>
             </table>                
+
+            {loadingMore && <span className='span-searchMore'>Searching more calls...</span>}
+            {!loadingMore && !isEmpty && <button onClick={handleMore} className='btn-searchMore'>Search more calls</button>}
             </>
             )}
 

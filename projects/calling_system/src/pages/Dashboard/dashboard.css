@@ -84,6 +84,11 @@ table td .action i {
     vertical-align: middle;
 } 
 
+table .badge {
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
 #search {
     margin-right: 8px;
     background-color: transparent;
@@ -94,6 +99,25 @@ table td .action i {
 #edit {
     color: var(--bg);
     background-color: var(--secondary-color);
+}
+
+.btn-searchMore {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--btn-save);
+    background-color: transparent;
+    color: var(--btn-save);
+    transition: all .4s;
+    margin-bottom: 16px;
+}
+
+.btn-searchMore:hover {
+    background-color: var(--btn-save);
+    color: var(--primary-color);
+}
+
+.span-searchMore {
+    color: var(--btn-save);
 }
 
 /* responsive table */
@@ -112,6 +136,10 @@ table td .action i {
     table tr {
         border-bottom: 1px solid var(--primary-color);
         display: block;
+    }
+
+    table tr:not(:last-child){
+        margin-bottom: 24px;
     }
 
     table td {
