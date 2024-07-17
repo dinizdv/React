@@ -7,6 +7,7 @@ import { Link } from "react-router-dom"
 import { collection, getDocs, orderBy, limit, startAfter, query } from 'firebase/firestore'
 import { db } from "../../services/firebaseConnection"
 import { format } from 'date-fns'
+import Modal from "../../components/Modal"
 
 const listRef = collection(db, 'calls')
 
@@ -16,6 +17,8 @@ export default function Dashboard(){
     const [loading, setLoading] = useState(true)
     const [lastDocs, setLastDocs] = useState()
     const [loadingMore, setLoadingMore] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+    const [detail, setDetail] = useState()
     // const { logout } = useContext(AuthContext)
 
     // async function handleLogout(){
@@ -74,6 +77,11 @@ export default function Dashboard(){
         const q = query(listRef, orderBy('created', 'desc'), startAfter(lastDocs), limit(5))
         const querySnapshot = await getDocs(q) // current docs + docs 
         await updateState(querySnapshot)
+    }
+
+    function toggleModal(item){ // item: object
+        setShowModal(!showModal) // false to true or true to false
+        setDetail(item)
     }
 
     if (loading){
@@ -144,9 +152,9 @@ export default function Dashboard(){
                             </td>
                             <td data-label='Registration'>{item.createdFormat}</td>
                             <td data-label=''>  
-                                <button className='action' id='search'>
+                                <Link className='action' id='search' onClick={ () => toggleModal (item)}>
                                     <i class="fa-solid fa-magnifying-glass"></i>
-                                </button>
+                                </Link>
                                 <Link to={`/newCall/${item.id}`} className='action' id='edit'>
                                     <i class="fa-solid fa-pencil"></i>
                                 </Link>
@@ -166,6 +174,14 @@ export default function Dashboard(){
             </>
             {/* <button onClick={handleLogout}>Logout</button> */}
             </div>
+
+            {/* if === true */}
+            {showModal && (
+                <Modal
+                    content={detail}
+                    close={() => setShowModal(!showModal)} // false to true or true to false
+                />
+            )}
         </div>
     )
 }

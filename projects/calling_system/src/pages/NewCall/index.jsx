@@ -12,7 +12,7 @@ const listRef = collection(db, 'customers')
 
 export default function NewCall(){
     const { user } = useContext(AuthContext)
-    const { id } = useParams()
+    const { id } = useParams() // params of the current url
     const navigate = useNavigate()
 
     const [customers, setCustomers] = useState([])
@@ -55,7 +55,7 @@ export default function NewCall(){
         }
 
         loadCustomers()
-    }, [id])
+    }, [id]) // useEffect => when id changes
 
     // /newCall/id
     async function loadId(list){

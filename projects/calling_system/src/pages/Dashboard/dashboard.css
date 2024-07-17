@@ -75,7 +75,7 @@ table td {
 
 table td .action {
     border: 0;
-    padding: 5px;
+    padding: 2px 5px 5px; /* 2px -> fixing the bug of the React Link */
     border-radius: 4px;
     display: inline-block;
 }
