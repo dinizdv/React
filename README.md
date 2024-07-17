@@ -3,7 +3,7 @@
 
 * All projects are located in the 'src' folder. In 'src', the index.js file is being used to render the current project.
 
-⭐ If you liked my content, star the repository! 
+⭐ If you liked my content, star the repository!
 
 <h3>Where to find me?</h3>
 

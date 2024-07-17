@@ -17,6 +17,7 @@ function RoutesApp(){
             <Route path="/profile" element={ <Private><Profile/></Private> } />
             <Route path="/customers" element={ <Private><Customers/></Private>} />
             <Route path="/newCall" element={ <Private><NewCall/></Private> } />
+            <Route path="/newCall/:id" element={ <Private><NewCall/></Private> } />
             <Route path="*" element={ <Error/> } />
         </Routes>
     )

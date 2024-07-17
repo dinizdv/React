@@ -143,13 +143,13 @@ export default function Dashboard(){
                                 </span>
                             </td>
                             <td data-label='Registration'>{item.createdFormat}</td>
-                            <td data-label=''>
+                            <td data-label=''>  
                                 <button className='action' id='search'>
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
-                                <button className='action' id='edit'>
+                                <Link to={`/newCall/${item.id}`} className='action' id='edit'>
                                     <i class="fa-solid fa-pencil"></i>
-                                </button>
+                                </Link>
                             </td>
                         </tr>
     
