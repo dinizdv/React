@@ -1,0 +1,74 @@
+.container-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 14px;
+    background-color: var(--bg);
+}
+
+.login {
+    background-color: var(--primary-color);
+    width: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form {
+    margin-top: 24px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--bg);
+}
+
+.login input {
+    margin-bottom: 16px;
+    height: 3rem;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    border: 0;
+    box-shadow: 0 0 .3rem var(--input-box-shadow); 
+    transition: all .4s; /* for input padding + color */
+    font-weight: 500;
+}
+
+.login input:focus {
+    box-shadow: 0 0 4px var(--tertiary-color);
+    color: var(--tertiary-color);
+}
+
+form .btnAccess {   
+    height: 3rem;
+    border: 0;
+    background-color: var(--bg);
+    color: var(--primary-color);
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+
+
+.login .createAccount {
+    margin: 24px 0;
+    color: var(--tertiary-color);
+    font-weight: 500;
+}
+
+.fa-user-check, .fa-address-card {
+    margin-left: 12px;
+}
+.login-page {
+    margin-bottom: 16px;
+    color: var(--input-box-shadow);
+}
