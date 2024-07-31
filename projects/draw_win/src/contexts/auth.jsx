@@ -12,6 +12,9 @@ function AuthProvider({ children }){
     const [loadingAuth, setLoadingAuth] = useState(false)
     const [loading, setLoading] = useState(true)
     const [result, setResult] = useState(0)
+    const [users, setUsers] = useState([])
+    const [totals, setTotals] = useState([])
+    
     const navigate = useNavigate()
 
     // localStorage
@@ -51,7 +54,7 @@ function AuthProvider({ children }){
             setUser(data)
             setLoadingAuth(false)
             toast(`👋 Seja bem-vindo(a) ao sorteio, ${data.name}!`)
-            navigate('/register/draw')
+            navigate('/draw')
             })
         })
         .catch((error) => {

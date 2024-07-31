@@ -55,6 +55,7 @@ form .btnAccess {
     color: var(--primary-color);
     font-size: 18px;
     border-radius: 8px;
+    margin-bottom: 32px;
 }
 
 

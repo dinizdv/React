@@ -1,0 +1,148 @@
+table {
+    border: 1px solid var(--secondary-color);
+    margin-block: 24px;
+    padding: 0;
+    width: 80%;
+    margin-inline: 10%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table tr {
+    border: 1px solid var(--primary-color);
+    padding: 6px;    
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    text-transform: uppercase;
+    color: var(--bg);
+    background-color: var(--primary-color);
+}
+
+table td {
+    font-weight: 300;
+    color: var(--primary-color);
+}
+
+table td .action {
+    border: 0;
+    padding: 2px 5px 5px; /* 2px -> fixing the bug of the React Link */
+    border-radius: 4px;
+    display: inline-block;
+}
+
+table td .action i {
+    vertical-align: middle;
+} 
+
+table .badge {
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+#search {
+    margin-right: 8px;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+#edit {
+    color: var(--bg);
+    background-color: var(--secondary-color);
+}
+
+.btn-searchMore {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--btn-save);
+    background-color: transparent;
+    color: var(--btn-save);
+    transition: all .4s;
+    margin-bottom: 16px;
+}
+
+.btn-searchMore:hover {
+    background-color: var(--btn-save);
+    color: var(--primary-color);
+}
+
+.span-searchMore {
+    color: var(--btn-save);
+}
+
+.container-btn-again {
+    margin-inline: 10%;
+    float: right;
+    margin-bottom: 16px;
+}
+
+.tr-ranking {
+    width: 300%;
+    background-color: var(--tertiary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.ranking {
+    font-size: 2rem;
+}
+
+/* responsive table */
+@media (max-width: 1020px){
+    table {
+        border: 0;
+    }
+
+    table thead {
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 1px solid var(--primary-color);
+        display: block;
+    }
+
+    table tr:not(:last-child){
+        margin-bottom: 24px;
+    }
+
+    table td {
+        display: block; /* break line */
+        font-size: 14px;
+        text-align: right;
+    }
+
+    table td:not(:last-child){
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    table td:last-child{
+        padding-bottom: 6px; /* fixing padding */
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 426px){
+    .newCallNoFound {   
+        display: block;
+        margin: 12px 0 0 0;
+        width: 110px;
+    }
+}
+

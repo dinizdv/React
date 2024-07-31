@@ -38,7 +38,7 @@
     width: inherit;
     margin-block: 16px;
     border: 0;
-    transition: all .4s;
+    transition: all .3s;
 }
 
 .btn-draw:hover {
@@ -68,4 +68,23 @@
 
 b {
     color: var(--btn-save);
+}
+
+.container-btn-classification {
+    float: right;
+    margin-top: 8px;
+}
+
+.btn-link {
+        border-radius: 5px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--newCall);
+        color: var(--primary-color);
+        transition: all .3s;
+}
+
+.btn-link:hover {
+    background-color: #009059;
 }

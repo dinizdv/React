@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react'
-import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/auth'
+import './signup.css'
 
 export default function SignUp(){
     const [name, setName] = useState('')
@@ -24,7 +24,7 @@ export default function SignUp(){
             <h1>Registrar conta<i class="fa-solid fa-address-card"></i></h1>
             <input
               type="text"
-              placeholder="Digite seu nome"
+              placeholder="Digite seu nome e sobrenome"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -47,10 +47,6 @@ export default function SignUp(){
               {loadingAuth ? 'Loading...' : 'Registrar'}
             </button>
           </form>
-  
-          <Link to="/" className="createAccount">
-            Já possui uma conta?
-          </Link>
         </div>
       </div>
     )

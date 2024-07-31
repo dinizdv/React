@@ -3,6 +3,7 @@ import { AuthContext } from '../../contexts/auth'
 import { toast } from 'react-toastify'
 import { doc, updateDoc } from 'firebase/firestore'
 import { db } from '../../services/firebaseConnection'
+import { Link } from 'react-router-dom'
 import './draw.css'
 
 export default function Draw(){
@@ -48,7 +49,12 @@ export default function Draw(){
                             return <p key={index} className='results'>Sorteio {index + 1}: {result}</p> // return = mandatory
                         })}
                 </div>
+
+                        <div className="container-btn-classification">
+                <Link to='/draw/results' className='btn-link'>Ver ranking</Link>
+            </div>    
                 <p className='total'>Pontuação total: <b>{total}</b></p>
+            
             </div>
         </div>
     )
