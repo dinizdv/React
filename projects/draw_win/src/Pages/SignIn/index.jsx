@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import "./signin.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
+import './signin.css'
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -21,28 +22,28 @@ export default function SignIn() {
     <div className="container-center">
       <div className="login">
         <form onSubmit={handleSignIn}>
-          <h1>Login page<i class="fa-solid fa-user-check"></i></h1>
+          <h1>Página de login<i class="fa-solid fa-user-check"></i></h1>
           <input
             type="text"
-            placeholder="your_email@gmail.com"
+            placeholder="seu_nome@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
           <input
             type="password"
-            placeholder="*********"
+            placeholder="Senha com 6 ou mais caracteres"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
 
           <button type="submit" className="btnAccess">
-            {loadingAuth ? 'Loading...' : 'Access'}
+            {loadingAuth ? 'Loading...' : 'Acessar'}
           </button>
         </form>
 
         <Link to="/register" className="createAccount">
-          Create an account
+          Criar uma conta
         </Link>
       </div>
     </div>

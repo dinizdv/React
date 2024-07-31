@@ -1,6 +1,45 @@
-body {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #83B4ff;
+  --tertiary-color: #5a72a0;
+  --bg: #1a2130;
+  --bg-modal: rgba(21, 26, 36, 0.8);
+  --input-box-shadow:#9b9b9b;
+  --btn-save: #00b570; 
+  --newCall: #00b570;
+  --newCallHover: #00b36eb3; 
+  --btn-logout: #c80d5e;
+}
+
+*{
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: Consolas, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Lexend, Manrope, Arial, Helvetica, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button, a {
+  cursor: pointer;
+  outline: none;
+}
+
+input, select, textarea {
+  outline: none;
 }
