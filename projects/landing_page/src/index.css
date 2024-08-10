@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
+:root {
+  /* colors */
+  --primary-color: #2b364a;
+  --secondary-color: #e9e9e9;
+  --green: #6cf3d5;
+  --green-bold: #13c8b5;
+  --green-bold2: #21a3a3;
+  --purple: #7375a5;
+  --dark: #242424;
+
+  --progress-bar-width: 200px;
+  --progress-bar-height: 200px;
+
+  /* radius */
+  --radius: 5px;
+  --input-radius: 15px;
+
+  /* paddings */
+  --p-32: 32px;
+  --p-16: 16px;
+  --p-8: 8px;
+
+  /* margins */
+  --m-32: 32px;
+  --m-16: 16px;
+  --m-8: 8px;
+
+  /* font-size */
+  --fs-medium: 1rem;
+  --fs-large: 2rem;
+
+  /* transitions */
+  --t-3: .3s;
+  --t-5: .5s;
+
+  /* brighteness hover */
+  --brightness: 90%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Lexend, Manrope, Arial, Helvetica, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button, a {
+  cursor: pointer;
+  outline: none;
+}
+
+input, select, textarea {
+  outline: none;
+}
+
+h1 {
+  color: var(--green);
+}
+
+input::placeholder, textarea::placeholder {
+  text-transform: capitalize;
+  color: var(--secondary-color);
+}
