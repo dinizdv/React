@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   /* colors */
   --primary-color: #2b364a;
@@ -8,6 +10,7 @@
   --green-bold2: #21a3a3;
   --purple: #7375a5;
   --dark: #242424;
+  --input-color: rgba(226, 226, 226, 0.2);
 
   --progress-bar-width: 200px;
   --progress-bar-height: 200px;
@@ -42,7 +45,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Lexend, Manrope, Arial, Helvetica, sans-serif;
+  /* font-family: Lexend, Manrope, Arial, Helvetica, sans-serif; */
+  transition: all var(--t-3);
 }
 
 html, body, #root {
@@ -62,7 +66,7 @@ ul {
   list-style: none;
 }
 
-button, a {
+button, a, i {
   cursor: pointer;
   outline: none;
 }
@@ -78,4 +82,12 @@ h1 {
 input::placeholder, textarea::placeholder {
   text-transform: capitalize;
   color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lexend!important;
+}
+
+p, label, textarea, ::placeholder, button, a {
+  font-family: Manrope!important;
 }

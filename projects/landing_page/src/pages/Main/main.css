@@ -1,5 +1,5 @@
-.bg-gradient {
-    background: linear-gradient(var(--dark), var(--blue));
+.bg {
+    background: linear-gradient(to left,var(--primary-color), var(--purple));
 }
 
 /* header */
@@ -11,12 +11,18 @@ header {
 
 header .nav-header {
   display: flex;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  width: 80px;
+  width: auto;
+  text-transform: capitalize;
+  color: var(--green);
+  font-weight: 600;
+  font-size: calc(var(--fs-medium) + .4rem);
+  font-family: Lexend!important;
 }
 
 .nav-header .ul-nav-header {
@@ -80,17 +86,29 @@ header .nav-header {
   margin-right: var(--m-8);
   padding: var(--p-8) var(--p-16);
   border-radius: var(--radius);
+  font-weight: 600;
 }
 
 .container-btn-section-main .btn-main-section {
   border: 1px solid transparent;
   background-color: var(--secondary-color);
+  color: var(--purple);
+}
+
+.container-btn-section-main .btn-main-section:hover {
+  background-color: var(--green);
+  color: var(--purple);
 }
 
 .container-btn-section-main .btn-outline-main-section {
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
   background-color: transparent;
+}
+
+.container-btn-section-main .btn-outline-main-section:hover {
+  border: 1px solid var(--green);
+  color: var(--green);
 }
 
 /* image section */
@@ -104,17 +122,18 @@ header .nav-header {
   width: 100%; /* 100% == 50% container */
 }
 
-/* skills section */
-.section-skills {
+/* courses section */
+.section-courses {
     width: 100%;
     max-width: 90%;
     margin: var(--m-16) auto;
     /* background-color: var(--dark); */
     border-radius: 80px;
     padding: var(--p-32) 0;
+    /* background-color: var(--primary-color); */
 }
 
-.section-skills .container-circles, .title-skills, .description-skills {
+.section-courses .container-circles, .title-courses, .description-courses {
     width: 60%;
     margin: 0 auto;
 }
@@ -122,15 +141,21 @@ header .nav-header {
 .container-circles {
     display: flex;
     justify-content: space-between;
+  text-align: center;
+  }
+
+.container-circle-elements {
+  display: flex;
+  flex-direction: column;
 }
 
-.title-skills {
+.title-courses {
     font-size: calc(var(--fs-large) + 1rem);
     margin-bottom: var(--m-16);
     text-align: center;    
 }
 
-.description-skills {
+.description-courses {
     font-size: var(--fs-medium);
     margin-bottom: var(--m-32);  
     text-align: center;
@@ -144,29 +169,31 @@ header .nav-header {
     justify-content: center;
     align-items: center;
   }
+
   .inner-circle {
     position: absolute;
     width: calc(var(--progress-bar-width) - 30px);
     height: calc(var(--progress-bar-height) - 30px);
     border-radius: 50%;
-    background-color: lightgrey;
+    border: 16px solid var(--secondary-color);
   }
   
   .percentage {
     position: relative;
     font-size: var(--fs-large);
-    color: rgb(0, 0, 0, 0.8);
+    color: var(--secondary-color);
   }
 
   /* contact section */
   .section-contact {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0 auto var(--m-32) auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, var(--purple), var(--primary-color));
+    /* background: linear-gradient(to right, var(--purple), var(--primary-color)); */
+    background-color: var(--primary-color);
 }
 
   .section-contact section {
@@ -204,7 +231,7 @@ header .nav-header {
     padding: var(--p-16);
     border-radius: var(--input-radius);
     border: none;
-    background-color: rgba(226, 226, 226, 0.2);
+    background-color: var(--input-color);
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
   }
@@ -216,7 +243,7 @@ header .nav-header {
     border-radius: var(--input-radius);
     padding: var(--p-16);
     margin-bottom: var(--m-16);
-    background-color: rgba(226, 226, 226, 0.2);
+    background-color: var(--input-color);
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
   }
@@ -232,6 +259,134 @@ header .nav-header {
     border: none;
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    font-weight: 500;
+}
+
+.btnSend-form:hover {
+  background-color: var(--green);
+}
+
+/* comments section */
+.section-comments {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto var(--m-32) auto;
+  padding: var(--p-16) 0;
+}
+
+.section-comments h1 {
+  text-align: center;
+  margin-bottom: var(--m-16);
+  font-size: calc(var(--fs-large) + 1rem);
+}
+
+.section-comments .comments-description {
+  text-align: center;
+  margin-bottom: var(--m-32);
+}
+
+.container-comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--m-32);
+}
+
+.comment {
+  background-color: var(--secondary-color);
+  border-radius: var(--input-radius);
+  padding: calc(var(--p-16) + 8px);
+  display: flex;
+  flex-direction: column;
+}
+
+.container-comment-person {
+  display: flex;
+  margin-bottom: var(--m-16);
+}
+
+.container-names-person {
+  margin-left: var(--m-16);
+}
+
+.container-names-person .comment-name {
+  margin-bottom: calc(var(--m-8) - 4px);
+  color: var(--purple);
+  font-weight: bold;
+  font-size: calc(var(--fs-medium) + .2rem);
+}
+
+.comment-job {
+  font-size: calc(var(--fs-medium) - .2rem);
+  color: var(--primary-color);
+}
+
+.comment img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  /* border: 2px solid var(--green); */
+  object-fit: cover;
+}
+
+.p-comment {
+  font-size: calc(var(--fs-medium) - .2rem);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .logo-footer {
+  width: auto;
+  font-size: var(--fs-large);
+  color: var(--green);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-family: Lexend!important;
+}
+
+footer .container-footer-elements {
+  text-align: end;
+  padding: var(--p-16) 0;
+}
+
+footer .container-footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: var(--p-8);
+}
+
+.container-footer-icons i {
+  width: 30px;
+  height: 30px;
+  background-color: var(--input-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-footer-icons i:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.container-copyright {
+  color: var(--secondary-color);
+  margin-top: var(--m-8);
+  font-weight: 200;
 }
 
 @media (min-width: 768px){

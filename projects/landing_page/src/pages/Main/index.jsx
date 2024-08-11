@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react'
 import Person from '../../assets/person.png'
 import Logo from '../../assets/logo.png'
 import ContactUs from '../../assets/contact.png'
+import PersonComment from '../../assets/person-comment.png'
 import './main.css'
 
 export default function Main(){
-    const [progressValues, setProgressValues] = useState({ circle1: 70, circle2: 85, circle3: 60 }); // Exemplo para três círculos
 
     function showSidebar(){
         const sidebar = document.querySelector('.sidebar')
@@ -20,34 +20,12 @@ export default function Main(){
 
 
 
-    useEffect(() => {
-        const intervals = Object.keys(progressValues).map(key => {
-            const maxValue = progressValues[key]; // Valor máximo de progresso para cada círculo
-            const intervalId = setInterval(() => {
-                if (progressValues[key] < maxValue) {
-                    setProgressValues(prevValues => ({
-                        ...prevValues,
-                        [key]: prevValues[key] + 1
-                    }));
-                } else {
-                    clearInterval(intervalId);
-                }
-            }, 20); // Ajuste a velocidade conforme necessário
-
-            return intervalId;
-        });
-
-        return () => {
-            intervals.forEach(interval => clearInterval(interval));
-        };
-    }, [progressValues]);
-
     return(
         // header
-        <div className='bg-gradient'>
+        <div className='bg'>
             <header className='header'>
                 <nav className='nav-header'>
-                    <img className='logo' src={Logo}/>
+                    <label className='logo'>student guide</label>
                     {/* <label htmlFor="" className='logo'>Logo</label> */}
                     <ul className='sidebar'>
                         <li onClick={hideSidebar} className='li-nav-header'><a href="#"><i class="fa-solid fa-x"></i></a></li>
@@ -81,18 +59,36 @@ export default function Main(){
             </div>
 
             {/* skills */}
-            <section className="section-skills">
-                <h1 className='title-skills'>Skills</h1>
-                <p className='description-skills'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quae ipsam sit consectetur beatae, odit nobis amet neque veniam sapiente?</p>
+            <section className="section-courses">
+                <h1 className='title-courses'>Courses</h1>
+                <p className='description-courses'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quae ipsam sit consectetur beatae, odit nobis amet neque veniam sapiente?</p>
                 
+                {/* const [labelProgress, setLabelProgress] = useState({ label1: 'React JS + TypeScript', label2: 'JavaScript advanced', label3: 'Angular for begginers' });  */}
 
             <div className="container-circles">
-                {Object.entries(progressValues).map(([key, value]) => (
-                    <div key={key} className="circular-progress" data-inner-circle-color="white" data-percentage={`${value}%`} data-progress-color="rebeccapurple" data-bg-color="violet">
-                        <div className="inner-circle"></div>
-                        <p className="percentage">{`${value}%`}</p>
+                    <div className="container-circle-elemenst">
+                        <div className="circular-progress">
+                            <div className="inner-circle"></div>
+                            <p className="percentage">97%</p>
+                        </div>
+                        <label htmlFor="" className='label-circle'>React JS + TypeScript</label>
                     </div>
-                ))}
+
+                    <div className="container-circle-elemenst">
+                        <div className="circular-progress">
+                            <div className="inner-circle"></div>
+                            <p className="percentage">97%</p>
+                        </div>
+                        <label htmlFor="" className='label-circle'>React JS + TypeScript</label>
+                    </div>
+
+                    <div className="container-circle-elemenst">
+                        <div className="circular-progress">
+                            <div className="inner-circle"></div>
+                            <p className="percentage">97%</p>
+                        </div>
+                        <label htmlFor="" className='label-circle'>React JS + TypeScript</label>
+                    </div>
             </div>
                 
             </section>
@@ -122,6 +118,68 @@ export default function Main(){
                 </section>
             </div>
 
-        </div> // bg-gradient 
+            {/* recomendations */}
+            <section className="section-comments">
+                <h1 className='comments-title'>Student´s Comments</h1>
+                <p className='comments-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dolorem. A in fugit recusandae quae?</p>
+                <div className="container-comments">
+                 
+                <div className="comment">
+                    <div className="container-comment-person">
+                        <img src={PersonComment} className='comment-img' alt="" />
+                        <div className="container-names-person">
+                            <p className="comment-name">Bruno Diniz</p>
+                            <p className="comment-job">fullstack developer</p>
+                        </div>
+                    </div>
+                    <div className="container-p-comment">
+                        <p className='p-comment'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam amet saepe iure laborum.</p>
+                    </div>
+                    </div>  
+
+                    <div className="comment">
+                    <div className="container-comment-person">
+                        <img src={PersonComment} className='comment-img' alt="" />
+                        <div className="container-names-person">
+                            <p className="comment-name">Bruno Diniz</p>
+                            <p className="comment-job">fullstack developer</p>
+                        </div>
+                    </div>
+                    <div className="container-p-comment">
+                        <p className='p-comment'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam amet saepe iure laborum.</p>
+                    </div>
+                    </div>
+
+                    <div className="comment">
+                    <div className="container-comment-person">
+                        <img src={PersonComment} className='comment-img' alt="" />
+                        <div className="container-names-person">
+                            <p className="comment-name">Bruno Diniz</p>
+                            <p className="comment-job">fullstack developer</p>
+                        </div>
+                    </div>
+                    <div className="container-p-comment">
+                        <p className='p-comment'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam amet saepe iure laborum.</p>
+                    </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer>
+                <label className='logo-footer'>student guide</label>
+                <div className="container-footer-elements">
+                    <div className="container-footer-icons">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div className="container-copyright">
+                        <p className='p-copyright'>Copyright 2024. All Rights Reserved</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div> // bg 
     )
 }
