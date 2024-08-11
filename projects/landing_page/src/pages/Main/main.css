@@ -64,6 +64,15 @@ header .nav-header {
   color: var(--green);
 }
 
+.sidebar i {
+  color: var(--green);
+  padding-left: var(--p-8);
+}
+
+.closeSidebar {
+  margin-bottom: var(--m-16);
+}
+
 .sidebar .sidebar-a:hover {
   padding-right: var(--p-16);
 }
@@ -333,11 +342,13 @@ header .nav-header {
   color: var(--purple);
   font-weight: bold;
   font-size: calc(var(--fs-medium) + .2rem);
+  text-transform: capitalize;
 }
 
 .comment-job {
   font-size: calc(var(--fs-medium) - .2rem);
   color: var(--primary-color);
+  text-transform: capitalize;
 }
 
 .comment img {
@@ -346,6 +357,7 @@ header .nav-header {
   border-radius: 50%;
   /* border: 2px solid var(--green); */
   object-fit: cover;
+  border: 3px solid var(--purple);
 }
 
 .p-comment {
@@ -418,7 +430,42 @@ footer .container-footer-icons {
     }
 }
 
+@media (max-width: 965px){
+  /* main */
+    .title-section-main-description {
+      font-size: calc(var(--fs-large) + .5rem);
+    }
+  
+      /* comments */
+      .section-comments {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto var(--m-32) auto;
+        padding: var(--p-16) 0;
+      }
+      
+      .section-comments h1 {
+        text-align: center;
+        margin-bottom: var(--m-16);
+        font-size: var(--fs-large);
+      }
+      
+      .section-comments .comments-description {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: var(--m-32);
+      }
+    
+      .container-comments {
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--m-32);
+      }
+  }
+  
+
 @media (max-width: 900px){
+  /* contact */
   .section-contact-img, .contactUs-img {
     display: none;
   }
@@ -440,42 +487,13 @@ footer .container-footer-icons {
 
 }
 
-@media (max-width: 922px){
-/* main */
-  .title-section-main-description {
-    font-size: calc(var(--fs-large) + .5rem);
-  }
-
-    /* comments */
-    .section-comments {
-      width: 100%;
-      max-width: 90%;
-      margin: 0 auto var(--m-32) auto;
-      padding: var(--p-16) 0;
-    }
-    
-    .section-comments h1 {
-      text-align: center;
-      margin-bottom: var(--m-16);
-      font-size: var(--fs-large);
-    }
-    
-    .section-comments .comments-description {
-      width: 70%;
-      margin: 0 auto;
-      margin-bottom: var(--m-32);
-    }
-  
-    .container-comments {
-      flex-direction: column;
-      justify-content: center;
-      gap: var(--m-32);
-    }
-}
-
 /* mobile interface */
 @media (max-width: 768px) {
   /* sidebar */
+  .ul-nav-header a:hover {
+    color: var(--green);
+  }
+
   /* <li> desktop */
   .hideOnMobile {
     display: none;
@@ -583,10 +601,6 @@ footer .container-footer-icons {
     .sidebar {
       width: 100%;
       height: auto;
-    }
-
-    .sidebar a:hover {
-      color: var(--green-bold2)
     }
 
     /* courses */
