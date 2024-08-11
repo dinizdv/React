@@ -29,9 +29,9 @@ export default function Main(){
                     {/* <label htmlFor="" className='logo'>Logo</label> */}
                     <ul className='sidebar'>
                         <li onClick={hideSidebar} className='li-nav-header'><a href="#"><i class="fa-solid fa-x"></i></a></li>
-                        <li className='li-nav-header'><a href="#">Home</a></li>
-                        <li className='li-nav-header'><a href="#">About</a></li>
-                        <li className='li-nav-header'><a href="#">Contact</a></li>
+                        <li className='li-nav-header sidebar-a'><a href="#">Home</a></li>
+                        <li className='li-nav-header sidebar-a'><a href="#">About</a></li>
+                        <li className='li-nav-header sidebar-a'><a href="#">Contact</a></li>
                     </ul>
                     <ul className='ul-nav-header'>
                         <li className='li-nav-header hideOnMobile'><a href="#">Home</a></li>
@@ -43,6 +43,7 @@ export default function Main(){
                 </nav>
             </header>
 
+{/* main */}
             <div className="container-section-main">
                 <section className="section-main-description">
                     <h1 className='title-section-main-description'>Develop your skills in a new and unique way</h1>
@@ -58,49 +59,47 @@ export default function Main(){
                 </section>
             </div>
 
-            {/* skills */}
+            {/* courses */}
             <section className="section-courses">
                 <h1 className='title-courses'>Courses</h1>
                 <p className='description-courses'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quae ipsam sit consectetur beatae, odit nobis amet neque veniam sapiente?</p>
                 
-                {/* const [labelProgress, setLabelProgress] = useState({ label1: 'React JS + TypeScript', label2: 'JavaScript advanced', label3: 'Angular for begginers' });  */}
-
             <div className="container-circles">
-                    <div className="container-circle-elemenst">
+                    <div className="container-circle-elements">
                         <div className="circular-progress">
                             <div className="inner-circle"></div>
                             <p className="percentage">97%</p>
                         </div>
-                        <label htmlFor="" className='label-circle'>React JS + TypeScript</label>
+                        <label htmlFor="" className='label-circle'>react JS + typeScript</label>
                     </div>
 
-                    <div className="container-circle-elemenst">
+                    <div className="container-circle-elements">
                         <div className="circular-progress">
                             <div className="inner-circle"></div>
                             <p className="percentage">97%</p>
                         </div>
-                        <label htmlFor="" className='label-circle'>React JS + TypeScript</label>
+                        <label htmlFor="" className='label-circle'>advanced javaScript</label>
                     </div>
 
-                    <div className="container-circle-elemenst">
+                    <div className="container-circle-elements">
                         <div className="circular-progress">
                             <div className="inner-circle"></div>
                             <p className="percentage">97%</p>
                         </div>
-                        <label htmlFor="" className='label-circle'>React JS + TypeScript</label>
+                        <label htmlFor="" className='label-circle'>angular for begginers</label>
                     </div>
             </div>
                 
             </section>
 
-
+{/* contact */}
             <div className="section-contact">
                 <section className="section-contact-img">
                     <img src={ContactUs} className='contactUs-img' alt="" />
                 </section>
 
                 <section className="section-contact-form">
-                    <h1 className='title-section-contact-form'>get in touch</h1> {/* to capitalize */}
+                    <h1 className='title-section-contact-form'>get in touch</h1>
                     <form action="">
                         <div className="container-input">
                             <input type="text" className="input-form" placeholder='first name'/>
