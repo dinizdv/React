@@ -19,4 +19,4 @@
 
 [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-diniz-oliveira-426a67286/)
 <br>
-# **https://dinizdev.com.br**
+# **https://dinizdev.com.br** 

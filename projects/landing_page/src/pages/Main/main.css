@@ -322,6 +322,7 @@ header .nav-header {
 
 .comment {
   background-color: var(--secondary-color);
+  width: 100%;
   border-radius: var(--input-radius);
   padding: calc(var(--p-16) + 8px);
   display: flex;
