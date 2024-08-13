@@ -62,9 +62,24 @@ export default function Main() {
                         <p className='description-rectangle-secure'>Invest in crypto anystime, anywhere with our safe, secure, and easy to use online platform</p>
                         <Link to='#' className='link-rectangle-secure'>get started</Link>
                     </div>
+
+                    <div className="rectangle-secure">
+                        <div className="radius-secure"><i className="fa-brands fa-bitcoin icon-radius-secure"></i></div>
+                        <h2 className='title-rectangle-secure'>Invest in crypto</h2>
+                        <p className='description-rectangle-secure'>Invest in crypto anystime, anywhere with our safe, secure, and easy to use online platform</p>
+                        <Link to='#' className='link-rectangle-secure'>get started</Link>
+                    </div>
+
+                    <div className="rectangle-secure">
+                        <div className="radius-secure"><i className="fa-brands fa-bitcoin icon-radius-secure"></i></div>
+                        <h2 className='title-rectangle-secure'>Invest in crypto</h2>
+                        <p className='description-rectangle-secure'>Invest in crypto anystime, anywhere with our safe, secure, and easy to use online platform</p>
+                        <Link to='#' className='link-rectangle-secure'>get started</Link>
+                    </div>
                 </div>
             </section>
 
+<h1>text</h1>
         </div> // container
     )
 }
