@@ -6,7 +6,7 @@
 - Implementation of a 404 error page<br>
 - Responsive website for different viewports<br><br>
 
-**Deploy:** https://landing-page-with-react-six.vercel.app/
+**Deploy:** https://react-landing-page-courses.vercel.app/
 <hr>
 
 <h3>Project Skills</h3>
