@@ -8,7 +8,10 @@
   --tertiary-color: #917FB3;
   --quartenary-color: #E5BEEC;
   --pink: #FFD0EC;
-  --input-color: rgba(226, 226, 226, 0.2);
+  --bitcoin-color: #f0db21;
+  --fast-color: #21f0ab;
+  --shield-color: #21a4f0;
+  --input-color: rgba(226, 226, 226, 0.170);
 
   /* widths */
   /* --img-main: 400px; */
@@ -38,7 +41,7 @@
   --t-5: .5s;
 
   /* brighteness hover */
-  --brightness: 90%;
+  --brightness: 80%;
 }
 
 *{
@@ -68,6 +71,9 @@ ul {
 
 button {
   font-weight: 600;
+  padding: var(--p-8) var(--p-16);
+  border-radius: var(--radius);
+  margin-bottom: var(--m-32);
 }
 
 button, a, i {

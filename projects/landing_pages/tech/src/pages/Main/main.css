@@ -28,6 +28,10 @@ header .link-header {
     color: var(--quartenary-color);
 }
 
+header .link-header:hover {
+    color: var(--secondary-color);
+}
+
 header button {
     padding: var(--p-8) var(--p-16);    
     border-radius: var(--radius);
@@ -48,7 +52,7 @@ header button:hover {
 .section-main {
     display: flex;
     justify-content: space-between;
-    margin-bottom: var(--m-32);
+    margin-bottom: calc(var(--m-32) * 2);
 }
 
 .section-main .section-texts-main, .section-img-main {
@@ -77,19 +81,13 @@ header button:hover {
     gap: var(--p-16);
 }
 
-.container-btn-main button {
-    padding: var(--p-8) var(--p-16);
-    border-radius: var(--radius);
-    margin-bottom: var(--m-32);
-}
-
 .container-btn-main .btn-connect {
     border: 2px solid var(--tertiary-color);
     background-color: var(--tertiary-color);
     color: var(--secondary-color);
 }
 
-.container-btn-main .btn-learnMore {
+.btn-learnMore {
     border: 2px solid var(--tertiary-color);
     background-color: transparent;
     color: var(--tertiary-color);
@@ -170,7 +168,7 @@ header button:hover {
     margin-bottom: var(--m-32);
 }
 
-.section-secure h1 {
+.section-secure h2 {
     text-transform: capitalize;
     font-size: calc(var(--fs-large) * 1.5);
 }
@@ -183,6 +181,8 @@ header button:hover {
 }
 
 .rectangle-secure {
+    width: 100%;
+    height: 260px;
     background-color: var(--input-color);
     border-radius: var(--radius);
     position: relative;
@@ -196,22 +196,34 @@ header button:hover {
     width: var(--circle-icon);
     height: var(--circle-icon);
     position: absolute;
-    top: -18%; /* above border */
+    top: -15%; /* above border */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid var(--tertiary-color);
-    box-shadow: 0 8px 24px 4px var(--tertiary-color);
 }
 
 .radius-secure i {
     color: var(--tertiary-color);
-    font-size: calc(var(--fs-large) * 2.2);
+    font-size: calc(var(--fs-large) * 1.5);
 }
 
-.rectangle-secure h2 {
+.radius-secure-bitcoin {
+    box-shadow: 0 8px 12px 4px var(--bitcoin-color);
+    background-color: var(--bitcoin-color);
+}
+
+.radius-secure-fast {
+    box-shadow: 0 8px 12px 4px var(--fast-color);
+}
+
+.radius-secure-shield {
+    box-shadow: 0 8px 12px 4px var(--shield-color);
+}
+
+.rectangle-secure h3 {
+    font-size: calc(var(--fs-medium) * 1.5);
     margin: calc(var(--m-32) * 1.5) 0 var(--m-8) 0;
 }
 
@@ -219,6 +231,106 @@ header button:hover {
     margin-bottom: var(--m-16);
 }
 
+.rectangle-secure .fa-bitcoin {
+    color: var(--bitcoin-color);
+}
+
+.rectangle-secure .fa-bolt {
+    color: var(--fast-color);
+}
+
+.rectangle-secure .fa-shield-halved {
+    color: var(--shield-color);
+}
+
+.rectangle-secure a .icon-arrow-right {
+    padding-left: var(--p-8);
+}
+
 .rectangle-secure a {
     color: var(--quartenary-color);
+    font-weight: bold;
+}
+
+
+
+
+/* customer */
+.section-customer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-customer .container-img-customer, .container-text-customer {
+    width: 50%;
+}
+
+/* .container-img-customer {
+} */
+
+.container-text-customer h2 {
+    text-transform: capitalize;
+    font-size: calc(var(--fs-large) * 1.5);
+    margin-bottom: var(--m-8);
+    text-align: end;
+}
+
+.container-text-customer p {
+    margin-bottom: var(--m-32);
+    text-align: end;
+}
+
+.container-btn-customer {
+    display: flex;
+    justify-content: end;
+}
+
+.bitcoin-img-customer {
+    width: 70%;
+}
+
+
+/* pricing */
+.section-pricing {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-mini-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--m-32);
+}
+
+.section-pricing h2 {
+    text-align: center;
+    font-size: calc(var(--fs-large) * 1.5);
+    margin-bottom: var(--m-8);
+}
+
+.section-pricing .description-pricing {
+    text-align: center;
+    margin-bottom: var(--m-32);
+}
+
+.container-text-icon-pricing {
+    display: flex;
+    align-items: center;
+}
+
+.icon-pricing {
+    padding: var(--p-8);
+    font-size: calc(var(--fs-large) - .4rem);
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    border-radius: calc(var(--radius) * 2);
+}
+
+.icon-pricing:hover {
+    filter: brightness(var(--brightness));
+}
+
+.container-text-icon-pricing p {
+    margin-left: var(--m-16);
 }
