@@ -21,6 +21,7 @@
   /* radius */
   --radius: 5px;
   --input-radius: 15px;
+  --card-radius: 24px;
 
   /* paddings */
   --p-32: 32px;
@@ -65,9 +66,9 @@ a {
   text-decoration: none;
 }
 
-ul {
+/* ul {
   list-style: none;
-}
+} */
 
 button {
   font-weight: 600;
@@ -102,6 +103,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Lexend!important;
 }
 
-p, label, textarea, ::placeholder, button, a {
+p, label, textarea, ::placeholder, button, a, li {
   font-family: Manrope!important;
 }

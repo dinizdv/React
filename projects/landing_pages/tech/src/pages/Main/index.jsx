@@ -132,8 +132,63 @@ export default function Main() {
 <p className='text-icon-pricing'>real time & trading</p>
 </div>
 </div> {/* mini cards container */}
-
 </div>
+
+{/* cards */}
+<div className="container-cards">
+    <div className="card-pricing">
+        <div className="container-plan">
+        <p className="plan">basic</p>
+        </div>
+        <p className="price">R$79.00 usd</p>
+        <p className="description-price">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio suscipit natus dicta.</p>
+        <p className="features">features</p>
+
+        <ul className="ul-cards">
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+    </div>
+
+    <div className="card-pricing">
+        <div className="container-plan">
+        <p className="plan">pro</p>
+        </div>
+        <p className="price">R$179.00 usd</p>
+        <p className="description-price">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio suscipit natus dicta.</p>
+        <p className="features">features</p>
+
+        <ul className="ul-cards">
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+    </div>
+
+    <div className="card-pricing">
+        <div className="container-plan">
+        <p className="plan">expert</p>
+        </div>
+        <p className="price">R$579.00 usd</p>
+        <p className="description-price">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio suscipit natus dicta.</p>
+        <p className="features">features</p>
+
+        <ul className="ul-cards">
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+
+        <button className="btn-add">Add to cart</button>
+        <button className="btn-buy">Buy now</button>
+    </div>
+</div>
+
+
         </section>
         </div> // container
     )
