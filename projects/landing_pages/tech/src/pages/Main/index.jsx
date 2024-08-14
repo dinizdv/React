@@ -9,7 +9,7 @@ import './main.css'
 
 export default function Main() {
     return (
-        <div className='container'>
+<>
             <header>
                 <p className='logo-header'>NFT Tech</p>
                 <nav className="nav-header">
@@ -25,6 +25,7 @@ export default function Main() {
                 <button className="btn-explore-header">explore now</button>
             </header>
 
+<div className='container'>
             <section className="section-main">
                 <div className="section-texts-main">
                     <h1 className='title-main'>explore the largest <span className='nft-color'>NFT</span> marketplaces</h1>
@@ -136,7 +137,8 @@ export default function Main() {
 
 {/* cards */}
 <div className="container-cards">
-    <div className="card-pricing">
+
+<div className="card-pricing">
         <div className="container-plan">
         <p className="plan">basic</p>
         </div>
@@ -150,13 +152,17 @@ export default function Main() {
             <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
             <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
         </ul>
+        <div className="container-btn-pricing">
+        <button className="btn-add">Add to cart</button>
+        <button className="btn-buy">Buy now</button>
+        </div>
     </div>
 
     <div className="card-pricing">
         <div className="container-plan">
         <p className="plan">pro</p>
         </div>
-        <p className="price">R$179.00 usd</p>
+        <p className="price">R$279.00 usd</p>
         <p className="description-price">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio suscipit natus dicta.</p>
         <p className="features">features</p>
 
@@ -166,7 +172,12 @@ export default function Main() {
             <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
             <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
         </ul>
+        <div className="container-btn-pricing">
+        <button className="btn-add">Add to cart</button>
+        <button className="btn-buy">Buy now</button>
+        </div>
     </div>
+
 
     <div className="card-pricing">
         <div className="container-plan">
@@ -182,14 +193,31 @@ export default function Main() {
             <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
             <li className="li-cards">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
         </ul>
-
+        <div className="container-btn-pricing">
         <button className="btn-add">Add to cart</button>
         <button className="btn-buy">Buy now</button>
+        </div>
     </div>
+
+
 </div>
-
-
         </section>
-        </div> // container
+        
+        
+        {/* footer */}
+        <footer>
+            <h2>contact us</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta repudiandae vel rerum culpa aspernatur, ipsa mollitia beatae itaque maxime impedit dolorem at, doloribus nostrum.</p>
+            <nav className="nav-links-footer">
+                <Link to='#'><i class="fa-brands fa-facebook-f"></i></Link>
+                <Link to='#'><i class="fa-brands fa-x-twitter"></i></Link>
+                <Link to='#'><i class="fa-brands fa-youtube"></i></Link>
+                <Link to='#'><i class="fa-brands fa-linkedin-in"></i></Link>
+                <Link to='#'><i class="fa-brands fa-instagram"></i></Link>
+            </nav>
+        </footer>
+        </div> {/* container */}
+
+        </>
     )
 }

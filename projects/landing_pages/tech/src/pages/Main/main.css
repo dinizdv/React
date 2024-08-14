@@ -1,21 +1,27 @@
 .container {
     width: 100%;
     max-width: 90%;
-    margin: 0 auto;
+    margin: calc(var(--m-32) * 3) auto 0 auto;
 }
 
 /* header */
 header {
     display: flex;
+    position: fixed;
+    z-index: 999;
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    padding: var(--p-16) 0;
+    padding: calc(var(--p-8) + 4px) 5%;
+    background-color: var(--secondary-color);
+    width: 100%;
+    top: 0;
 }
 
 header .logo-header {
-    color: var(--quartenary-color);
+    color: var(--tertiary-color);
     font-size: var(--fs-large);
+    font-weight: 900;
 }
 
 .li-header {
@@ -25,24 +31,24 @@ header .logo-header {
 }
 
 header .link-header {
-    color: var(--quartenary-color);
+    color: var(--tertiary-color);
+    font-weight: 600;
 }
 
 header .link-header:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 header button {
-    padding: var(--p-8) var(--p-16);    
+    padding: calc(var(--p-8) + 2px) var(--p-16);    
     border-radius: var(--radius);
     border: 0;
-    background-color: var(--quartenary-color);
-    color: var(--primary-color);
-    border: 2px solid var(--quartenary-color);
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
 }
 
 header button:hover {
-    filter: brightness(var(--brightness));
+    background-color: var(--primary-color);
 }
 
 
@@ -52,7 +58,9 @@ header button:hover {
 .section-main {
     display: flex;
     justify-content: space-between;
-    margin-bottom: calc(var(--m-32) * 2);
+    margin-bottom: calc(var(--m-32) * 1);
+    padding: 0 0 var(--p-32) 0;
+    border-bottom: 2px dashed var(--tertiary-color);
 }
 
 .section-main .section-texts-main, .section-img-main {
@@ -79,6 +87,7 @@ header button:hover {
 .container-btn-main {
     display: flex;
     gap: var(--p-16);
+    margin-bottom: var(--m-32);
 }
 
 .container-btn-main .btn-connect {
@@ -87,10 +96,21 @@ header button:hover {
     color: var(--secondary-color);
 }
 
+.btn-connect:hover {
+    background-color: var(--quartenary-color);
+    color: var(--primary-color);
+    border-color: var(--quartenary-color);
+}
+
 .btn-learnMore {
     border: 2px solid var(--tertiary-color);
     background-color: transparent;
     color: var(--tertiary-color);
+}
+
+.btn-learnMore:hover {
+    color: var(--quartenary-color);
+    border-color: var(--quartenary-color);
 }
 
 .container-members {
@@ -109,6 +129,7 @@ header button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all var(--t-3);
 }
 
 .member:nth-child(1){
@@ -139,7 +160,7 @@ header button:hover {
 }
 
 .member:hover {
-    scale: 1.2;
+    transform: scale(1.2);
     cursor: pointer;
 }
 
@@ -165,7 +186,8 @@ header button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: var(--m-32);
+    padding: 0 0 var(--p-32) 0;
+    border-bottom: 2px dashed var(--tertiary-color);
 }
 
 .section-secure h2 {
@@ -260,6 +282,8 @@ header button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px dashed var(--tertiary-color);
+    margin-bottom: var(--m-32);
 }
 
 .section-customer .container-img-customer, .container-text-customer {
@@ -329,10 +353,12 @@ header button:hover {
     background-color: var(--tertiary-color);
     color: var(--secondary-color);
     border-radius: calc(var(--radius) * 2);
+    transition: all var(--t-4);
 }
 
 .icon-pricing:hover {
-    filter: brightness(var(--brightness));
+    background-color: var(--quartenary-color);
+    color: var(--primary-color);
 }
 
 .container-text-icon-pricing p {
@@ -344,6 +370,8 @@ header button:hover {
     display: flex;
     justify-content: space-between;
     gap: var(--p-32);
+    padding: var(--p-32) 0;
+    border-bottom: 2px dashed var(--tertiary-color);
     margin-bottom: var(--m-32);
 }
 
@@ -366,6 +394,7 @@ header button:hover {
     font-size: calc(var(--fs-medium) - .2rem);
     border-radius: var(--radius);
     text-transform: uppercase;
+    margin-bottom: var(--m-8);
 }
 
 .card-pricing .price {
@@ -384,13 +413,76 @@ header button:hover {
     color: var(--primary-color);
 }
 
+.container-btn-pricing {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--m-16);
+    gap: var(--p-8);
+}
+
 .btn-add, .btn-buy {
     width: 140px;
-    margin-bottom: var(--m-8)!important;
 }
 
 .btn-add {
     background-color: var(--tertiary-color);
     border: 2px solid var(--tertiary-color);
     color: var(--secondary-color)!important;
+}
+
+.btn-add:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-buy {
+    background-color: transparent;
+    border: 2px solid var(--tertiary-color);
+    color: var(--tertiary-color);
+}
+
+.btn-buy:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 25%;
+}
+
+footer h2 {
+    text-transform: capitalize;
+    margin-bottom: var(--m-16);
+    font-size: calc(var(--fs-large) * 1.5);
+}
+
+footer p {
+    margin-bottom: var(--m-32);
+}
+
+footer nav {
+    display: flex;
+    gap: var(--p-16);
+    margin-bottom: var(--m-32);
+}
+
+footer nav a {
+    width: var(--link-footer);
+    height: var(--link-footer);
+    background-color: var(--input-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }

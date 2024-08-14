@@ -17,6 +17,7 @@
   /* --img-main: 400px; */
   --member: 60px;
   --circle-icon: 70px;
+  --link-footer: 36px;
 
   /* radius */
   --radius: 5px;
@@ -39,7 +40,7 @@
 
   /* transitions */
   --t-3: .3s;
-  --t-5: .5s;
+  --t-4: .4s;
 
   /* brighteness hover */
   --brightness: 80%;
@@ -50,7 +51,6 @@
   margin: 0;
   box-sizing: border-box;
   /* font-family: Lexend, Manrope, Arial, Helvetica, sans-serif; */
-  transition: all var(--t-3);
 }
 
 html, body, #root {
@@ -74,7 +74,6 @@ button {
   font-weight: 600;
   padding: var(--p-8) var(--p-16);
   border-radius: var(--radius);
-  margin-bottom: var(--m-32);
 }
 
 button, a, i {
@@ -84,6 +83,10 @@ button, a, i {
 
 button, a {
   text-transform: capitalize;
+}
+
+button, a  {
+  transition: var(--t-4);
 }
 
 input, select, textarea {
