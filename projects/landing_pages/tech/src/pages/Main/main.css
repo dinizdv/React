@@ -486,3 +486,112 @@ footer nav a:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
+
+
+
+
+
+
+
+/* responsive interface */
+@media (max-width: 1270px){
+    /* customer */
+    .section-customer .container-img-customer  {
+        width: 40%;
+    }
+    
+    .section-customer .container-text-customer {
+        width: 60%;
+    }
+    
+    .container-text-customer h2 {
+        font-size: var(--fs-large);
+    }
+}
+
+@media (max-width: 1088px){
+    /* main */
+    .section-main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-texts-main h1 {
+        font-size: calc(var(--fs-large) * 1.4);
+        margin-bottom: var(--m-8);
+        text-transform: capitalize;
+    }    
+    
+    .section-main .section-texts-main, .section-img-main {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    /* secure */
+    .rectangle-secure {
+        height: 320px;
+    }
+}
+
+@media (max-width: 1015px){
+    .section-customer {
+        flex-direction: column;
+    }
+
+    .section-customer h2, .container-text-customer p {
+        text-align: center;
+    }
+
+    .container-img-customer {
+        display: none;
+    }
+}
+
+@media (max-width: 947px){
+    /* secure */
+    .container-secure {
+        flex-direction: column;
+    }
+    
+    .rectangle-secure {
+        height: 220px;
+        margin-bottom: var(--m-32);
+    }
+}
+
+@media (max-width: 850px){
+    /* main */
+    .section-texts-main h1 {
+        text-align: center;
+    }
+    
+    .section-main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: calc(var(--m-32) * 1);
+        padding: 0 0 var(--p-32) 0;
+        border-bottom: 2px dashed var(--tertiary-color);
+    }
+    
+    .section-main .section-img-main {
+        display: none;
+    }   
+
+    .section-main .section-texts-main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-members {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+}

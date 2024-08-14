@@ -88,7 +88,7 @@ export default function Main() {
 
             <div className="container-text-customer">
                 <h2>24/7 access to customer support</h2>
-                <p>Invest in digital assets with peace of mind. Our secure platform offers industry-leading security to protect your funds. With advanced encryption technology and multi-factor authentication, we ensure that your investments are safeguarded against unauthorized access. Our platform undergoes regular security audits to maintain the highest standards of protection, giving you confidence in the safety of your digital assets.</p>
+                <p>Invest in digital assets with peace of mind. Our secure platform offers industry-leading security to protect your funds. With advanced encryption technology and multi-factor authentication, we ensure that your investments are safeguarded against unauthorized access.</p>
                 <div className="container-btn-customer">
                 <button className="btn-learnMore">learn more</button>
                 </div>
