@@ -8,17 +8,40 @@ import { Link } from 'react-router-dom'
 import './main.css'
 
 export default function Main() {
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+
     return (
 <>
             <header>
                 <p className='logo-header'>NFT Tech</p>
                 <nav className="nav-header">
-                    <ul className="ul-header">
+                <ul className="sidebar">
                         <li className="li-header">
+                        <a href="#" className="link-header"><i class="fa-solid fa-x closeSidebar"  onClick={hideSidebar}></i></a>
                             <a href="#" className="link-header">home</a>
                             <a href="#" className="link-header">NFT markets</a>
                             <a href="#" className="link-header">shop</a>
                             <a href="#" className="link-header">about us</a>
+                        </li>
+                    </ul>
+                    
+                    <ul className="ul-header">
+                        <li className="li-header">
+                            <a href="#" className="link-header hideOnMobile">home</a>
+                            <a href="#" className="link-header hideOnMobile">NFT markets</a>
+                            <a href="#" className="link-header hideOnMobile">shop</a>
+                            <a href="#" className="link-header hideOnMobile">about us</a>
+                            <a href="#" className="link-header hideOnMobile"></a>
+                            <a href="#" className="link-header"><i class="fa-solid fa-bars menu-btn" onClick={showSidebar}></i>    
+                            </a>                         
                         </li>
                     </ul>
                 </nav>
