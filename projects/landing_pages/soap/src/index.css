@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* colors */
+  --primary-color: #7A7468;
+  --secondary-color: #c0ae95;
+  --tertiary-color: #ADAFAA;
+  --quartenary-color: #BE8451;
+  --light: #fff;
+
+  --marron: #E5BEEC;
+  --pink: #FFD0EC;
+  --bitcoin-color: #f0db21;
+  --fast-color: #21f0ab;
+  --shield-color: #21a4f0;
+  --input-color: rgba(226, 226, 226, 0.170);
+
+  /* widths */
+  /* --img-main: 400px; */
+  --mainImg: 600px;
+  --productImg: 300px;
+
+  /* radius */
+  --radius: 5px;
+  --input-radius: 15px;
+  --card-radius: 24px;
+
+  /* paddings */
+  --p-section: 56px;
+  --p-32: 32px;
+  --p-16: 16px;
+  --p-8: 8px;
+
+  /* margins */
+  --m-32: 32px;
+  --m-16: 16px;
+  --m-8: 8px;
+
+  /* font-size */
+  --fs-medium: 1rem;
+  --fs-large: 2rem;
+
+  /* transitions */
+  --t-3: .3s;
+  --t-4: .4s;
+
+  /* brighteness hover */
+  --brightness: 85%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: Lexend, Manrope, Arial, Helvetica, sans-serif; */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+button {
+  font-weight: 600;
+  padding: var(--p-8) var(--p-16);
+  border-radius: var(--radius);
+}
+
+button:hover {
+  filter: brightness(var(--brightness));
+}
+
+button, a, i {
+  cursor: pointer;
+  outline: none;
+}
+
+button, a {
+  text-transform: capitalize;
+}
+
+button, a  {
+  transition: var(--t-4);
+}
+
+input, select, textarea {
+  outline: none;
+}
+
+h1 {
+  color: var(--green);
+}
+
+input::placeholder, textarea::placeholder {
+  text-transform: capitalize;
+  color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lexend!important;
+  text-transform: capitalize;
+}
+
+p, label, textarea, ::placeholder, button, a, li {
+  font-family: Manrope!important;
+}
+
+li {
+  list-style-type: none;
+}
