@@ -3,6 +3,7 @@
 
 :root {
   /* colors */
+  --dark: #121212;
   --primary-color: #7A7468;
   --secondary-color: #c0ae95;
   --tertiary-color: #ADAFAA;
@@ -60,11 +61,6 @@ html, body, #root {
   height: 100%;
 }
 
-body {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
 a {
   text-decoration: none;
 }
@@ -100,13 +96,9 @@ input, select, textarea {
   outline: none;
 }
 
-h1 {
-  color: var(--green);
-}
-
 input::placeholder, textarea::placeholder {
   text-transform: capitalize;
-  color: var(--secondary-color);
+  color: var(--light);
 }
 
 h1, h2, h3, h4, h5, h6 {

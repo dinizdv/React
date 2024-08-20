@@ -5,8 +5,9 @@
 
 header {
     width: 100%;
-    padding: var(--p-32) 5%;
-    background-color: var(--light);
+    padding: var(--p-16) 5%;
+    /* position: absolute; */
+    background-color: var(--dark);
 }
 
 header nav {
@@ -14,14 +15,17 @@ header nav {
     justify-content: space-between;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
-    justify-content: space-between;
-    gap: 120px;
+}
+
+nav .ul-header {
+    justify-content: end;
+    gap: calc(var(--p-32) * 2);
 }
 
 header nav li a {
-    color: var(--primary-color);
+    color: var(--light);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -42,7 +46,6 @@ main {
 
 main h1 {
     color: var(--light);
-    width: 33.3%;
     font-size: calc(var(--fs-large) * 2);
     text-align: center;
 }
@@ -50,13 +53,16 @@ main h1 {
 main p {
     color: var(--secondary-color);
     text-align: center;
-    width: 33.3%;
 }
 
-main img {
+.container-left {
+    width: 50%;
+}
+
+.container-left img {
     position: absolute;
     z-index: -999;
-    width: 100%;
+    width: inherit;
     height: var(--mainImg);
     object-fit: cover;
     filter: brightness(60%);
@@ -85,17 +91,104 @@ main img {
     border: 1px solid var(--light);
 }
 
+/* form */
+  .section-contact {
+    width: 50%;
+    background-color: var(--dark);
+  }
+
+  .section-contact-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-contact-img img {
+    width: 100%;
+  }
+
+  .section-contact-form {
+    padding: var(--p-32);
+  }
+
+  .title-section-contact-form {
+    font-size: calc(var(--fs-large) * 2);
+    margin-bottom: var(--m-16);
+    text-transform: capitalize;
+  }
+
+  .container-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--m-16) 0;
+}
+
+  .container-input input {
+    width: 48%;
+    padding: var(--p-16);
+    border-radius: var(--input-radius);
+    border: none;
+    background-color: transparent;
+    border: 1px solid var(--light);
+    color: var(--light);
+  }
+
+  form textarea {
+    width: 100%;
+    height: 160px;
+    resize: none;
+    border-radius: var(--input-radius);
+    padding: var(--p-16);
+    margin-bottom: var(--m-16);
+    background-color: transparent;
+    border: 1px solid var(--light);
+    color: var(--light);
+  }
+
+  .container-btnSend-form {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .btnSend-form {
+    padding: calc(var(--p-8) + 4px) var(--p-32);
+    border-radius: var(--radius);
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light);
+    font-weight: 500;
+}
+
+
+/* test */
+aside {
+    border: 12px solid gold;
+    float: right;
+    display: flex;
+    width: 50%;
+    height: 1112px;
+    flex-direction: column;
+    justify-content: start;
+}
+
+aside h2 {
+    
+}
+
+.gradient {
+    background-color: var(--dark);
+}
 
 /* experience */
 .section-experience {
-    background-color: var(--secondary-color);
     padding: var(--p-section) 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: var(--primary-color);
+    color: var(--light);
     width: 100%;
+    /* background-color: var(--light); */
 }
 
 .section-experience h2 {
@@ -131,10 +224,10 @@ main img {
     text-transform: capitalize;
 }
 
-
 /* product */
 .section-product {
     width: 100%;
+    /* background-color: var(--light); */
     padding: var(--p-section) 0;
     display: flex;
     justify-content: center;
@@ -145,10 +238,12 @@ main img {
 .section-product h2 {
     font-size: var(--fs-large);
     margin-bottom: var(--m-8);
+    color: var(--light);
 }
 
 .section-product > p {
     margin-bottom: var(--m-32);
+    color: var(--secondary-color)
 }
 
 .container-products {
@@ -168,7 +263,6 @@ main img {
 }
 
 .container-img-product img {
-    z-index: -999;
     width: 100%;
     height: 100%;
     object-fit: cover;

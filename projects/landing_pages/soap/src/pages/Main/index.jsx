@@ -1,5 +1,6 @@
 import './main.css'
 import mainImg from '../../assets/soap.jpeg'
+import ContactUs from '../../assets/contact.png'
 
 export default function Main(){
     return(
@@ -8,16 +9,13 @@ export default function Main(){
         {/* header */}
         <header>
             <nav className='nav-header'>
-                <ul className='ul-header'>
+                    <ul className="ul-logo">
+                    <li className='li-header' id='logo'><a className='a-header' href="#">logo</a></li>
+                    </ul>
+                    <ul className='ul-header'>
                     <li className='li-header'><a className='a-header' href="#">home</a></li>
                     <li className='li-header'><a className='a-header' href="#">products</a></li>
                     <li className='li-header'><a className='a-header' href="#">subscribe</a></li>
-                </ul>
-                    <li className='li-header' id='logo'><a className='a-header' href="#">logo</a></li>
-                <ul>    
-                    <li className='li-header'><a className='a-header' href="#">about</a></li>
-                    <li className='li-header'><a className='a-header' href="#">alembic</a></li>
-                    <li className='li-header'><a className='a-header' href="#">contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -25,6 +23,13 @@ export default function Main(){
 
 {/* main */}
         <main className='main'>
+        <aside className='aside'>
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In commodi dolorem harum!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis amet ratione quisquam cumque adipisci aperiam, doloremque aut earum officia placeat odio saepe!</p>
+                <img src={ContactUs} alt="" />
+            </aside>
+            {/* section left */}
+            <section className="container-left">
             <img src={mainImg} alt="" />
             <div className="container-texts-main">
             <h1>Lorem ipsum, dolor sit amet.</h1>
@@ -35,8 +40,32 @@ export default function Main(){
             <button className="subscribe-now">subscribe now</button>
             </div>
             </div>
+            </section>
+
+            {/* contact */}
+            <section className="section-contact">
+
+                <div className="section-contact-form">
+                    <h1 className='title-section-contact-form'>get in touch</h1>
+                    <form action="">
+                        <div className="container-input">
+                            <input type="text" className="input-form" placeholder='first name'/>
+                            <input type="text" className="input-form" placeholder='last name'/>
+                        </div>
+                        <div className="container-input">
+                            <input type="text" className="input-form" placeholder='email address'/>
+                            <input type="text" className="input-form" placeholder='phone number'/>
+                        </div>
+                        <textarea name="" id="" placeholder='Message (optional)'></textarea>
+                        <div className="container-btnSend-form">
+                            <button className='btnSend-form'>Send</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </main>
 
+<div className="gradient">
         {/* experience */}
         <section className="section-experience">
             <h2>experience the aromas</h2>
@@ -96,6 +125,8 @@ export default function Main(){
 
             </div>
         </section>
+        </div>
+
         </div> // container
         
     )
