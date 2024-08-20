@@ -23,8 +23,10 @@ export default function Main(){
 
 {/* main */}
         <main className='main'>
-       
+
             <img src={mainImg} alt="" />
+            <div className="container-elements-main">
+
             <div className="container-texts-main">
             <h1>Lorem ipsum, dolor sit amet.</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quisquam sequi possimus temporibus dolores quas adipisci?</p>
@@ -34,6 +36,8 @@ export default function Main(){
             <button className="subscribe-now">subscribe now</button>
             </div>
             </div>
+            </div>
+
         </main>
 
                {/* contact */}
