@@ -23,13 +23,7 @@ export default function Main(){
 
 {/* main */}
         <main className='main'>
-        <aside className='aside'>
-                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In commodi dolorem harum!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perspiciatis amet ratione quisquam cumque adipisci aperiam, doloremque aut earum officia placeat odio saepe!</p>
-                <img src={ContactUs} alt="" />
-            </aside>
-            {/* section left */}
-            <section className="container-left">
+       
             <img src={mainImg} alt="" />
             <div className="container-texts-main">
             <h1>Lorem ipsum, dolor sit amet.</h1>
@@ -40,10 +34,13 @@ export default function Main(){
             <button className="subscribe-now">subscribe now</button>
             </div>
             </div>
-            </section>
+        </main>
 
-            {/* contact */}
-            <section className="section-contact">
+               {/* contact */}
+       <section className="section-contact">
+                <div className="section-contact-img">
+                    <img src={ContactUs} className='contactUs-img' alt="" />
+                </div>
 
                 <div className="section-contact-form">
                     <h1 className='title-section-contact-form'>get in touch</h1>
@@ -63,9 +60,8 @@ export default function Main(){
                     </form>
                 </div>
             </section>
-        </main>
 
-<div className="gradient">
+
         {/* experience */}
         <section className="section-experience">
             <h2>experience the aromas</h2>
@@ -125,7 +121,6 @@ export default function Main(){
 
             </div>
         </section>
-        </div>
 
         </div> // container
         

@@ -5,9 +5,9 @@
 
 header {
     width: 100%;
-    padding: var(--p-16) 5%;
-    /* position: absolute; */
-    background-color: var(--dark);
+    padding: var(--p-32) 5%;
+    position: absolute;
+    background-color: transparent;
 }
 
 header nav {
@@ -35,6 +35,11 @@ main {
     width: 100%;
 }
 
+.container-left {
+    background-color: orange;
+    width: 50%;
+}
+
 .container-texts-main {
     display: flex;
     justify-content: center;
@@ -46,6 +51,7 @@ main {
 
 main h1 {
     color: var(--light);
+    width: 33.3%;
     font-size: calc(var(--fs-large) * 2);
     text-align: center;
 }
@@ -53,16 +59,13 @@ main h1 {
 main p {
     color: var(--secondary-color);
     text-align: center;
+    width: 33.3%;
 }
 
-.container-left {
-    width: 50%;
-}
-
-.container-left img {
+main img {
     position: absolute;
     z-index: -999;
-    width: inherit;
+    width: 100%;
     height: var(--mainImg);
     object-fit: cover;
     filter: brightness(60%);
@@ -91,11 +94,21 @@ main p {
     border: 1px solid var(--light);
 }
 
-/* form */
-  .section-contact {
+
+/* contact section */
+.section-contact {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: linear-gradient(to right, var(--purple), var(--primary-color)); */
+    background-color: var(--primary-color);
+}
+
+.section-contact-img, .section-contact-form {
     width: 50%;
-    background-color: var(--dark);
-  }
+}
 
   .section-contact-img {
     display: flex;
@@ -103,7 +116,7 @@ main p {
   }
 
   .section-contact-img img {
-    width: 100%;
+    width: 80%;
   }
 
   .section-contact-form {
@@ -114,6 +127,8 @@ main p {
     font-size: calc(var(--fs-large) * 2);
     margin-bottom: var(--m-16);
     text-transform: capitalize;
+    color: var(--secondary-color);
+    color: var(--light);
   }
 
   .container-input {
@@ -128,8 +143,7 @@ main p {
     padding: var(--p-16);
     border-radius: var(--input-radius);
     border: none;
-    background-color: transparent;
-    border: 1px solid var(--light);
+    background-color: var(--input-color);
     color: var(--light);
   }
 
@@ -140,8 +154,7 @@ main p {
     border-radius: var(--input-radius);
     padding: var(--p-16);
     margin-bottom: var(--m-16);
-    background-color: transparent;
-    border: 1px solid var(--light);
+    background-color: var(--input-color);
     color: var(--light);
   }
 
@@ -154,52 +167,33 @@ main p {
     padding: calc(var(--p-8) + 4px) var(--p-32);
     border-radius: var(--radius);
     border: none;
-    background-color: var(--primary-color);
-    color: var(--light);
+    background-color: var(--light);
     font-weight: 500;
-}
-
-
-/* test */
-aside {
-    border: 12px solid gold;
-    float: right;
-    display: flex;
-    width: 50%;
-    height: 1112px;
-    flex-direction: column;
-    justify-content: start;
-}
-
-aside h2 {
-    
-}
-
-.gradient {
-    background-color: var(--dark);
 }
 
 /* experience */
 .section-experience {
+    background-color: var(--light);
     padding: var(--p-section) 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: var(--light);
+    color: var(--primary-color);
     width: 100%;
-    /* background-color: var(--light); */
 }
 
 .section-experience h2 {
     font-size: var(--fs-large);
     text-align: center;
     margin-bottom: var(--m-8);
+    color: var(--primary-color);
 }
 
 .section-experience > p {
     margin-bottom: var(--m-16);
     text-align: center;
+    color: var(--secondary-color);
 }
 
 .container-elements-experience {
@@ -222,17 +216,19 @@ aside h2 {
 .container-icon-experience p {
     font-size: var(--fs-medium);
     text-transform: capitalize;
+    color: var(--primary-color);
 }
+
 
 /* product */
 .section-product {
     width: 100%;
-    /* background-color: var(--light); */
     padding: var(--p-section) 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--primary-color);
 }
 
 .section-product h2 {
@@ -243,7 +239,7 @@ aside h2 {
 
 .section-product > p {
     margin-bottom: var(--m-32);
-    color: var(--secondary-color)
+    color: var(--secondary-color);
 }
 
 .container-products {
@@ -281,7 +277,7 @@ aside h2 {
     width: 100%;
     border-radius: 0;
     border: 0;
-    background-color: var(--light);
-    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--light);
     padding: calc(var(--p-8) + 4px) 0;
 }
