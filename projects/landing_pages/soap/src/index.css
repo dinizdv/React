@@ -9,12 +9,6 @@
   --tertiary-color: #ADAFAA;
   --quartenary-color: #BE8451;
   --light: #fff;
-
-  --marron: #E5BEEC;
-  --pink: #FFD0EC;
-  --bitcoin-color: #f0db21;
-  --fast-color: #21f0ab;
-  --shield-color: #21a4f0;
   --input-color: rgba(226, 226, 226, 0.170);
 
   /* widths */
@@ -64,10 +58,6 @@ html, body, #root {
 a {
   text-decoration: none;
 }
-
-/* ul {
-  list-style: none;
-} */
 
 button {
   font-weight: 600;

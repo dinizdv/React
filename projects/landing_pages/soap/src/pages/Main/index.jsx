@@ -3,19 +3,38 @@ import mainImg from '../../assets/soap.jpeg'
 import ContactUs from '../../assets/contact.png'
 
 export default function Main(){
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+
     return(
         <div className="container">
         
         {/* header */}
         <header>
             <nav className='nav-header'>
+
+                    <ul className='ul-header sidebar'>
+                    <li onClick={hideSidebar} className='li-header'><a href="#"><i class="fa-solid fa-x closeSidebar"></i></a></li>
+                    <li className='li-header'><a className='a-header' href="#">home</a></li>
+                    <li className='li-header'><a className='a-header' href="#">products</a></li>
+                    <li className='li-header'><a className='a-header' href="#">subscribe</a></li>
+                </ul>
+
                     <ul className="ul-logo">
                     <li className='li-header' id='logo'><a className='a-header' href="#">logo</a></li>
                     </ul>
                     <ul className='ul-header'>
-                    <li className='li-header'><a className='a-header' href="#">home</a></li>
-                    <li className='li-header'><a className='a-header' href="#">products</a></li>
-                    <li className='li-header'><a className='a-header' href="#">subscribe</a></li>
+                    <li className='li-header hideOnMobile'><a className='a-header' href="#">home</a></li>
+                    <li className='li-header hideOnMobile'><a className='a-header' href="#">products</a></li>
+                    <li className='li-header hideOnMobile'><a className='a-header' href="#">subscribe</a></li>
+                    <li onClick={showSidebar} className='menu-btn'><a href="#"><i class="fa-solid fa-bars"></i></a></li>
                 </ul>
             </nav>
         </header>
