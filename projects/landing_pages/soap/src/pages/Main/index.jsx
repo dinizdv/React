@@ -28,7 +28,7 @@ export default function Main(){
                 </ul>
 
                     <ul className="ul-logo">
-                    <li className='li-header' id='logo'><a className='a-header' href="#">logo</a></li>
+                    <li className='li-header' id='logo'><a className='a-header' href="#">soap company</a></li>
                     </ul>
                     <ul className='ul-header'>
                     <li className='li-header hideOnMobile'><a className='a-header' href="#">home</a></li>

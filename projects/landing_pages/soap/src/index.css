@@ -35,6 +35,7 @@
   /* font-size */
   --fs-medium: 1rem;
   --fs-large: 2rem;
+  --h1-error: 12rem;
 
   /* transitions */
   --t-3: .3s;
