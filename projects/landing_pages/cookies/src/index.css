@@ -31,11 +31,14 @@
   --m-32: 32px;
   --m-16: 16px;
   --m-8: 8px;
+  --m-section: 64px;
 
   /* font-size */
   --fs-medium: 1rem;
   --fs-large: 2rem;
+  --fs-icon: 3rem;
   --h1-error: 12rem;
+  --fs-title: 2rem;
 
   /* transitions */
   --t-3: .3s;
@@ -54,6 +57,10 @@
 
 html, body, #root {
   height: 100%;
+}
+
+body {
+  background-color: bisque;
 }
 
 a {
@@ -94,7 +101,6 @@ input::placeholder, textarea::placeholder {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Lexend!important;
-  text-transform: capitalize;
 }
 
 p, label, textarea, ::placeholder, button, a, li {
