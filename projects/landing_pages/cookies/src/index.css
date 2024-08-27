@@ -4,22 +4,23 @@
 :root {
   /* colors */
   --dark: #121212;
-  --primary-color: #7A7468;
-  --secondary-color: #c0ae95;
-  --tertiary-color: #ADAFAA;
-  --quartenary-color: #BE8451;
+  --primary-color: #973131;
+  --secondary-color: #E0A75E;
+  --tertiary-color: #F9D689;
+  --quartenary-color: #F5E7B2;
   --light: #fff;
   --input-color: rgba(226, 226, 226, 0.170);
 
   /* widths */
   /* --img-main: 400px; */
   --mainImg: 600px;
-  --productImg: 300px;
+  --productImg: 280px;
+  --cookieImg: 280px;
 
   /* radius */
   --radius: 5px;
   --input-radius: 15px;
-  --card-radius: 24px;
+  --card-radius: 10px;
 
   /* paddings */
   --p-section: 56px;
@@ -60,7 +61,7 @@ html, body, #root {
 }
 
 body {
-  background-color: bisque;
+  background-color: var(--quartenary-color);
 }
 
 a {
@@ -101,6 +102,13 @@ input::placeholder, textarea::placeholder {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Lexend!important;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+h2 {
+  color: var(--secondary-color);
 }
 
 p, label, textarea, ::placeholder, button, a, li {

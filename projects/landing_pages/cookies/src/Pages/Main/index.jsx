@@ -1,4 +1,5 @@
 import Cookie from '../../assets/cookie.png'
+import CookieCard from '../../assets/cookieCard.png'
 import './main.css'
 
 export default function Main(){
@@ -65,6 +66,35 @@ export default function Main(){
                 <div className="container-cards-products">
                     <div className="card-product">
                         {/* infos */}
+                        <div className="container-img-card">
+                        <div className="container-description-card">
+                        <h3 className='title-card'>Cookie tradicional</h3>
+                        <p className="price-card">R$5,99</p>
+                        </div>
+                        <img src={CookieCard} alt="" className="img-card" />
+                        </div>
+                    </div>
+
+                    <div className="card-product">
+                        {/* infos */}
+                        <div className="container-img-card">
+                        <div className="container-description-card">
+                        <h3 className='title-card'>Cookie com Nutella</h3>
+                        <p className="price-card">R$6,99</p>
+                        </div>
+                        <img src={CookieCard} alt="" className="img-card" />
+                        </div>
+                    </div>
+
+                    <div className="card-product">
+                        {/* infos */}
+                        <div className="container-img-card">
+                        <div className="container-description-card">
+                        <h3 className='title-card'>Cookie de Ninho</h3>
+                        <p className="price-card">R$6,99</p>
+                        </div>
+                        <img src={CookieCard} alt="" className="img-card" />
+                        </div>
                     </div>
                 </div>
             </section>
