@@ -7,21 +7,48 @@ import { Link  } from 'react-router-dom'
 import './main.css'
 
 export default function Main(){
+    
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+
     return(
         <div className="container">
             <header>
                 <nav className="header-nav">
+                    <ul className="sidebar">
                     <ul className="ul-header">
-                        <img src={Logo} alt="Logo da Shine Cookies" />
-                    </ul>
-                    <ul className="ul-header">
+                        <li className="li-header"><a href="" className="a-header"><i class="fa-solid fa-x closeSidebar"  onClick={hideSidebar}></i></a></li>
                         <li className="li-header"><a href="" className="a-header">home</a></li>
                         <li className="li-header"><a href="" className="a-header">cookies</a></li>
                         <li className="li-header"><a href="" className="a-header">pix</a></li>
                         <li className="li-header"><a href="" className="a-header">contato</a></li>
+                        <ul className="ul-header">
+                        <img src={Logo} alt="Logo da Shine Cookies" />
                     </ul>
+                    </ul>
+                </ul>
 
-                    <ul className="ul-header"><button className="btn-header">explorar cookies</button></ul>
+                    <ul className="ul-header">
+                        <img src={Logo} alt="Logo da Shine Cookies" />
+                    </ul>
+                    <ul className="ul-header">
+                        <li className="li-header hideOnMobile"><a href="" className="a-header">home</a></li>
+                        <li className="li-header hideOnMobile"><a href="" className="a-header">cookies</a></li>
+                        <li className="li-header hideOnMobile"><a href="" className="a-header">pix</a></li>
+                        <li className="li-header hideOnMobile"><a href="" className="a-header">contato</a></li>
+                    </ul>
+                    <div className="container-btn-explore">
+                    <ul className="ul-header"><button className="btn-header" id='btn-explore'>explorar cookies</button></ul>
+                    </div>
+                    <li><a href="#" className="link-header" id='menuIcon'><i class="fa-solid fa-bars menu-btn" onClick={showSidebar}></i></a></li>
+
                 </nav>
             </header>
 
