@@ -25,6 +25,10 @@ header nav ul {
     gap: var(--p-32);
 }
 
+header nav ul img {
+    width: var(--logo);
+}
+
 header nav ul a {
     color: var(--primary-color);
     font-weight: 500;
@@ -78,6 +82,11 @@ main {
     height: var(--cookieImg);
 }
 
+.section-main-text button {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color); /* adjusting with header button outline (because of the width) */
+    color: var(--quartenary-color);
+}
 
 /* choose */
 .section-choose {
@@ -112,6 +121,11 @@ main {
 
 .container-choose i {
     font-size: var(--fs-icon);
+    color: var(--dark);
+}
+
+.container-choose h3, p {
+    color: var(--dark);
 }
 
 
@@ -122,7 +136,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: var(--m-section);
+    margin-bottom: calc(var(--m-section) * 1.5);
 }
 
 .section-products h2 {
@@ -172,7 +186,74 @@ main {
     justify-content: center;
     padding: 4px var(--p-16);
     flex-direction: column;
-    background-color: orange;
+    background-color: var(--primary-color);
     border-bottom-left-radius: var(--card-radius);
     border-bottom-right-radius: var(--card-radius);
+}
+
+.container-description-card h3 {
+    color: var(--tertiary-color);
+}
+
+.container-description-card p {
+    color: var(--quartenary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.container-description-card a {
+    font-weight: bold;
+    color: var(--primary-color);
+    border-radius: var(--radius);
+    width: 100px;
+    padding: 4px 0;
+    text-align: center;
+    background-color: var(--quartenary-color);
+    margin: var(--m-8) 0;
+    font-family: manrope!important;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 25%;
+}
+
+footer h2 {
+    text-transform: capitalize;
+    margin-bottom: var(--m-16);
+    font-size: var(--fs-title);
+}
+
+footer p {
+    margin-bottom: var(--m-32);
+    color: var(--dark);
+}
+
+footer nav {
+    display: flex;
+    gap: var(--p-16);
+    margin-bottom: var(--m-32);
+}
+
+footer nav a {
+    width: var(--link-footer);
+    height: var(--link-footer);
+    background-color: transparent;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--quartenary-color);
 }
