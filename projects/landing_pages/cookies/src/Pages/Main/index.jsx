@@ -38,11 +38,12 @@ export default function Main(){
                     <ul className="ul-header">
                         <img src={Logo} alt="Logo da Shine Cookies" />
                     </ul>
-                    <ul className="ul-header">
+                    <ul className="ul-header ul-headers-icons">
                         <li className="li-header hideOnMobile"><a href="" className="a-header">home</a></li>
                         <li className="li-header hideOnMobile"><a href="" className="a-header">cookies</a></li>
                         <li className="li-header hideOnMobile"><a href="" className="a-header">pix</a></li>
                         <li className="li-header hideOnMobile"><a href="" className="a-header">contato</a></li>
+                    
                     </ul>
                     <div className="container-btn-explore">
                     <ul className="ul-header"><button className="btn-header" id='btn-explore'>explorar cookies</button></ul>
@@ -65,7 +66,6 @@ export default function Main(){
                     <img src={Cookie} className='cookie-main' alt="" />
                 </section>
             </main>
-
 
 {/* choose */}
             <section className="section-choose">
@@ -101,7 +101,7 @@ export default function Main(){
                         <div className="container-description-card">
                         <h3 className='title-card'>Tradicional</h3>
                         <p className="price-card">R$4,99</p>
-                        <Link to='/cookieTradicional' className='btn-comprar'>Comprar</Link>
+                        <Link to='/cookie_tradicional' className='btn-comprar'>Comprar</Link>
                         </div>
                         <img src={CookieTradicional} alt="" className="img-card" />
                         </div>
