@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import CookieTraditional from '../../assets/cookieTradicional.png'
-import Pix from '../../assets/pixTradicional.png'
-import './traditionalCookie.css'
+import CookieChocolateBranco from '../../assets/cookieChocolateBranco.png'
+import Pix from '../../assets/pixChocolateBranco.png'
+import './whiteCookie.css'
 import { toast } from 'react-toastify'
 
-export default function TraditionalCookie(){
+export default function WhiteCookie(){
     function copyCode(){
         const code = document.getElementById('code-pix')
         const copyText = () => navigator.clipboard.writeText(code.textContent) // () => ---> arrow function
@@ -21,17 +21,17 @@ export default function TraditionalCookie(){
         <div className='container-pix'>
 
             <main className='main-pix'>
-                <h1>Tradicional</h1>
+                <h1>Chocolate branco</h1>
                 <div className="container-pix-img">
                 <div className="card-product">
                         {/* infos */}
                         <div className="container-img-card">
-                        <img src={CookieTraditional} alt="" className="img-card" />
+                        <img src={CookieChocolateBranco} alt="" className="img-card" />
                         
                         </div>
                         <div className="container-description-card">
-                        <h3 className='title-card'>Tradicional</h3>
-                        <p className="price-card">R$4,99</p>
+                        <h3 className='title-card'>Chocolate branco</h3>
+                        <p className="price-card">R$5,99</p>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@ export default function TraditionalCookie(){
 
                 <div className="container-pix-text">
                 <strong>Pix copia e cola:</strong>
-                    <p id='code-pix'>00020126330014BR.GOV.BCB.PIX01115464325581152040000530398654044.995802BR5901N6001C62160512ShineCookies6304FE24</p>
+                    <p id='code-pix'>00020126330014BR.GOV.BCB.PIX01115464325581152040000530398654045.995802BR5901N6001C62160512ShineCookies6304B9C8</p>
                     <button id='btn-copyCode' onClick={copyCode}>Copiar código</button>
                 </div>
                 <Link to='/' className='back-link'>Voltar à home</Link>

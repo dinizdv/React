@@ -24,11 +24,11 @@ export default function Main(){
                 <nav className="header-nav">
                     <ul className="sidebar">
                     <ul className="ul-header">
-                        <li className="li-header"><a href="" className="a-header"><i class="fa-solid fa-x closeSidebar"  onClick={hideSidebar}></i></a></li>
-                        <li className="li-header"><a href="" className="a-header">home</a></li>
-                        <li className="li-header"><a href="" className="a-header">cookies</a></li>
-                        <li className="li-header"><a href="" className="a-header">pix</a></li>
-                        <li className="li-header"><a href="" className="a-header">contato</a></li>
+                        <li className="li-header"><a href="#" className="a-header"><i class="fa-solid fa-x closeSidebar"  onClick={hideSidebar}></i></a></li>
+                        <li className="li-header"><a href="#" className="a-header">Home</a></li>
+                        <li className="li-header"><a href="#about" className="a-header">Sobre</a></li>
+                        <li className="li-header"><a href="#cookies" className="a-header">Cookies</a></li>
+                        <li className="li-header"><a href="#footer" className="a-header">Contato</a></li>
                         <ul className="ul-header">
                         <img src={Logo} alt="Logo da Shine Cookies" />
                     </ul>
@@ -39,14 +39,14 @@ export default function Main(){
                         <img src={Logo} alt="Logo da Shine Cookies" />
                     </ul>
                     <ul className="ul-header ul-headers-icons">
-                        <li className="li-header hideOnMobile"><a href="" className="a-header">home</a></li>
-                        <li className="li-header hideOnMobile"><a href="" className="a-header">cookies</a></li>
-                        <li className="li-header hideOnMobile"><a href="" className="a-header">pix</a></li>
-                        <li className="li-header hideOnMobile"><a href="" className="a-header">contato</a></li>
+                        <li className="li-header hideOnMobile"><a href="#" className="a-header">Home</a></li>
+                        <li className="li-header hideOnMobile"><a href="#about" className="a-header">Sobre</a></li>
+                        <li className="li-header hideOnMobile"><a href="#cookies" className="a-header">Cookies</a></li>
+                        <li className="li-header hideOnMobile"><a href="#footer" className="a-header">Contato</a></li>
                     
                     </ul>
                     <div className="container-btn-explore">
-                    <ul className="ul-header"><button className="btn-header" id='btn-explore'>explorar cookies</button></ul>
+                    <ul className="ul-header"><a className="btn-header" id='btn-explore' href='#cookies'>Explorar cookies</a></ul>
                     </div>
                     <li><a href="#" className="link-header" id='menuIcon'><i class="fa-solid fa-bars menu-btn" onClick={showSidebar}></i></a></li>
 
@@ -59,7 +59,7 @@ export default function Main(){
                 <section className="section-main-text">
                     <h1>Nós fazemos o melhor</h1>
                     <p>Nós temos o melhor cookie do mercado feito com muito carinho para você!</p>
-                    <button className="btn-main">Comprar cookies</button>
+                    <a className="btn-main" href='#cookies'>Comprar cookies</a>
                 </section>
 
                 <section className="section-main-img">
@@ -68,81 +68,84 @@ export default function Main(){
             </main>
 
 {/* choose */}
-            <section className="section-choose">
+            <section className="section-choose" id='about'>
                 <h2>Por que nos escolher?</h2>
                 <div className="container-choose">
                     <div className="choose">
                     <i class="fa-solid fa-cookie"></i>
                     <h3>Fresh food</h3>
-                    <p>Nossos cookies são extremamente saborosos, recheados e crocantes.</p>
+                    <p>Nossos cookies são extremamente saborosos, recheados e crocantes</p>
                     </div>
                     
                     <div className="choose">
-                    <i class="fa-solid fa-cookie"></i>
+                    <i class="fa-solid fa-truck-fast"></i>
                     <h3>Fresh food</h3>
-                    <p>Nossos cookies são extremamente saborosos, recheados e crocantes.</p>
+                    <p>Nossas entregas são presenciais e extremamente rápidas</p>
                     </div>
 
                     <div className="choose">
-                    <i class="fa-solid fa-cookie"></i>
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
                     <h3>Fresh food</h3>
-                    <p>Nossos cookies são extremamente saborosos, recheados e crocantes.</p>
+                    <p>100% da renda advinda das vendas é destinada à doação</p>
                     </div>
                 </div>
             </section>
 
             {/* products */}
-            <section className="section-products">
+            <section className="section-products" id='cookies'>
                 <h2>Explore nossos cookies</h2>
                 <div className="container-cards-products">
                     <div className="card-product">
                         {/* infos */}
                         <div className="container-img-card">
+                        <img src={CookieTradicional} alt="" className="img-card" />
+                        
+                        </div>
                         <div className="container-description-card">
                         <h3 className='title-card'>Tradicional</h3>
                         <p className="price-card">R$4,99</p>
                         <Link to='/cookie_tradicional' className='btn-comprar'>Comprar</Link>
                         </div>
-                        <img src={CookieTradicional} alt="" className="img-card" />
-                        </div>
                     </div>
 
                     <div className="card-product">
                         {/* infos */}
                         <div className="container-img-card">
+                        <img src={CookieNutella} alt="" className="img-card" />
+                        
+                        </div>
                         <div className="container-description-card">
                         <h3 className='title-card'>Nutella</h3>
                         <p className="price-card">R$7,49</p>
-                        <Link to='/cookieTradicional' className='btn-comprar'>Comprar</Link>
-                        </div>
-                        <img src={CookieNutella} alt="" className="img-card" />
+                        <Link to='/cookie_nutella' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
 
                     <div className="card-product">
                         {/* infos */}
                         <div className="container-img-card">
+                        <img src={CookieChocolateBranco} alt="" className="img-card" />
+                        
+                        </div>
                         <div className="container-description-card">
                         <h3 className='title-card'>Chocolate branco</h3>
                         <p className="price-card">R$5,99</p>
-                        <Link to='/cookieTradicional' className='btn-comprar'>Comprar</Link>
-                        </div>
-                        <img src={CookieChocolateBranco} alt="" className="img-card" />
+                        <Link to='/cookie_chocolate_branco' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
+
                 </div>
             </section>
 
                     {/* footer */}
-        <footer>
+        <footer id='footer'>
             <h2>Contate-nos</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta repudiandae vel rerum culpa aspernatur, ipsa mollitia beatae itaque maxime impedit dolorem at, doloribus nostrum.</p>
+            <p>Entre em contato conosco! Abaixo estão as mídias sociais da Shine Cookies para que, além do site, nós possamos fornecer um atendimento exclusivo e esclarecer dúvidas</p>
             <nav className="nav-links-footer">
-                <Link to='#'><i class="fa-brands fa-facebook-f"></i></Link>
-                <Link to='#'><i class="fa-brands fa-x-twitter"></i></Link>
-                <Link to='#'><i class="fa-brands fa-youtube"></i></Link>
-                <Link to='#'><i class="fa-brands fa-linkedin-in"></i></Link>
-                <Link to='#'><i class="fa-brands fa-instagram"></i></Link>
+                <a target='blank' href='https://api.whatsapp.com/send?phone=5511989779948&text=Ol%C3%A1,%20Shine%20Cookies!
+'><i class="fa-brands fa-whatsapp"></i></a>
+                <a href='https://www.linkedin.com/in/luisa-belo-1a3535285/'><i class="fa-brands fa-linkedin-in"></i></a>
+                {/* <a href='#'><i class="fa-brands fa-instagram"></i></a> */}
             </nav>
         </footer>
         </div>

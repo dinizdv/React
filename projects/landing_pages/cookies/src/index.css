@@ -14,10 +14,10 @@
   /* widths */
   --logo: 80px;
   --mainImg: 600px;
-  --productImg: 280px;
-  --cookieImg: 280px;
+  --productImg: 300px;
+  --cookieImg: 300px;
   --link-footer: 36px;
-  --pix: 280px;
+  --pix: 300px;
 
   /* radius */
   --radius: 5px;
@@ -74,10 +74,6 @@ button {
   font-weight: 600;
   padding: var(--p-8) var(--p-16);
   border-radius: var(--radius);
-}
-
-button:hover {
-  filter: brightness(var(--brightness));
 }
 
 button, a, i {
