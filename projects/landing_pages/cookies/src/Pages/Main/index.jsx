@@ -1,6 +1,6 @@
 import Logo from '../../assets/logo.png'
 import Cookie from '../../assets/cookie.png'
-import CookieTradicional from '../../assets/cookieCard.png'
+import CookieTradicional from '../../assets/cookieTradicional.png'
 import CookieNutella from '../../assets/cookieNutella.png'
 import CookieChocolateBranco from '../../assets/cookieChocolateBranco.png'
 import { Link  } from 'react-router-dom'

@@ -12,12 +12,12 @@
   --input-color: rgba(226, 226, 226, 0.170);
 
   /* widths */
-  /* --img-main: 400px; */
   --logo: 80px;
   --mainImg: 600px;
   --productImg: 280px;
   --cookieImg: 280px;
   --link-footer: 36px;
+  --pix: 280px;
 
   /* radius */
   --radius: 5px;
@@ -85,9 +85,6 @@ button, a, i {
   outline: none;
 }
 
-button, a {
-  text-transform: capitalize;
-}
 
 button, a  {
   transition: var(--t-4);
