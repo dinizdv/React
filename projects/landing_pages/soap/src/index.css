@@ -9,17 +9,19 @@
   --tertiary-color: #ADAFAA;
   --quartenary-color: #BE8451;
   --light: #fff;
+  --price: rgb(15, 163, 96);
   --input-color: rgba(226, 226, 226, 0.170);
 
   /* widths */
   /* --img-main: 400px; */
   --mainImg: 600px;
   --productImg: 300px;
+  --pix: 300px;
 
   /* radius */
-  --radius: 5px;
+  --radius: 8px;
   --input-radius: 15px;
-  --card-radius: 24px;
+  --card-radius:14px;
 
   /* paddings */
   --p-section: 56px;
@@ -56,6 +58,10 @@ html, body, #root {
   height: 100%;
 }
 
+body {
+  background-color: var(--primary-color);
+}
+
 a {
   text-decoration: none;
 }
@@ -75,10 +81,6 @@ button, a, i {
   outline: none;
 }
 
-button, a {
-  text-transform: capitalize;
-}
-
 button, a  {
   transition: var(--t-4);
 }
@@ -94,7 +96,6 @@ input::placeholder, textarea::placeholder {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Lexend!important;
-  text-transform: capitalize;
 }
 
 p, label, textarea, ::placeholder, button, a, li {
