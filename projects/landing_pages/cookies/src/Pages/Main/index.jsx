@@ -73,19 +73,19 @@ export default function Main(){
                 <div className="container-choose">
                     <div className="choose">
                     <i class="fa-solid fa-cookie"></i>
-                    <h3>Fresh food</h3>
+                    <h3>Cookies deliciosos</h3>
                     <p>Nossos cookies são extremamente saborosos, recheados e crocantes</p>
                     </div>
                     
                     <div className="choose">
                     <i class="fa-solid fa-truck-fast"></i>
-                    <h3>Fresh food</h3>
+                    <h3>Entregas eficientes</h3>
                     <p>Nossas entregas são presenciais e extremamente rápidas</p>
                     </div>
 
                     <div className="choose">
                     <i class="fa-solid fa-hand-holding-dollar"></i>
-                    <h3>Fresh food</h3>
+                    <h3>Renda doada</h3>
                     <p>100% da renda advinda das vendas é destinada à doação</p>
                     </div>
                 </div>
