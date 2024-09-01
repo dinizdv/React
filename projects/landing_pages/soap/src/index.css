@@ -12,11 +12,13 @@
   --price: rgb(15, 163, 96);
   --input-color: rgba(226, 226, 226, 0.170);
 
-  /* widths */
+  /* widths and heights */
   /* --img-main: 400px; */
   --mainImg: 600px;
   --productImg: 300px;
   --pix: 300px;
+  --dashboardHeight: 660px;
+  --container-purchase: 350px;
 
   /* radius */
   --radius: 8px;
@@ -72,9 +74,6 @@ button {
   border-radius: var(--radius);
 }
 
-button:hover {
-  filter: brightness(var(--brightness));
-}
 
 button, a, i {
   cursor: pointer;
@@ -89,9 +88,8 @@ input, select, textarea {
   outline: none;
 }
 
-input::placeholder, textarea::placeholder {
-  text-transform: capitalize;
-  color: var(--light);
+input {
+  font-family: Lexend;
 }
 
 h1, h2, h3, h4, h5, h6 {

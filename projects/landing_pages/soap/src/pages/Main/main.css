@@ -168,6 +168,11 @@ main {
     color: var(--light);
   }
 
+ .container-input input::placeholder, textarea::placeholder {
+    color: var(--light);
+    text-transform: capitalize;
+ }
+ 
   form textarea {
     width: 100%;
     height: 160px;

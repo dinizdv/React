@@ -1,0 +1,35 @@
+#btn-transactions {
+    background-color: var(--quartenary-color);
+    color: var(--light);
+    border: 2px solid var(--quartenary-color); /* fixing the default button */
+}
+
+#btn-outline-transactions {
+    background-color: transparent;
+    color: var(--quartenary-color);
+    border: 2px solid var(--quartenary-color);
+}
+
+.container-purchase {
+    height: var(--container-purchase);
+    overflow-y: auto;
+    margin-bottom: var(--m-16);
+}
+
+.purchase {
+    background-color: var(--secondary-color);
+    border-radius: var(--radius);
+    padding: var(--p-8);
+}
+
+.purchase:not(:last-child){
+    margin-bottom: var(--m-16); /* fixing last element spacement */ 
+}
+
+.purchase strong {
+    padding-right: var(--p-8);
+}
+
+.transactions-p {
+    font-size: calc(var(--fs-medium) * 1.5);
+}
