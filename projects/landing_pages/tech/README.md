@@ -1,7 +1,7 @@
 # Landing Page project
 ✔️ This is a landing page with React and CSS.
 
-**Deploy:** https://react-landing-page-courses.vercel.app/
+**Deploy:** https://ntf-landing-page.vercel.app/
 <hr>
 
 <h3>Project Skills</h3>
