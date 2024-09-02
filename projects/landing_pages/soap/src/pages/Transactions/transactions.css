@@ -33,3 +33,14 @@
 .transactions-p {
     font-size: calc(var(--fs-medium) * 1.5);
 }
+
+.purchase button {
+    background-color: var(--light);
+    border: 2px solid var(--secondary-color);
+    margin-top: var(--m-8);
+    color: var(--primary-color);
+}
+
+.purchase button:hover {
+    color: var(--quartenary-color);
+}

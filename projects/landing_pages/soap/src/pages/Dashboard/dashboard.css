@@ -88,3 +88,22 @@
     background-color: var(--price);
     color: var(--light);
 }
+
+@media (max-width: 740px){
+    .container-style-dashboard {
+        max-width: 80%;
+    }       
+}
+
+@media (max-width: 500px){
+    .container-style-dashboard {
+        max-width: 95%;
+        padding: var(--p-16);
+    }
+}
+
+@media (max-width: 334px){
+    .container-style-dashboard {
+        height: auto;
+    }
+}
