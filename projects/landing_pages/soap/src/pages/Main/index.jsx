@@ -3,8 +3,18 @@ import { Link } from 'react-router-dom'
 import mainImg from '../../assets/soap.jpeg'
 import ContactUs from '../../assets/contact.png'
 import { useState } from 'react'
+import { db } from '../../services/firebaseConnection'
+import { addDoc, collection } from 'firebase/firestore'
+import { toast } from 'react-toastify'
 
 export default function Main(){
+    const [userData, setUserData] = useState({
+        name: '',
+        age: '',
+        email: '',
+        phone: '',
+        message: ''
+    })
     const [name, setName] = useState('Soap GRU') // company name
 
     function showSidebar(){
@@ -16,6 +26,35 @@ export default function Main(){
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.display = 'none'
     }
+
+    // getting data form
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+    
+        const userDataRef = collection(db, 'userData')
+    
+        // Verifique se todos os campos estão preenchidos
+        if (!userData.name || !userData.age || !userData.email || !userData.phone || !userData.message) {
+            toast.error('Por favor, preencha todos os campos.')
+            return
+        }
+    
+        try {
+            const res = await addDoc(userDataRef, {
+                name: userData.name,
+                age: userData.age,
+                email: userData.email,
+                phone: userData.phone,
+                message: userData.message 
+            })
+            toast.success('Dados enviados com sucesso')
+            setUserData({name: '', age: '', email: '', phone: '', message: ''}) // cleaning inputs
+        } catch (error){
+            console.log('Error: ', error)
+            toast.error('Error ao enviar os dados')
+        }
+    }
+    
 
     return(
         <div className="container">
@@ -71,20 +110,51 @@ export default function Main(){
 
                 <div className="section-contact-form">
                     <h1 className='title-section-contact-form'>Formulário</h1>
-                    <form action="">
-                        <div className="container-input">
-                            <input type="text" className="input-form" placeholder='nome'/>
-                            <input type="text" className="input-form" placeholder='idade'/>
-                        </div>
-                        <div className="container-input">
-                            <input type="text" className="input-form" placeholder='email'/>
-                            <input type="text" className="input-form" placeholder='n° telefone'/>
-                        </div>
-                        <textarea name="" id="" placeholder='Mensagem (opcional)'></textarea>
-                        <div className="container-btnSend-form">
-                            <button className='btnSend-form'>Enviar</button>
-                        </div>
-                    </form>
+                    <form onSubmit={handleSubmit}>
+  <div className="container-input">
+    <input 
+      type="text" 
+      className="input-form" 
+      placeholder='nome' 
+      value={userData.name}
+      onChange={(e) => setUserData({...userData, name: e.target.value})}
+    />
+    <input 
+      type="number" 
+      className="input-form" 
+      placeholder='idade' 
+      value={userData.age}
+      onChange={(e) => setUserData({...userData, age: parseInt(e.target.value)})}
+    />
+  </div>
+  <div className="container-input">
+    <input 
+      type="email" 
+      className="input-form" 
+      placeholder='email' 
+      value={userData.email}
+      onChange={(e) => setUserData({...userData, email: e.target.value})}
+    />
+    <input 
+      type="text" 
+      className="input-form" 
+      placeholder='n° telefone' 
+      value={userData.phone}
+      onChange={(e) => setUserData({...userData, phone: e.target.value})}
+    />
+  </div>
+  <textarea 
+    name="" 
+    id="" 
+    placeholder='Mensagem (opcional)' 
+    value={userData.message}
+    onChange={(e) => setUserData({...userData, message: e.target.value})}
+  ></textarea>
+  <div className="container-btnSend-form">
+    <button className='btnSend-form' type='submit'>Enviar</button>
+  </div>
+</form>
+
                 </div>
             </section>
 

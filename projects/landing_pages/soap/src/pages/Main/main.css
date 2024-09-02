@@ -169,7 +169,7 @@ main {
   }
 
  .container-input input::placeholder, textarea::placeholder {
-    color: var(--light);
+    color: var(--placeholder-main);
     text-transform: capitalize;
  }
  
