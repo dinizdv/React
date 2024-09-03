@@ -1,19 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 :root {
-  --primary-color: crimson;
+  --primary-color: #192030;
+  --secondary-color: #FFFFFF;
+  --tertiary-color: #E7E8EA;
+  --card-title-color: #CACACC;
+  --a-hover: #4C505C;
   --update-color: rgb(24, 190, 107);
 
   /* widts */
   --sidebar-w: 200px;
+  --graph-h: 400px;
 
   /* padding */
   --p-8: 8px;
   --p-16: 16px;
+  --p-32: 32px;
 
   /* radius */
   --card-radius: 6px;
+  --graph-radius: 6px;
 
   /* font-size */
   --card-title: 1rem;
+  --card-subtitle: 2rem;
 }
 
 body {
@@ -21,6 +31,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--secondary-color);
+  font-family: Outfit;
 }
 
 a, li, ul, button {

@@ -2,19 +2,24 @@
     width: var(--sidebar-w);
     height: 100vh;
     background-color: var(--primary-color);
-    background-color: rgba(44, 117, 180, 0.253);
     position: fixed;
 }
 
+.sidebar a {
+    color: var(--secondary-color);
+}
+
+/* main */
 main {
-    background-color: rgb(167, 108, 0);
+    background-color: var(--tertiary-color);
     height: 100vh;
-    padding: var(--p-16);
     margin-left: var(--sidebar-w);
 }
 
 .top {
     display: flex;
+    background-color: var(--secondary-color);
+    padding: var(--p-8) var(--p-32);
 }
 
 .profile-top {
@@ -26,12 +31,13 @@ main {
 .container-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(80% / 4), 1fr));
-    gap: var(--p-16);
+    gap: var(--p-32);
+    padding: var(--p-32);
 }
 
 .card {
-    background-color: aqua;
-    padding: var(--p-8);
+    background-color: var(--secondary-color);
+    padding: var(--p-16);
     border-radius: var(--card-radius);
 }
 
@@ -42,14 +48,54 @@ main {
 .border-card {
     border-left: 4px solid var(--primary-color);
     padding-left: var(--p-8);
+    line-height: 100%;
+}
+
+.border-card h2 {
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.border-card span {
+    font-size: var(--card-subtitle);
+    color: var(--primary-color);
 }
 
 .update {
     color: var(--update-color);
     padding-right: var(--p-8);
+    font-size: var(--card-title);
 }
 
 
+/* graph */
+.container-graph {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--p-32);
+    gap: var(--p-32);
+}
+
+.pie-chart-container {
+    width: 40%;
+    border-radius: var(--graph-radius);
+    background-color: var(--secondary-color);
+    height: var(--graph-h);
+}
+
+.barra-chart-container {
+    width: 60%;
+    border-radius: var(--graph-radius);
+    background-color: var(--secondary-color);
+}
+  
+  @media (max-width: 768px) {
+    .pie-chart-container {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
 /* responsive interface */
 @media (max-width: 1160px) {
     .container-cards {
