@@ -2,12 +2,44 @@
     width: var(--sidebar-w);
     height: 100vh;
     background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: var(--p-16) 0;
     position: fixed;
 }
 
-.sidebar a {
-    color: var(--secondary-color);
+.sidebar nav {
+    width: 100%;
+    border: 2px solid orange;
 }
+
+.sidebar nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.ul-sidebar > li {
+    text-align: center; /* first element */
+    font-size: 1.6rem;
+}
+
+.ul-sidebar-links {
+    margin-top: var(--m-32);
+    border: 2px solid blueviolet;
+    gap: var(--p-32);
+}
+
+.ul-sidebar-links i {
+    padding-right: 6px;
+}
+
+.sidebar a {
+    color: var(--tertiary-color);
+    text-transform: capitalize;
+}
+
+
 
 /* main */
 main {
@@ -81,12 +113,46 @@ main {
     border-radius: var(--graph-radius);
     background-color: var(--secondary-color);
     height: var(--graph-h);
+    display: flex;
+    justify-content: center;
+    padding: var(--p-16);
 }
 
-.barra-chart-container {
+.line-chart-container {
     width: 60%;
     border-radius: var(--graph-radius);
     background-color: var(--secondary-color);
+    padding: var(--p-16);
+    height: var(--graph-h);
+}
+
+/* table */
+.container-table {
+    padding: var(--p-32);
+}
+
+table {
+    background-color: var(--secondary-color);
+    border-radius: var(--table-radius);
+    padding: var(--p-8) 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+thead, tbody {
+    padding: var(--p-16);
+}
+
+thead, tbody:not(:last-child) {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+table tr {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
   
   @media (max-width: 768px) {

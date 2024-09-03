@@ -52,10 +52,10 @@ export default function Dashboard(){
       };
     
       const lineChartData = {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
         datasets: [{
             label: 'Sales',
-            data: [18, 15, 24, 26, 19, 26],
+            data: [26, 15, 19, 14, 21, 12, 28],
             borderColor: '#FF6384',
             backgroundColor: '#FF6384'
         }]
@@ -76,12 +76,24 @@ export default function Dashboard(){
             }
         }
     };
+
     return(
         <>
         <div className="sidebar">
             <nav>
                 <ul className='ul-sidebar'>
-                    <li className='li-sidebar'><a href="">Dashboard</a></li>
+                    <li className='li-sidebar'><a href="">Finance Tech</a></li>
+                    <ul className="ul-sidebar-links">
+                    <li className='li-sidebar'><a href="">resources</a></li>
+                    <li className='li-sidebar'><a href=""><i class="fa-solid fa-table-cells-large"></i>dashboard</a></li>
+                    <li className='li-sidebar'><a href=""><i class="fa-solid fa-cube"></i>products</a></li>
+                    <li className='li-sidebar'><a href=""><i class="fa-solid fa-store"></i>store</a></li>
+                    <li className='li-sidebar'><a href=""><i class="fa-regular fa-comment-dots"></i>messages</a></li>
+                    <li className='li-sidebar'><a href=""><i class="fa-solid fa-chart-line"></i>statistics</a></li>
+                    <li className='li-sidebar'><a href=""><i class="fa-solid fa-file-invoice-dollar"></i>invoices</a></li>
+                    <li className='li-sidebar'><a href=""><i class="fa-solid fa-list-check"></i>to-do list</a></li>
+                    <li className='li-sidebar'><a href=""><i class="fa-solid fa-hand-holding-dollar"></i>finances</a></li>
+                    </ul>
                 </ul>
             </nav>
         </div> {/* sidebar */}
@@ -139,15 +151,86 @@ export default function Dashboard(){
 <Pie data={chartData} options={chartOptions} id='pie-graph' />
 </div>
 
-<div className="barra-chart-container">
+<div className="line-chart-container">
 <Line
   data={lineChartData}
   options={lineChartOptions}
 />
-
-
 </div>
 </section>
+
+
+<div className="container-table">
+<table>
+    <thead>
+        <tr>
+            <th>title</th>
+            <th>title</th>
+            <th>title</th>
+            <th>title</th>
+            <th>title</th>
+            <th>title</th>
+            <th>title</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+        </tr>
+
+        <tr>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+        </tr>
+
+        <tr>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+        </tr>
+
+
+        <tr>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+        </tr>
+
+        <tr>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+            <th>trow</th>
+        </tr>
+
+    </tbody>    
+</table>
+</div>
+
+
         </main>
         </>
     )
