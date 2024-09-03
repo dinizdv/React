@@ -5,11 +5,20 @@
   --secondary-color: #FFFFFF;
   --tertiary-color: #E7E8EA;
   --card-title-color: #CACACC;
-  --a-hover: #4C505C;
+  --border-table-color: #CACACC;
+  --a-hover-color: #4C505C;
+  --table-text-color: #4C505C;
   --update-color: rgb(24, 190, 107);
+  --paid-color: #dafeec;
+  --paid-text-color: #18be6b;
+  --pending-color: #f9f2cc;
+  --pending-text-color: #e0a220;
+  --overdue-color: #fee5e5;
+  --overdue-text-color: #ef4452;
 
   /* widts */
   --sidebar-w: 240px;
+  --search-w: 200px;
   --graph-h: 480px;
 
   /* padding and margins */
@@ -24,10 +33,16 @@
   --card-radius: 6px;
   --graph-radius: 6px;
   --table-radius: 6px;
+  --status-radius: 6px;
+  --search-radius: 10px;
 
   /* font-size */
   --card-title: 1rem;
   --card-subtitle: 2rem;
+  --welcome: 1.6rem;
+
+  /* transation */
+  --t-4: .4s;
 }
 
 body {
@@ -41,4 +56,9 @@ body {
 
 a, li, ul, button {
   all: unset;
+}
+
+li, a, button {
+  cursor: pointer;
+  transition: var(--t-4);
 }

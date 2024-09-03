@@ -5,13 +5,11 @@
     display: flex;
     justify-content: center;
     align-items: start;
-    padding: var(--p-16) 0;
     position: fixed;
 }
 
 .sidebar nav {
     width: 100%;
-    border: 2px solid orange;
 }
 
 .sidebar nav ul {
@@ -24,22 +22,37 @@
     font-size: 1.6rem;
 }
 
-.ul-sidebar-links {
-    margin-top: var(--m-32);
-    border: 2px solid blueviolet;
-    gap: var(--p-32);
+.sidebar li {
+    padding: var(--p-16);
 }
 
-.ul-sidebar-links i {
+.ul-sidebar-links {
+    margin-top: var(--m-32);
+}
+
+.sidebar i {
     padding-right: 6px;
 }
 
 .sidebar a {
     color: var(--tertiary-color);
+}
+
+.subtitle-sidebar {
+    text-transform: uppercase;
+}
+
+.ul-logout {
+    margin-top: var(--m-32);
+}
+
+.link-sidebar {
     text-transform: capitalize;
 }
 
-
+.sidebar .link-sidebar:hover {
+    background-color: var(--a-hover-color);
+}
 
 /* main */
 main {
@@ -50,12 +63,34 @@ main {
 
 .top {
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--secondary-color);
-    padding: var(--p-8) var(--p-32);
+    padding: var(--p-16) var(--p-32);
+}
+
+
+.top .welcome {
+    font-size: var(--welcome);
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.welcome i {
+    padding-left: var(--p-8);
+    color: var(--pending-text-color);
 }
 
 .profile-top {
     margin-left: auto;
+}
+
+.search {
+    width: var(--search-w);
+    padding: var(--p-8);
+    border-radius: var(--search-radius);
+    box-shadow: 0 0 4px 1px var(--primary-color);
 }
 
 
@@ -93,12 +128,19 @@ main {
     color: var(--primary-color);
 }
 
+.card p {
+    text-transform: capitalize;
+}
+
 .update {
     color: var(--update-color);
     padding-right: var(--p-8);
     font-size: var(--card-title);
 }
 
+.update i {
+    padding-right: 3px;
+}
 
 /* graph */
 .container-graph {
@@ -134,28 +176,72 @@ main {
 table {
     background-color: var(--secondary-color);
     border-radius: var(--table-radius);
-    padding: var(--p-8) 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-thead, tbody {
+table h2 {
+    padding: var(--p-8) var(--p-16) 0 var(--p-16);
+    margin: 0; /* fixing space default */
+    text-transform: capitalize;
+    color: var(--table-text-color);
+}
+
+thead, tr:not(:last-child) {
+    border-bottom: 1px solid var(--border-table-color);
+}
+
+table th {
+    color: var(--table-text-color);
+    text-transform: capitalize;
+}
+
+table td {
+    color: var(--table-text-color);
+}
+
+table th, td {
+    width: calc(100% / 7);
     padding: var(--p-16);
+    text-align: start;    
 }
 
-thead, tbody:not(:last-child) {
-    border-bottom: 2px solid var(--primary-color);
-}
+th:last-child, td:last-child {
+    text-align: end; /* fixing the interface */
+}    
 
 table tr {
     display: flex;
     width: 100%;
-    justify-content: space-between;
 }
   
-  @media (max-width: 768px) {
+.td-status {
+    padding: 6px var(--p-16);
+    border-radius: var(--status-radius);
+    color: var(--secondary-color);
+    text-transform: capitalize;
+}
+
+.paid {
+    background-color: var(--paid-color);
+    color: var(--paid-text-color);
+    border: 1px solid var(--paid-text-color);
+}
+
+.pending {
+    background-color: var(--pending-color);
+    color: var(--pending-text-color);
+    border: 1px solid var(--pending-text-color);
+}
+
+.overdue {
+    background-color: var(--overdue-color);
+    color: var(--overdue-text-color);
+    border: 1px solid var(--overdue-text-color);
+}
+
+@media (max-width: 768px) {
     .pie-chart-container {
       width: 100%;
       height: auto;
