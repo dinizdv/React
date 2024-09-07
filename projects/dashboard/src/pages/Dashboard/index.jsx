@@ -1,4 +1,5 @@
 import './dashboard.css'
+import ProfilePhoto from '../../assets/profilePhoto.png'
 import { Pie, Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement } from 'chart.js';
 
@@ -107,7 +108,29 @@ export default function Dashboard(){
             <div className="top">
                 <p className='welcome'>welcome back, diniz<i class="fa-solid fa-hand"></i></p>
                 <div className="profile-top">
-                    <div className="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    {/* <div className="search"><i class="fa-solid fa-magnifying-glass"></i></div> */}
+                    <div class="search-container">
+    <form>
+    <button type="submit"><i class="fa fa-search"></i></button>
+      <input type="text" placeholder="Search anything" name="search" />
+    </form>
+  </div>        
+                </div>
+                <div className="contact-top">
+                    
+                <i class="fa-regular fa-comment-dots"></i>
+                
+                <i class="fa-regular fa-bell"></i>
+                
+                <div className="container-profile">
+                <div className="radius-profile">
+                    <img src={ProfilePhoto} alt="Photo profile" />
+                </div>
+
+                <label htmlFor="">Bruno Diniz</label>
+
+                </div>
+                <i class="fa-solid fa-caret-down"></i>
                 </div>
             </div>
         

@@ -6,8 +6,11 @@
   --tertiary-color: #E7E8EA;
   --card-title-color: #CACACC;
   --border-table-color: #CACACC;
+  --bg-scroll: #b5b5b5;
+  --scroll-color: #4B59E0;
   --a-hover-color: #4C505C;
   --table-text-color: #4C505C;
+  --top-color: #939393;
   --update-color: rgb(24, 190, 107);
   --paid-color: #dafeec;
   --paid-text-color: #18be6b;
@@ -16,9 +19,12 @@
   --overdue-color: #fee5e5;
   --overdue-text-color: #ef4452;
 
-  /* widts */
+  /* widts and heights */
+  --scroll-w: 10px;
   --sidebar-w: 240px;
   --search-w: 200px;
+  --search-h: 40px;
+  --radius-profile-w: 40px;
   --graph-h: 480px;
 
   /* padding and margins */
@@ -26,6 +32,7 @@
   --p-16: 16px;
   --p-32: 32px;
 
+  --m-8: 8px;
   --m-16: 16px;
   --m-32: 32px;
 
@@ -40,6 +47,7 @@
   --card-title: 1rem;
   --card-subtitle: 2rem;
   --welcome: 1.6rem;
+  --fs-top: 1.4rem;
 
   /* transation */
   --t-4: .4s;
