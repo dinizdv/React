@@ -77,27 +77,27 @@ export default function Dashboard(){
         <div className="sidebar">
             <nav>
                 <ul className='ul-sidebar'>
-                    <li className='li-sidebar'><a href="">Finance Tech</a></li>
+                    <li className='li-sidebar'><i class="fa-solid fa-coins"></i><a href="">Finance Tech</a></li>
                     <ul className="ul-sidebar-links">
                     <li className='li-sidebar subtitle-sidebar'><a href="">resources</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-table-cells-large"></i>dashboard</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-cube"></i>products</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-store"></i>store</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-regular fa-comment-dots"></i>messages</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-chart-line"></i>statistics</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-file-invoice-dollar"></i>invoices</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-list-check"></i>to-do list</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-hand-holding-dollar"></i>finances</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-table-cells-large"></i><a href="">dashboard</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-cube"></i><a href="">products</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-store"></i><a href="">store</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-regular fa-comment-dots"></i><a href="">messages</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-chart-line"></i><a href="">statistics</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-file-invoice-dollar"></i><a href="">invoices</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-list-check"></i><a href="">to-do list</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-hand-holding-dollar"></i><a href="">finances</a></li>
                     </ul>
 
                     <ul className="ul-sidebar-links">
                     <li className='li-sidebar subtitle-sidebar'><a href="">help & support</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-triangle-exclamation"></i>help & center</a></li>
-                    <li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-gear"></i>settings</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-triangle-exclamation"></i><a href="">help & center</a></li>
+                    <li className='li-sidebar link-sidebar'><i class="fa-solid fa-gear"></i><a href="">settings</a></li>
                     </ul>
 
 <ul className="ul-logout">
-<li className='li-sidebar link-sidebar'><a href=""><i class="fa-solid fa-arrow-right-from-bracket" id='link-logout'></i>logout</a></li>
+<li className='li-sidebar link-sidebar'><i class="fa-solid fa-arrow-right-from-bracket" id='link-logout'></i><a href="">logout</a></li>
 </ul>
 
                 </ul>
@@ -118,9 +118,9 @@ export default function Dashboard(){
                 </div>
                 <div className="contact-top">
                     
-                <i class="fa-regular fa-comment-dots"></i>
+                <i class="fa-regular fa-comment-dots icon-top"></i>
                 
-                <i class="fa-regular fa-bell"></i>
+                <i class="fa-regular fa-bell icon-top"></i>
                 
                 <div className="container-profile">
                 <div className="radius-profile">
@@ -220,38 +220,35 @@ export default function Dashboard(){
         </tr>
 
         <tr>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>
+        <td>1</td>
+            <td>#052499</td>
+            <td>Bruno Diniz</td>
+            <td>1xBlack Backpack</td>
+            <td>03/09/2024</td>
+            <td>$101</td>            <td>
                 <label htmlFor="trow" className='td-status pending'>pending</label>
             </td>
         </tr>
 
         <tr>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>
+        <td>1</td>
+            <td>#052499</td>
+            <td>Bruno Diniz</td>
+            <td>1xBlack Backpack</td>
+            <td>03/09/2024</td>
+            <td>$101</td>            <td>
                 <label htmlFor="trow" className='td-status paid'>paid</label>
             </td>
         </tr>
 
 
         <tr>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>trow</td>
-            <td>
+        <td>1</td>
+            <td>#052499</td>
+            <td>Bruno Diniz</td>
+            <td>1xBlack Backpack</td>
+            <td>03/09/2024</td>
+            <td>$101</td>            <td>
                 <label htmlFor="trow" className='td-status overdue'>overdue</label>
             </td>        
             </tr>

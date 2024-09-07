@@ -1,342 +1,507 @@
 .sidebar {
-    width: var(--sidebar-w);
-    height: 100vh;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    position: fixed;
-    overflow-y: auto;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: fixed;
+  overflow-y: auto;
 }
 
 .sidebar nav {
-    width: 100%;
+  width: 100%;
 }
 
 .sidebar nav ul {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .ul-sidebar > li {
-    text-align: center; /* first element */
-    font-size: 1.6rem;
+  text-align: center; /* first element */
+  font-size: 1.6rem;
 }
 
 .sidebar li {
-    padding: var(--p-16);
+  padding: var(--p-16);
 }
 
 .ul-sidebar-links {
-    margin-top: var(--m-32);
+  margin-top: var(--m-32);
 }
 
 .sidebar i {
-    padding-right: 6px;
+  padding-right: 6px;
+  color: var(--tertiary-color);
 }
 
 .sidebar a {
-    color: var(--tertiary-color);
+  color: var(--tertiary-color);
 }
 
 .subtitle-sidebar {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .ul-logout {
-    margin-top: var(--m-32);
+  margin-top: var(--m-32);
 }
 
 .link-sidebar {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .sidebar .link-sidebar:hover {
-    background-color: var(--a-hover-color);
+  background-color: var(--a-hover-color);
 }
-
 
 /* Firefox scroll */
 * {
-    scrollbar-width: var(--scroll-w);
-    scrollbar-color: var(--scroll-color) var(--secondary-color);
-  }
-  
-/* Works on Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: var(--scroll-w);
-  }
-  
-*::-webkit-scrollbar-track {
-    background-color: var(--secondary-color);
+  scrollbar-width: var(--scroll-w);
+  scrollbar-color: var(--scroll-color) var(--secondary-color);
 }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-color);
-  }
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: var(--scroll-w);
+  height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-color);
+}
 
 /* main */
 main {
-    background-color: var(--tertiary-color);
-    height: 100vh;
-    margin-left: var(--sidebar-w);
+  background-color: var(--tertiary-color);
+  height: 100vh;
+  margin-left: var(--sidebar-w);
 }
 
 .top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--secondary-color);
-    padding: var(--p-16) var(--p-32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  padding: var(--p-16) var(--p-32);
 }
 
-
 .top .welcome {
-    font-size: var(--welcome);
-    padding: 0;
-    margin: 0;
-    text-transform: capitalize;
+  font-size: var(--welcome);
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
 }
 
 .welcome i {
-    padding-left: var(--p-8);
-    color: var(--pending-text-color);
+  padding-left: var(--p-8);
+  color: var(--pending-text-color);
 }
 
 .profile-top {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .search-container button {
-    float: left;
-    padding: 0 10px;
-    border: none;
-    height: var(--search-h);
-    cursor: pointer;
-    color: var(--top-color);
+  float: left;
+  padding: 0 10px;
+  border: none;
+  height: var(--search-h);
+  cursor: pointer;
+  color: var(--secondary-color);
+  background-color: var(--top-color);
+  border-top-left-radius: var(--search-radius);
+  border-bottom-left-radius: var(--search-radius);
 }
 
-input[type=text] {
-    padding: 0 10px;
-    border: none;
-    height: var(--search-h);
-    color: var(--top-color);
-    font-family: Outfit;
-    margin-right: var(--m-32);
+input[type="text"] {
+  padding: 0 10px;
+  border-top-right-radius: var(--search-radius);
+  border-bottom-right-radius: var(--search-radius);
+  border: none;
+  height: var(--search-h);
+  color: var(--top-color);
+  font-family: Outfit;
+  margin-right: var(--m-32);
+  box-shadow: inset 0 0 4px var(--top-color);
 }
 
-input[type=text]::placeholder {
-    color: var(--top-color);
+input[type="text"]::placeholder {
+  color: var(--top-color);
 }
 
-input[type=text]:focus {
-    outline: none;
+input[type="text"]:focus {
+  outline: none;
 }
-  
+
 .contact-top {
-    border-left: 2px solid var(--top-color);
-    gap: var(--p-32);
-    padding: 0 var(--p-32);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: var(--search-h);
+  border-left: 2px solid var(--top-color);
+  gap: var(--p-32);
+  padding-left: var(--p-32);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: var(--search-h);
 }
 
 .contact-top i {
-    color: var(--top-color);
-    font-size: var(--fs-top);
+  color: var(--top-color);
+  font-size: var(--fs-top);
+  transition: all var(--t-4);
+}
+
+.contact-top i:hover {
+  color: var(--top-hover-color);
+  cursor: pointer;
 }
 
 /* profile photo + label ('Bruno Diniz') */
 .container-profile {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .container-profile label {
-    margin-left: var(--m-8);
+  margin-left: var(--m-8);
 }
 
 .radius-profile {
-    width: var(--radius-profile-w);
-    height: var(--radius-profile-w);
-    border-radius: 50%;
-    position: relative;
+  width: var(--radius-profile-w);
+  height: var(--radius-profile-w);
+  border-radius: 50%;
+  position: relative;
 }
 
 .radius-profile img {
-    border-radius: 50%;
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-/* .search-container button:hover {
-    background: #ccc;
-} */
-  
-
+.search-container button:hover {
+  background-color: var(--top-hover-color);
+}
 
 /* cards */
 .container-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(80% / 4), 1fr));
-    gap: var(--p-32);
-    padding: var(--p-32);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(80% / 4), 1fr));
+  gap: var(--p-32);
+  padding: var(--p-32);
 }
 
 .card {
-    background-color: var(--secondary-color);
-    padding: var(--p-16);
-    border-radius: var(--card-radius);
+  background-color: var(--secondary-color);
+  padding: var(--p-16);
+  border-radius: var(--card-radius);
 }
 
 .card h2 {
-    font-size: var(--card-title);
+  font-size: var(--card-title);
 }
 
 .border-card {
-    border-left: 4px solid var(--primary-color);
-    padding-left: var(--p-8);
-    line-height: 100%;
+  border-left: 4px solid var(--primary-color);
+  padding-left: var(--p-8);
+  line-height: 100%;
 }
 
 .border-card h2 {
-    font-weight: 400;
-    color: var(--primary-color);
+  font-weight: 400;
+  color: var(--primary-color);
 }
 
 .border-card span {
-    font-size: var(--card-subtitle);
-    color: var(--primary-color);
+  font-size: var(--card-subtitle);
+  color: var(--primary-color);
 }
 
 .card p {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .update {
-    color: var(--update-color);
-    padding-right: var(--p-8);
-    font-size: var(--card-title);
+  color: var(--update-color);
+  padding-right: var(--p-8);
+  font-size: var(--card-title);
 }
 
 .update i {
-    padding-right: 3px;
+  padding-right: 3px;
 }
 
 /* graph */
 .container-graph {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 var(--p-32);
-    gap: var(--p-32);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--p-32);
+  gap: var(--p-32);
 }
 
 .pie-chart-container {
-    width: 40%;
-    border-radius: var(--graph-radius);
-    background-color: var(--secondary-color);
-    height: var(--graph-h);
-    display: flex;
-    justify-content: center;
-    padding: var(--p-16);
+  width: 40%;
+  border-radius: var(--graph-radius);
+  background-color: var(--secondary-color);
+  height: var(--graph-h);
+  display: flex;
+  justify-content: center;
+  padding: var(--p-16);
 }
 
 .line-chart-container {
-    width: 60%;
-    border-radius: var(--graph-radius);
-    background-color: var(--secondary-color);
-    padding: var(--p-16);
-    height: var(--graph-h);
+  width: 60%;
+  border-radius: var(--graph-radius);
+  background-color: var(--secondary-color);
+  padding: var(--p-16);
+  height: var(--graph-h);
 }
 
 /* table */
 .container-table {
-    padding: var(--p-32);
+  padding: var(--p-32);
 }
 
 table {
-    background-color: var(--secondary-color);
-    border-radius: var(--table-radius);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  background-color: var(--secondary-color);
+  border-radius: var(--table-radius);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
 }
 
 table h2 {
-    padding: var(--p-8) var(--p-16) 0 var(--p-16);
-    margin: 0; /* fixing space default */
-    text-transform: capitalize;
-    color: var(--table-text-color);
+  padding: var(--p-8) var(--p-16) 0 var(--p-16);
+  margin: 0; /* fixing space default */
+  text-transform: capitalize;
+  color: var(--table-text-color);
 }
 
-thead, tr:not(:last-child) {
-    border-bottom: 1px solid var(--border-table-color);
+thead,
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--border-table-color);
 }
 
 table th {
-    color: var(--table-text-color);
-    text-transform: capitalize;
+  color: var(--table-text-color);
+  text-transform: capitalize;
 }
 
 table td {
-    color: var(--table-text-color);
+  color: var(--table-text-color);
 }
 
-table th, td {
-    width: calc(100% / 7);
-    padding: var(--p-16);
-    text-align: start;    
+table th,
+td {
+  width: calc(100% / 7);
+  padding: var(--p-16);
+  text-align: start;
 }
 
-th:last-child, td:last-child {
-    text-align: end; /* fixing the interface */
-}    
+th:last-child,
+td:last-child {
+  text-align: end; /* fixing the interface */
+}
 
 table tr {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
-  
+
 .td-status {
-    padding: 6px var(--p-16);
-    border-radius: var(--status-radius);
-    color: var(--secondary-color);
-    text-transform: capitalize;
+  padding: 6px var(--p-16);
+  border-radius: var(--status-radius);
+  color: var(--secondary-color);
+  text-transform: capitalize;
 }
 
 .paid {
-    background-color: var(--paid-color);
-    color: var(--paid-text-color);
-    border: 1px solid var(--paid-text-color);
+  background-color: var(--paid-color);
+  color: var(--paid-text-color);
+  border: 1px solid var(--paid-text-color);
 }
 
 .pending {
-    background-color: var(--pending-color);
-    color: var(--pending-text-color);
-    border: 1px solid var(--pending-text-color);
+  background-color: var(--pending-color);
+  color: var(--pending-text-color);
+  border: 1px solid var(--pending-text-color);
 }
 
 .overdue {
-    background-color: var(--overdue-color);
-    color: var(--overdue-text-color);
-    border: 1px solid var(--overdue-text-color);
+  background-color: var(--overdue-color);
+  color: var(--overdue-text-color);
+  border: 1px solid var(--overdue-text-color);
 }
 
-@media (max-width: 768px) {
-    .pie-chart-container {
-      width: 100%;
-      height: auto;
-    }
-  }
-  
 /* responsive interface */
-@media (max-width: 1160px) {
-    .container-cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width: 1895px) {
+  /* graph */
+  .pie-chart-container {
+    height: calc(var(--graph-h) * 0.9);
   }
-  
+
+  .line-chart-container {
+    height: calc(var(--graph-h) * 0.9);
+  }
+}
+
+@media (max-width: 1795px) {
+  /* graph */
+  .pie-chart-container {
+    height: calc(var(--graph-h) * 0.8);
+  }
+
+  .line-chart-container {
+    height: calc(var(--graph-h) * 0.8);
+  }
+}
+
+@media (max-width: 1590px) {
+  /* graph */
+  .pie-chart-container {
+    height: calc(var(--graph-h) * 0.7);
+  }
+
+  .line-chart-container {
+    height: calc(var(--graph-h) * 0.7);
+  }
+}
+
+@media (max-width: 1490px) {
+  /* graph */
+  .pie-chart-container {
+    height: calc(var(--graph-h) * 0.6);
+  }
+
+  .line-chart-container {
+    height: calc(var(--graph-h) * 0.6);
+  }
+
+  /* cards */
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* table */
+  table tr {
+    gap: var(--p-32);
+  }
+
+  thead,
+  tr:not(:last-child) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 1260px) {
+  .icon-top {
+    display: none;
+  }
+}
+@media (max-width: 1198px) {
+  /* graph */
+  .pie-chart-container {
+    height: calc(var(--graph-h) * 0.5);
+  }
+
+  .line-chart-container {
+    height: calc(var(--graph-h) * 0.5);
+  }
+}
+
+@media (max-width: 1120px) {
+  .sidebar {
+    width: auto; /* according by icons spacement */
+  }
+
+  /* texts */
+  .sidebar a {
+    display: none;
+  }
+
+  .sidebar i {
+    padding-right: 0; /* fixing desktop spacement */
+  }
+
+  .ul-sidebar li {
+    font-size: 1.2rem;
+  }
+
+  main {
+    margin-left: 55px;
+  }
+}
+
+@media (max-width: 960px) {
+  .contact-top {
+    display: none;
+  }
+
+  input[type="text"] {
+    margin-right: 0;
+  }
+
+  /* graph */
+  .container-graph {
+    flex-direction: column;
+    justify-content: center;
+    padding-right: calc(var(--p-32) * 2);
+  }
+
+  .pie-chart-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .line-chart-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .welcome {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  /* cards */
+  .container-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* for better mobile spacement */
+  .top,
+  .container-cards,
+  .container-table {
+    padding: var(--p-16);
+  }
+  .container-graph {
+    padding: var(--p-16) 48px var(--p-16) var(--p-16);
+  }
+}
+
+@media (max-width: 355px) {
+  .top {
+    padding: var(--p-16) var(--p-8);
+  }
+
+  input[type="text"] {
+    margin-right: 0;
+  }
+
+  .profile-top {
+    margin-left: 0; /* fixing of the desktop; auto to 0 */
+  }
+}
