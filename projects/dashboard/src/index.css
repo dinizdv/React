@@ -44,6 +44,8 @@
   --table-radius: 6px;
   --status-radius: 6px;
   --search-radius: 4px;
+  --error-radius: 10px;
+  --btn-error-radius: 6px;
 
   /* font-size */
   --card-title: 1rem;

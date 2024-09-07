@@ -51,8 +51,8 @@ export default function Dashboard(){
         datasets: [{
             label: 'Sales',
             data: [26, 15, 19, 14, 21, 12, 28],
-            borderColor: '#FF6384',
-            backgroundColor: '#FF6384'
+            borderColor: '#4B59E0',
+            backgroundColor: '#4B59E0'
         }]
     };
 
@@ -97,7 +97,7 @@ export default function Dashboard(){
                     </ul>
 
 <ul className="ul-logout">
-<li className='li-sidebar link-sidebar'><i class="fa-solid fa-arrow-right-from-bracket" id='link-logout'></i><a href="">logout</a></li>
+<li className='li-sidebar link-sidebar'><i class="fa-solid fa-arrow-right-from-bracket" id='link-logout'></i><a href="">log out</a></li>
 </ul>
 
                 </ul>
@@ -140,37 +140,37 @@ export default function Dashboard(){
                 <div className="card">
                     <div className="border-card">
                     <h2>Customers</h2>
-                    <span>1420</span>
+                    <span>1612</span>
                     </div>
                     <p className='p-card'><label htmlFor="" className="update"><i class="fa-solid fa-arrow-up"></i>
-4,5%</label>since last week</p>
++4,57%</label>since last week</p>
                 </div>
 
                 <div className="card">
                     <div className="border-card">
-                    <h2>Customers</h2>
-                    <span>1420</span>
+                    <h2>Revenue</h2>
+                    <span>$3.175</span>
                     </div>
-                    <p className='p-card'><label htmlFor="" className="update"><i class="fa-solid fa-arrow-up"></i>
-4,5%</label>since last week</p>
+                    <p className='p-card'><label htmlFor="" className="fall"><i class="fa-solid fa-arrow-down"></i>
+-0,21%</label>since last week</p>
                 </div>
 
                 <div className="card">
                     <div className="border-card">
-                    <h2>Customers</h2>
-                    <span>1420</span>
+                    <h2>Profit</h2>
+                    <span>58%</span>
                     </div>
-                    <p className='p-card'><label htmlFor="" className="update"><i class="fa-solid fa-arrow-up"></i>
-4,5%</label>since last week</p>
+                    <p className='p-card'><label htmlFor="" className="fall"><i class="fa-solid fa-arrow-down"></i>
+-0,33%</label>since last week</p>
                 </div>
 
                 <div className="card">
                     <div className="border-card">
-                    <h2>Customers</h2>
-                    <span>1420</span>
+                    <h2>Invoices</h2>
+                    <span>1.351</span>
                     </div>
                     <p className='p-card'><label htmlFor="" className="update"><i class="fa-solid fa-arrow-up"></i>
-4,5%</label>since last week</p>
++14,36%</label>since last week</p>
                 </div>
 
             </div>
@@ -220,35 +220,35 @@ export default function Dashboard(){
         </tr>
 
         <tr>
-        <td>1</td>
-            <td>#052499</td>
-            <td>Bruno Diniz</td>
-            <td>1xBlack Backpack</td>
-            <td>03/09/2024</td>
-            <td>$101</td>            <td>
+        <td>2</td>
+            <td>#062499</td>
+            <td>Bill Gates</td>
+            <td>1xDistro Backpack</td>
+            <td>04/09/2024</td>
+            <td>$144</td>            <td>
                 <label htmlFor="trow" className='td-status pending'>pending</label>
             </td>
         </tr>
 
         <tr>
-        <td>1</td>
-            <td>#052499</td>
-            <td>Bruno Diniz</td>
-            <td>1xBlack Backpack</td>
-            <td>03/09/2024</td>
-            <td>$101</td>            <td>
+        <td>3</td>
+            <td>#072499</td>
+            <td>Jeff Bezos</td>
+            <td>1xNew Backpack</td>
+            <td>05/09/2024</td>
+            <td>$121</td>            <td>
                 <label htmlFor="trow" className='td-status paid'>paid</label>
             </td>
         </tr>
 
 
         <tr>
-        <td>1</td>
-            <td>#052499</td>
-            <td>Bruno Diniz</td>
-            <td>1xBlack Backpack</td>
-            <td>03/09/2024</td>
-            <td>$101</td>            <td>
+        <td>4</td>
+            <td>#082499</td>
+            <td>Warren Buffet</td>
+            <td>2xBlack Backpack</td>
+            <td>06/09/2024</td>
+            <td>$202</td>            <td>
                 <label htmlFor="trow" className='td-status overdue'>overdue</label>
             </td>        
             </tr>

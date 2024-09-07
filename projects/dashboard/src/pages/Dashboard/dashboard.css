@@ -237,6 +237,17 @@ input[type="text"]:focus {
   padding-right: 3px;
 }
 
+.fall {
+    color: var(--overdue-text-color);
+    padding-right: var(--p-8);
+    font-size: var(--card-title);
+}
+  
+.fall i {
+    padding-right: 3px;
+}
+  
+
 /* graph */
 .container-graph {
   display: flex;
