@@ -1,4 +1,4 @@
-# Landing Page project
+# Dashboard
 ✔️ This is a landing page with React and CSS. The graphs were create with Chart.js library.
 
 **Deploy:** https://react-dashboard-theta-eosin.vercel.app/
