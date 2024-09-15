@@ -70,7 +70,7 @@ export default function Dashboard() {
             />
           
           
-            <label htmlFor="price">Price:</label>
+            <label htmlFor="price">Preço:</label>
             <input
               type="number"
               id="text"
