@@ -1,0 +1,116 @@
+.container-pix {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-pix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 5%;
+    margin-bottom: var(--m-32);
+}
+
+.main-pix h1 {
+    color: var(--light);
+}
+
+.container-description-card-pix {
+    margin-top: 220px!important;
+}
+
+.container-pix-img {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: var(--m-32) 0;
+}
+
+.container-img-card-purchase {
+    height: var(--productImg)!important;
+}
+
+.container-pix-img .pix-img {
+    width: var(--pix);
+    height: var(--pix);
+    object-fit: cover;
+}
+
+.container-pix-text {
+    width: 100%;
+    background-color: var(--light);
+    word-wrap: break-word; /* break word (remove inline default) */
+    padding: var(--p-16);
+    border-radius: var(--card-radius);
+}
+
+.container-pix-text strong {
+    font-family: lexend;
+    color: var(--primary-color);
+}
+
+.container-pix-text p {
+    color: var(--primary-color);
+}
+
+.container-pix-text button {
+    margin-top: var(--m-16);
+    color: var(--light);
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color); /* because of the default main page buttons */
+}
+
+.back-link {
+    margin: var(--m-32) 0 0 auto;
+    font-weight: 500;
+    color: var(--light);
+    background-color: transparent;
+    box-shadow: 0 0 4px 1px var(--light);
+    padding: var(--p-8) var(--p-16);
+    border-radius: var(--radius);
+}
+
+.back-link:hover {
+    background-color: var(--light);
+    color: var(--primary-color);
+}
+
+@media (max-width: 1027px){
+    /* because of the css main responsive */
+    .card-product-pix {
+        width: var(--productImg)!important;
+        height: var(--productImg)!important;
+    }
+    
+    .container-img-card-pix {
+        width: var(--productImg)!important;
+        height: var(--productImg)!important;
+    }
+    
+    .container-description-card-pix {
+        width: var(--productImg)!important;
+    }
+    
+}
+
+@media (max-width: 680px){
+    .container-pix-img {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    .container-pix-img .pix-img {
+        margin: var(--m-32) 0 0 0;
+    }
+
+    .card-product-pix {
+        margin-bottom: var(--m-32);
+    }
+}

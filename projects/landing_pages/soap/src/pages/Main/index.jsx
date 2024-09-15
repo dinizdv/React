@@ -2,6 +2,10 @@ import './main.css'
 import { Link } from 'react-router-dom'
 import mainImg from '../../assets/soap.jpeg'
 import ContactUs from '../../assets/contact.png'
+import heartSoap from '../../assets/heartSoap.png'
+import flowerSoap from '../../assets/flowerSoap.png'
+import squareSoap from '../../assets/squareSoap.png'
+import drawSoap from '../../assets/drawSoap.png'
 import { useState } from 'react'
 import { db } from '../../services/firebaseConnection'
 import { addDoc, collection } from 'firebase/firestore'
@@ -15,7 +19,7 @@ export default function Main(){
         phone: '',
         message: ''
     })
-    const [name, setName] = useState('Soap GRU') // company name
+    const [name, setName] = useState('SABOM') // company name
 
     function showSidebar(){
         const sidebar = document.querySelector('.sidebar')
@@ -190,46 +194,46 @@ export default function Main(){
 
 
         <section className="section-product" id='sec-products'>
-            <h2>Nosso produto</h2>
+            <h2>Nossos produtos</h2>
             <p className="description-section-product">Conheça nosso sabão abaixo e aproveite as promoções imperdíveis!</p>
             
             <div className="container-cards-products">
                     <div className="card-product">
                         {/* infos */}
                         <div className="container-img-card">
-                        <img src={mainImg} alt="" className="img-card" />
+                        <img src={heartSoap} alt="" className="img-card" />
                         
                         </div>
                         <div className="container-description-card">
-                        <h3 className='title-card'>Sabão em pedra</h3>
+                        <h3 className='title-card'>Sabonete Capim Limão</h3>
                         <p className="price-card"><span className="risk">de R$6,00</span><span className="price-p">por R$2,99</span></p>
-                        <Link to='/compra' className='btn-comprar'>Comprar</Link>
+                        <Link to='/compra-sabonete-de-coracao' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
 
                     <div className="card-product">
                         {/* infos */}
                         <div className="container-img-card">
-                        <img src={mainImg} alt="" className="img-card" />
+                        <img src={flowerSoap} alt="" className="img-card" />
                         
                         </div>
                         <div className="container-description-card">
-                        <h3 className='title-card'>Sabão em pedra</h3>
-                        <p className="price-card"><span className="risk">de R$6,00</span><span className="price-p">por R$2,99</span></p>
-                        <Link to='/compra' className='btn-comprar'>Comprar</Link>
+                        <h3 className='title-card'>Sabonete Capim Limão</h3>
+                        <p className="price-card"><span className="risk">de R$10,00</span><span className="price-p">por R$4,99</span></p>
+                        <Link to='/compra-sabonete-de-flor' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
 
                     <div className="card-product">
                         {/* infos */}
                         <div className="container-img-card">
-                        <img src={mainImg} alt="" className="img-card" />
+                        <img src={squareSoap} alt="" className="img-card" />
                         
                         </div>
                         <div className="container-description-card">
-                        <h3 className='title-card'>Sabão em pedra</h3>
-                        <p className="price-card"><span className="risk">de R$6,00</span><span className="price-p">por R$2,99</span></p>
-                        <Link to='/compra' className='btn-comprar'>Comprar</Link>
+                        <h3 className='title-card'>Sabonete Capim Limão</h3>
+                        <p className="price-card"><span className="risk">de R$10,00</span><span className="price-p">por R$4,99</span></p>
+                        <Link to='/compra-sabonete-quadrado' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
 
@@ -237,6 +241,15 @@ export default function Main(){
                 </div>
 
 
+        </section>
+
+        <section className="section-draw">
+        <h2>Concorra ao sorteio</h2>
+            <p className="description-section-draw">Compre qualquer produto no site e <b>concorra ao sorteio</b> de dois sabonetes da {name} + uma saboneteira da Natura</p>
+            
+            <div className="container-draw-soap">
+                <img src={drawSoap} alt="" />
+            </div>
         </section>
 
         </div> // container

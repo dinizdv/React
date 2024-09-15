@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import Soap from '../../assets/soap.jpeg'
+import squareSoap from '../../assets/squareSoap.png'
 import Pix from '../../assets/pix.png'
 import './purchase.css'
 import { toast } from 'react-toastify'
 
-export default function Purchase(){
+export default function PurchaseSquare(){
     function copyCode(){
         const code = document.getElementById('code-pix')
         const copyText = () => navigator.clipboard.writeText(code.textContent) // () => ---> arrow function
@@ -25,13 +25,13 @@ export default function Purchase(){
                 <div className="container-pix-img">
                 <div className="card-product">
                         {/* infos */}
-                        <div className="container-img-card">
-                        <img src={Soap} alt="" className="img-card" />
+                        <div className="container-img-card container-img-card-purchase">
+                        <img src={squareSoap} alt="" className="img-card" />
                         
                         </div>
                         <div className="container-description-card">
-                        <h3 className='title-card'>Sabão em pedra</h3>
-                        <p className="price-card"><span className="risk">de R$6,00</span><span className="price-p">por R$2,99</span></p>
+                        <h3 className='title-card'>Sabonete Capim Limão</h3>
+                        <p className="price-card"><span className="risk">de R$10,00</span><span className="price-p">por R$4,99</span></p>
                         </div>
                     </div>
 
