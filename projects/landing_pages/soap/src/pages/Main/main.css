@@ -30,18 +30,22 @@ header nav li a {
     text-transform: uppercase;
 }
 
+.sabomLogo {
+    width: var(--sabomLogo);
+}
+
 /* sidebar */
 .sidebar {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 200px;
     height: 100vh;
     z-index: 999;
     padding: var(--p-16);
     display: flex;
     justify-content: start;
-    align-items: end;
+    align-items: start;
     gap: var(--p-8);
     flex-direction: column;
     background-color: var(--secondary-color);
@@ -382,6 +386,7 @@ main {
     max-width: 500px;
     height: var(--drawImg);
     border-radius: var(--card-radius);
+    border: 4px solid var(--secondary-color);
 }
 
 .container-draw-soap img {
@@ -583,6 +588,12 @@ main {
         width: 100%;
         gap: var(--m-32);
     }    
+}
+
+@media (max-width: 420px){
+    .section-draw h2 {
+        font-size: calc(var(--fs-large) * .8);
+    }
 }
 
 @media (max-width: 400px){

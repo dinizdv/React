@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import squareSoap from '../../assets/squareSoap.png'
-import Pix from '../../assets/pix.png'
-import './purchase.css'
+import pixBigger from '../../assets/pixBigger.png'
 import { toast } from 'react-toastify'
 
 export default function PurchaseSquare(){
@@ -35,13 +34,13 @@ export default function PurchaseSquare(){
                         </div>
                     </div>
 
-                    <img src={Pix} className='pix-img' alt="" />
+                    <img src={pixBigger} className='pix-img' alt="" />
 
                 </div>
 
                 <div className="container-pix-text">
                 <strong>Pix copia e cola:</strong>
-                    <p id='code-pix'>00020126360014BR.GOV.BCB.PIX0114+551195444930052040000530398654042.995802BR5901N6001C62110507SoapGru6304E007</p>
+                    <p id='code-pix'>00020126360014BR.GOV.BCB.PIX0114+551195444930052040000530398654044.995802BR5901N6001C62090505SABOM630490F4</p>
                     <button id='btn-copyCode' onClick={copyCode}>Copiar código</button>
                 </div>
                 <Link to='/' className='back-link'>Voltar à home</Link>

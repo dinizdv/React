@@ -6,6 +6,7 @@ import heartSoap from '../../assets/heartSoap.png'
 import flowerSoap from '../../assets/flowerSoap.png'
 import squareSoap from '../../assets/squareSoap.png'
 import drawSoap from '../../assets/drawSoap.png'
+import sabomLogo from '../../assets/sabomLogo.png'
 import { useState } from 'react'
 import { db } from '../../services/firebaseConnection'
 import { addDoc, collection } from 'firebase/firestore'
@@ -73,16 +74,17 @@ export default function Main(){
                     <li className='li-header'><a className='a-header' href="#sec-products">produto</a></li>
                     <li className='li-header'><a className='a-header' href="#sec-form">increver-se</a></li>
                 </ul>
-
-                    <ul className="ul-logo">
-                    <li className='li-header' id='logo'><a className='a-header' href="#">{name}</a></li>
-                    </ul>
-                    <ul className='ul-header'>
+                <ul className='ul-header'>
                     <li className='li-header hideOnMobile'><a className='a-header' href="#">home</a></li>
                     <li className='li-header hideOnMobile'><a className='a-header' href="#sec-products">produto</a></li>
                     <li className='li-header hideOnMobile'><a className='a-header' href="#sec-form">increver-se</a></li>
                     <li onClick={showSidebar} className='menu-btn'><a href="#"><i class="fa-solid fa-bars"></i></a></li>
                 </ul>
+
+
+                    <ul className="ul-logo">
+                    <li className='li-header' id='logo'><img src={sabomLogo} className='sabomLogo' alt="" /></li>
+                    </ul>
             </nav>
         </header>
 

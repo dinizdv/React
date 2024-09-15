@@ -7,9 +7,9 @@ import './dashboard.css';
 
 export default function Dashboard() {
   const [data, setData] = useState({
-    product: '',
+    product: 'Sabonete Capim Limão',
     name: '',
-    email: '',
+    price: '',
     phone: ''
   });
 
@@ -20,14 +20,14 @@ export default function Dashboard() {
       const purchasesRef = collection(db, 'purchases');
 
       const res = await addDoc(purchasesRef, {
-        product: data.product,
         name: data.name,
-        email: data.email,
+        product: data.product,
+        price: data.price,
         phone: data.phone,
       });
 
       toast.success('Dados salvos com sucesso');
-      setData({ product: '', name: '', email: '', phone: '' });
+      setData({ name: '', product: '', price: '', phone: '' });
     } catch (error) {
       console.error("Erro ao salvar dados:", error);
       toast.error('Erro ao enviar dados');
@@ -56,24 +56,26 @@ export default function Dashboard() {
               id="product"
               name="product"
               value={data.product}
+              disabled='true'
               onChange={handleChange}
             />
             
             <label htmlFor="nome">Nome:</label>
             <input
-              type="text"
+              type='text'
               id="nome"
               name="name"
               value={data.name}
               onChange={handleChange}
             />
           
-            <label htmlFor="email">E-mail:</label>
+          
+            <label htmlFor="price">Price:</label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              value={data.email}
+              type="number"
+              id="text"
+              name="price"
+              value={data.price}
               onChange={handleChange}
             />
           

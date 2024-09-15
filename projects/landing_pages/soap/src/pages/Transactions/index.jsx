@@ -8,11 +8,25 @@ import './transactions.css'
 
 export default function Transactions(){
     const [transactions, setTransactions] = useState([]);
-    const price = 2.99
-    var total = transactions.length * price
+    function calcTotal() {
+        let totalPrice = 0;
+        parseInt(totalPrice)
+
+        transactions.forEach(transaction => {
+            const price = transaction.price || 0;
+                totalPrice += parseFloat(price);
+        });
+    
+        return {
+            total: totalPrice,
+        };
+    }
+    
+    
 
     useEffect(() => {
         fetchTransactions()
+        calcTotal()
     }, [])
 
     async function fetchTransactions(){
@@ -60,9 +74,9 @@ export default function Transactions(){
                     <div key= {transaction.id} className="purchase">                                                              
                     <p className="purchase-name"><strong>Transação:</strong>{index + 1}</p>
                     <p className="purchase-name"><strong>Nome:</strong>{transaction.name}</p>
-                    <p className="purchase-name"><strong>E-mail:</strong>{transaction.email}</p>
-                    <p className="purchase-name"><strong>N° telefone:</strong>{transaction.phone}</p>
                     <p className="purchase-name"><strong>Produto:</strong>{transaction.product}</p>
+                    <p className="purchase-name"><strong>Preço:</strong>R$ {transaction.price}</p>
+                    <p className="purchase-name"><strong>N° telefone:</strong>{transaction.phone}</p>
                     <button onClick={() => deleteTransaction(transaction.id)}>Excluir</button>
                   </div>
         
@@ -74,7 +88,8 @@ export default function Transactions(){
                           </div>
 
                           <p className='transactions-p'><strong>Total de transações:</strong> {transactions.length}</p>
-                          <p className='transactions-p'><strong>Valor arrecadado:</strong> R${total.toFixed(2)}</p>
+                          <p className='transactions-p'><strong>Receita:</strong> R$ {calcTotal().total}</p>
+
                       </div>
                   </div>
     )
