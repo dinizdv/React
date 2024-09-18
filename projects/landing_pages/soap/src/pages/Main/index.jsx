@@ -96,7 +96,7 @@ export default function Main(){
             <div className="container-elements-main">
 
             <div className="container-texts-main">
-            <h1>O melhor sabão de Guarulhos</h1>
+            <h1>O melhor sabonete de Guarulhos</h1>
             <p>Descubra a sensação mais agradável da sua vida.</p>
             
             <div className="container-buttons-main">
