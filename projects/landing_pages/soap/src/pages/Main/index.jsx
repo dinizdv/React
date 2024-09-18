@@ -97,7 +97,7 @@ export default function Main(){
 
             <div className="container-texts-main">
             <h1>O melhor sabão de Guarulhos</h1>
-            <p>Descubra a sensação de roupas limpas e louças brilhantes com nosso sabão.</p>
+            <p>Descubra a sensação mais agradável da sua vida.</p>
             
             <div className="container-buttons-main">
             <Link to='/compra' className="buy-products">Comprar sabão</Link>
