@@ -169,7 +169,7 @@ export default function Main(){
         <section className="section-experience">
             <h2>Sua experiência é prioridade</h2>
             <p className="subtitle-experience">Nossos clientes são nossas maiores motivações para que continuemos produzindo.</p>
-            <p className="description-experience">O sabão da <strong>{name}</strong> passa por diversos estágios na produção, desde o setor primário até o setor quinário. Todo processo é feito cuidadosamente para que nosso sabão chegue às suas mãos em ótimas condições.</p>
+            <p className="description-experience">O sabonete da <strong>{name}</strong> passa por diversos estágios na produção, desde o setor primário até o setor quinário. Todo processo é feito cuidadosamente para que nosso sabonete chegue às suas mãos em ótimas condições.</p>
             
             <div className="container-elements-experience">
             <div className="container-icon-experience">
