@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+
+:root {
+  --dark: #121212;
+}
+
+
 * {
-  font-family: Consolas;
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
-  padding: 32px;
+  padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Bungee Tint';
+}
+
+button, input {
+  all: unset;
 }

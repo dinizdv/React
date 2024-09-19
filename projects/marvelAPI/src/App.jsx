@@ -5,7 +5,6 @@ import Search from './Components/Search';
 function App() {
   return (
     <>
-      <h1>Marvel API</h1>
       <Search/>
     </>
   );

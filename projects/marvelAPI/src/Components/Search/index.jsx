@@ -2,11 +2,14 @@ import { useState } from 'react'
 import md5 from 'md5'
 import Characters from '../Characters'
 import Comics from '../Comics'
+import '../../styles/search.scss'
+import bg from '../../assets/bg.jpg'
 
 export default function Search(){
     const [characterName, setCharacterName] = useState('')
     const [characterData, setCharacterData] = useState(null)
     const [comicData, setComicData] = useState(null)
+    const [viewComics, setViewComics] = useState(false)
 
     // .env file
     const publicKey = import.meta.env.VITE_PUBLIC_KEY
@@ -32,6 +35,7 @@ export default function Search(){
             result => {
                 setCharacterData(result.data)
                 console.log(result)
+                setViewComics(true)
             }
         ).catch((error) => {
             console.log(`There was an error: ${error}`)
@@ -49,6 +53,7 @@ export default function Search(){
         fetch(url).then(response => response.json())
         .then(results => {
             setComicData(results.data)
+            setViewComics(true)
             console.log(results)
         })
         .catch((error) => {
@@ -72,8 +77,13 @@ export default function Search(){
     }
 
     return(
-        <>
+        <div className='container'>
+            <div className="container-bg-img">
+            <img src={bg} alt="" />
+            </div>
+            
             <form action="" className="search-form" onSubmit={handleSubmit}>
+                <h1>Marvel API</h1>
                 <input type="text" placeholder="Enter character name" onChange={handleChange}/>
             <div className="btns-form">
                 <button type='submit' className="btn-submit" onClick={getCharacterData}>Get character data</button>
@@ -81,12 +91,14 @@ export default function Search(){
             </div>
             </form>
 
-            {!comicData && characterData && characterData.results[0] && (
-                <Characters data={characterData.results} onClick={getComicData} />
-            )}
+                {!comicData && characterData && characterData.results[0] && (
+                    <>
+                    <Characters data={characterData.results} onClick={getComicData} />
+                    </>
+                )}
 
-            {comicData && comicData.results[0] && <Comics data={comicData.results} /> }
+                {comicData && comicData.results[0] && <Comics data={comicData.results} /> }
 
-        </>
+        </div>
     )
 }

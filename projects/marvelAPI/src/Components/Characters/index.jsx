@@ -1,6 +1,10 @@
+import '../../styles/characters.scss'
+// import bgCharacters from '../../assets/bgCharacters.jpg'
+
 export default function Characters({ data, onClick }){
     return(
-        <div>
+        <div className='containerCharacters'>
+            {/* <img src={bgCharacters} alt="" /> */}
             {data.map(character => {
                 return (
                     <div key={character.id} className="characterCard" onClick={() => onClick(character.id)}
@@ -12,7 +16,9 @@ export default function Characters({ data, onClick }){
                         <div className="caption">
                             {character.name}
                         </div>
-                        <div>View comics</div>
+                        <div className="caption viewComics">
+                            View comics
+                        </div>
                     </div>
                 )
             })}

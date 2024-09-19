@@ -1,0 +1,82 @@
+.container {
+    background-color: var(--dark);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.container-bg-img {
+    position: absolute;
+    width: inherit;
+    height: 100vh;
+
+& img {
+    width: inherit;
+    height: inherit;
+    filter: brightness(30%);
+    object-fit: cover;
+}
+}
+
+form {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    margin: 8px 0;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: white;
+    border: 2px solid var(--dark);
+
+& h1 {
+    margin: 0;
+    color: red;
+    word-spacing: 6px;
+    text-transform: uppercase;
+}
+
+& input {
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 1.4rem;
+    border: 2px solid var(--dark);
+    border-radius: none;
+    transition: all .2s;
+}
+
+& input:focus {
+    box-shadow: 4px 4px 0 var(--dark);    
+}
+}
+
+form button {
+    padding: 8px 24px;
+    font-size: 1rem;
+    border: 2px solid var(--dark);
+    transition: all .2s;
+
+&:last-child {
+    margin-left: 12px;
+}
+
+&:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 0 var(--dark);
+}
+
+&.btn-submit {
+    background-color: yellow;
+}
+}
+
+@media screen and (max-width: 800px){
+    form {
+        width: 80vw;
+    }
+}

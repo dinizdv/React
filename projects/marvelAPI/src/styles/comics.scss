@@ -1,0 +1,64 @@
+.container-comics {
+    width: 100%;
+    max-width: 88vw;
+    margin: 0 auto;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 1em;
+    position: relative;
+}
+
+.comicCard {
+    height: 240px;
+    filter: grayscale(100);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 0 8px 12px 8px;
+    border: 2px solid #fff;
+    transition: .2s linear;
+
+.caption {
+    padding: 1em;
+    background-color:azure;
+    border: 2px solid var(--dark);
+    box-shadow: 4px 4px 0 2px var(--dark);
+    color: var(--dark);
+
+&.viewComicDetails {
+    position: absolute;
+    opacity: 0;
+    color: var(--dark);
+}
+}
+
+&:hover {
+    cursor: pointer;
+    filter: grayscale(0); // getting saturation
+    box-shadow: inset 0 0 24px 4px var(--dark);
+
+.caption {
+    opacity: 0;
+}
+
+.viewComicDetails {
+    opacity: 1;
+}
+
+}
+}
+
+@media screen and (max-width: 1200px){
+    .container-comics {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .container-comics {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
