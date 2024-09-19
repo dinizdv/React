@@ -1,0 +1,9 @@
+* {
+  font-family: Consolas;
+}
+
+body {
+  margin: 0;
+  padding: 32px;
+  box-sizing: border-box;
+}
