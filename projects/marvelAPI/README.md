@@ -1,8 +1,15 @@
-# React + Vite
+# Marvel API
+✔️ This React and SCSS project consumes the Marvel API to search for Marvel characters and their respective comics.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Deploy:** https://marvel-api-react-phi.vercel.app/
+<hr>
 
-Currently, two official plugins are available:
+<h3>Project Skills</h3>
+- React<br>
+- SCSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h3>Where to find me?</h3>
+
+[![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-diniz-oliveira-426a67286/)
+<br>
+# **https://dinizdev.com.br** 
