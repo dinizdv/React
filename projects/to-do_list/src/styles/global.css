@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --primary-color: #405D72;
+  --secondary-color: #758694;
+  --tertiary-color: #F7E7DC;
+  --quartenary-color: #FFF8F3;
+}
+
+body {
+  font-family: 'Outfit', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  all: unset;
+}

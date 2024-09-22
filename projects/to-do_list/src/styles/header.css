@@ -1,0 +1,17 @@
+header {
+    background-color: var(--primary-color);
+    color: var(--quartenary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    height: 10vh;
+}
+
+header h1 {
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-size: 3em;
+    margin: 0;
+}

@@ -1,0 +1,70 @@
+.container-taskList {
+    width: 100%;
+    margin-top: 24px;
+    max-width: 420px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-taskList h2 {
+    margin: 0;
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.container-tasks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.task {
+    box-shadow: 0 0 3px var(--primary-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.task h3 {
+    margin: 0;
+    width: 70%;
+    word-wrap: break-word;
+    color: var(--secondary-color);
+    margin-left: 12px;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.container-icons-task {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-task {
+    font-size: 1.4em;
+    padding: .3em;
+    color: var(--quartenary-color);
+    transition: ease .3s;
+}
+
+.icon-edit {
+    background-color: var(--secondary-color);
+}
+
+.icon-delete {
+    background-color: crimson;
+    margin-right: 12px;
+}
+
+.icon-task:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
