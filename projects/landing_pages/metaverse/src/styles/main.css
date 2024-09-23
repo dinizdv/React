@@ -1,3 +1,79 @@
 .container-main {
-    
+}
+
+.container-bg-main {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.container-bg-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.explore {
+    position: relative;
+    margin: 48px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 90%;
+    max-height: 35vh;
+    flex-direction: column;
+    z-index: 1;
+    padding: 0 5%;
+}
+
+.explore h1 {
+    width: 40%;
+    font-size: 4em;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(to right, var(--blue), var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 4px blueviolet);
+    text-transform: capitalize;
+}
+
+.explore p {
+    color: var(--light);
+}
+
+.explore a {
+    background: linear-gradient(var(--tertiary-color), var(--quartenary-color));
+    padding: 8px;
+    border-radius: var(--radius-default);
+    color: var(--light);
+}
+
+.container-stopwatch {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stopwatch {
+    border: 2px solid gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: var(--radius-default);
+}
+
+.stopwatch label {
+    color: var(--light);
+    line-height: 110%;
+}
+
+.stopwatch :first-child {
+    font-size: 2em;
 }

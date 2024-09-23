@@ -1,10 +1,18 @@
 header {
     width: 100%;
-    border: 2px solid gold;
+    background-color: transparent;
+    position: relative;
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    z-index: 1;
 }
 
 header nav {
+    padding: 0 5%;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 header nav ul {
@@ -12,6 +20,17 @@ header nav ul {
     padding: 0;
 }
 
+header nav ul li :not(#buy-tickets)  {
+    margin-right: 36px;
+}
+
 header nav ul li a {
     color: var(--light);
+    text-transform: uppercase;
+}
+
+header nav ul li #buy-tickets {
+    background: linear-gradient(var(--tertiary-color), var(--quartenary-color));
+    padding: 8px;
+    border-radius: var(--radius-default);
 }
