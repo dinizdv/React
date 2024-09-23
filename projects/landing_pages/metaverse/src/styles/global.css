@@ -1,0 +1,20 @@
+:root {
+  --primary-color: #520D74;
+  --secondary-color: #110C2B;
+  --tertiary-color: #53109A;
+  --quartenary-color: #C147FA;
+  --blue: #0066FD;
+  --green: #01FECF;
+  --light: #FFF;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a, input, button, li {
+  all: unset;
+}

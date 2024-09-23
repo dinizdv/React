@@ -1,0 +1,17 @@
+header {
+    width: 100%;
+    border: 2px solid gold;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: var(--light);
+}
