@@ -12,7 +12,7 @@
     width: 110%;
     height: 100%;
     object-fit: cover;
-    filter: blur(6px) brightness(50%);
+    filter: brightness(50%);
 }
 
 
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     gap: 28px;
-    margin: 40px 0 80px 0;
+    margin: 40px 0 40px 0;
 }
 
 .explore {
@@ -33,6 +33,7 @@
     max-height: auto;
     width: 60%;
     flex-direction: column;
+    margin-right: 5%;
     z-index: 1;
     padding: 12px;
     border-radius: var(--radius-default);
@@ -48,12 +49,14 @@
 }
 
 .explore-left {
+    /* background-color: rgba(255, 255, 255, 0.120); */
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.120), var(--secondary-color));
     background-color: rgba(255, 255, 255, 0.120);
     gap: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 40%;
     flex-direction: column;
     z-index: 1;
     margin-left: 5%;
@@ -82,7 +85,7 @@
     background: transparent;
     box-shadow: 0 0 5px var(--green);
     color: var(--green);
-    padding: 8px;
+    padding: 8px 20px;
     border-radius: var(--radius-default);
     transition: ease .3s;
     text-transform: uppercase;
@@ -110,6 +113,7 @@
     box-shadow: 0 0 6px var(--green);
     background-color: var(--secondary-color);
     background-color: transparent;
+    background-color: var(--secondary-color);
 }
 
 .stopwatch:hover, .stopwatch label:hover {
@@ -125,4 +129,64 @@
 
 .stopwatch :first-child {
     font-size: 2em;
+}
+
+/* section */
+.about-us {
+    position: relative;
+    background-color: orange;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* business */
+.container-business {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.120);
+    border-radius: var(--radius-default);
+    padding: 32px 0;
+}
+
+.container-business h1 {
+    margin: 0 0 16px 0;
+    color: var(--light);
+    font-size: 2em;
+}
+
+.container-enterprises {
+    display: flex;
+    width: 100%;
+    max-width: 80%;
+    overflow-x: auto;
+    gap: 100px;
+    padding: 16px;
+    border-top-left-radius: var(--radius-default);
+    border-top-right-radius: var(--radius-default);
+    /* box-shadow: 1px 1px 1px var(--green); */
+}
+
+.enterprise {
+    border-radius: var(--radius-default);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enterprise label {
+    color: var(--green);
+    text-transform: capitalize;
+    margin-bottom: 12px;
+}
+
+.logo-enterprise {
+    font-size: 4em;
+    color: var(--light);
 }
