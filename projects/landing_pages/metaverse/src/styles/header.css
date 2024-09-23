@@ -31,6 +31,15 @@ header nav ul li a {
 
 header nav ul li #buy-tickets {
     background: linear-gradient(var(--tertiary-color), var(--quartenary-color));
+    background: transparent;
+    box-shadow: 0 0 5px var(--green);
+    color: var(--green);
     padding: 8px;
     border-radius: var(--radius-default);
+    transition: ease .3s;
+}
+
+header nav ul li #buy-tickets:hover {
+    background-color: var(--green);
+    color: var(--primary-color);
 }
