@@ -18,7 +18,7 @@ export default function Transactions(){
         });
     
         return {
-            total: totalPrice,
+            total: totalPrice.toFixed(2),
         };
     }
     
@@ -82,7 +82,7 @@ export default function Transactions(){
         
                 ))
             ) : (
-                <p className="no-transactions">Nenhuma transação encontrada</p>
+                <p className="no-transactions">Nenhuma transação encontrada...</p>
             )}
             
                           </div>

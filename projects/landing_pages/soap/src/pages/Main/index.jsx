@@ -71,7 +71,7 @@ export default function Main(){
                     <ul className='ul-header sidebar'>
                     <li onClick={hideSidebar} className='li-header'><a href="#"><i class="fa-solid fa-x closeSidebar"></i></a></li>
                     <li className='li-header'><a className='a-header' href="#">home</a></li>
-                    <li className='li-header'><a className='a-header' href="#sec-products">produto</a></li>
+                    <li className='li-header'><a className='a-header' href="#sec-products">produtos</a></li>
                     <li className='li-header'><a className='a-header' href="#sec-form">increver-se</a></li>
                 </ul>
                 <ul className='ul-header'>
@@ -100,7 +100,7 @@ export default function Main(){
             <p>Descubra a sensação mais agradável da sua vida.</p>
             
             <div className="container-buttons-main">
-            <Link to='/compra' className="buy-products">Comprar sabão</Link>
+            <a href='#sec-products' className="buy-products">Comprar sabão</a>
             <a href='#sec-form' className="subscribe-now">Increver-se</a>
             </div>
             </div>
