@@ -30,7 +30,7 @@
 .container-elements input {
     margin: 6px 0 20px 0;
     padding: 14px;
-    background-color: var(--quartenary-color);
+    background-color: var(--quaternary-color);
     box-shadow: 0 0 4px var(--primary-color);
     transition: ease .3s;
 }
@@ -38,7 +38,7 @@
 .container-elements input[type='submit']{
     text-align: center;
     background-color: var(--secondary-color);
-    color: var(--quartenary-color)
+    color: var(--quaternary-color)
 }
 
 .container-elements input[type='submit']:hover{

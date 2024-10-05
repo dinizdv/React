@@ -2,29 +2,35 @@ import '../../styles/taskList.css'
 import { FaEdit } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
 
-const TaskForm = () => {
-    return (
-        <div className='container-taskList'>
-            <h2>Your tasks:</h2>
-            <div className="container-tasks">
-                <div className="task">
-                <h3>Task one</h3>
-                <div className="container-icons-task">
-                    <FaEdit className='icon-task icon-edit'/>
-                    <FaTrashAlt className='icon-task icon-delete' />
-                </div>
-                </div>
-                <div className="task">
-                <h3>Task one</h3>
-                <div className="container-icons-task">
-                    <FaEdit className='icon-task icon-edit'/>
-                    <FaTrashAlt className='icon-task icon-delete' />
-                </div>
-                </div>
-            </div>
+import { ITask } from '../../interfaces/task';
 
-        </div>
-    )
+interface Props {
+    taskList: ITask[]
 }
 
-export default TaskForm
+const TaskList = ({taskList}: Props) => {
+    return (
+        <div className='container-taskList'>
+            {taskList.length > 0 ? (
+                <>
+                    <h2>Your tasks:</h2>
+                    {taskList.map((task) => (
+                        <div key={task.id} className="container-tasks">
+                            <div className="task">
+                                <h3>{task.title}</h3>
+                                <div className="container-icons-task">
+                                    <FaEdit className='icon-task icon-edit'/>
+                                    <FaTrashAlt className='icon-task icon-delete' />
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </>
+            ) : (
+                <p className='no-tasks'>No tasks yet...</p>
+            )}
+        </div>
+    );
+};
+
+export default TaskList
