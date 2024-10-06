@@ -1,0 +1,30 @@
+.fade {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #000;
+    opacity: .5;
+}
+
+.modal {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    background-color: var(--quaternary-color);
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal h2 {
+    margin: .5em 0 0 0;
+}
+
+.modal form {
+    width: 90%;
+}

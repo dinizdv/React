@@ -8,16 +8,30 @@ interface Props {
     taskList: ITask[],
     setTaskList?: React.Dispatch<React.SetStateAction<ITask[]>> // function => receiving []current state
     // ?: => optional
+    task?: ITask | null
+    handleUpdate?(id: number, title: string): void
 }
 
-const TaskForm = ({btnText, taskList, setTaskList}: Props) => {
+const TaskForm = ({btnText, taskList, setTaskList, task, handleUpdate}: Props) => {
   const [id, setId] = useState<number>(0)
   const [title, setTitle] = useState<string>('')
+  const [showTitle, setShowTitle] = useState(true);
+
+
+  useEffect(() => {
+    if (task) {
+      setId(task.id)
+      setTitle(task.title)
+    }
+  }, [task])
 
   // form
   const addTaskHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    
+
+    if (handleUpdate) {
+      handleUpdate(id, title)
+    } else {
     // floor => rounds down;
     const id = Math.floor(Math.random() * 10000000)
     const newTask: ITask = {id, title} // create a new object with current data (useState)
@@ -25,7 +39,7 @@ const TaskForm = ({btnText, taskList, setTaskList}: Props) => {
     // '!' => says to TS: sure the object will come (will not be 'undefined')
 
     setTitle('') // cleaning field
-    console.log(taskList)
+    }
   }
   
   // input value
@@ -40,7 +54,7 @@ const TaskForm = ({btnText, taskList, setTaskList}: Props) => {
     return (
       <form action="" onSubmit={addTaskHandler} className="form-content">
         <div className="container-elements">
-        <h2>Register your task</h2>
+        {showTitle && <h2>{btnText}</h2>}
           <label htmlFor="" className="label-content">Title:</label>
           <input type="text" name='title' placeholder='Task title' value={title} className="input-content" onChange={handleChange} />
         <input type="submit" className="btn-submit" value={btnText}></input>

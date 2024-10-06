@@ -21,3 +21,7 @@ body {
 input {
   all: unset;
 }
+
+.hide {
+  display: none!important;
+}
