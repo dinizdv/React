@@ -6,9 +6,10 @@ import { ITask } from '../../interfaces/task';
 
 interface Props {
     taskList: ITask[]
+    handleDelete(id: number): void
 }
 
-const TaskList = ({taskList}: Props) => {
+const TaskList = ({taskList, handleDelete}: Props) => {
     return (
         <div className='container-taskList'>
             {taskList.length > 0 ? (
@@ -20,7 +21,11 @@ const TaskList = ({taskList}: Props) => {
                                 <h3>{task.title}</h3>
                                 <div className="container-icons-task">
                                     <FaEdit className='icon-task icon-edit'/>
-                                    <FaTrashAlt className='icon-task icon-delete' />
+                                    <FaTrashAlt className='icon-task icon-delete'
+                                        onClick={() => {
+                                            handleDelete(task.id) // () => {} -> renders by click, not by HTML
+                                        }}
+                                    />
                                 </div>
                             </div>
                         </div>

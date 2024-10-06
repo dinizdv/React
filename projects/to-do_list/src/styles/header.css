@@ -1,6 +1,5 @@
 header {
     background-color: var(--primary-color);
-    color: var(--quartenary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +9,7 @@ header {
 }
 
 header h1 {
+    color: var(--quaternary-color);
     text-transform: capitalize;
     letter-spacing: 3px;
     font-size: 3em;
