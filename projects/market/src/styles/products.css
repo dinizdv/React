@@ -82,3 +82,54 @@ main h1 {
     margin: 20px 0 12px 0;
     border-bottom: 1px solid var(--primary-color);
 }
+
+/* cart */
+.container-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-cart h1 {
+    color: var(--primary-color);
+    margin: 6px 0 12px 0;
+}
+
+.container-product-cart {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.product-cart {
+    box-shadow: 0 0 3px var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.product-cart label b {
+    padding-right: 6px;
+    text-transform: capitalize;
+}
+
+.container-bills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container-bills label {
+    font-size: 1.6em;
+}
+
+.container-bills label input {
+    border-bottom: 1px solid var(--dark-color);
+    width: 140px;
+    cursor:text;
+}
+
+.container-bills label b {
+    padding-right: 6px;
+}
