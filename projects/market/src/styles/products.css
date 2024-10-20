@@ -127,9 +127,57 @@ main h1 {
 .container-bills label input {
     border-bottom: 1px solid var(--dark-color);
     width: 140px;
-    cursor:text;
+    cursor: text;
 }
 
 .container-bills label b {
     padding-right: 6px;
+}
+
+#missing {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+#correct {
+    color: var(--correct-color);
+    margin-top: 12px;
+}
+
+#change {
+    color: var(--change-color);
+    margin-top: 12px;
+}
+
+
+/* responsive */
+@media only screen and (max-width: 1090px){
+    .container-products {
+        grid-template-columns: auto auto auto;
+    }
+
+    .container-product-cart {
+        grid-template-columns: auto auto auto;
+    }    
+} 
+
+@media only screen and (max-width: 820px){
+    .container-products {
+        grid-template-columns: auto auto;
+    }
+
+    .container-product-cart {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 545px){
+    .container-products {
+        grid-template-columns: auto;
+    }
+
+    .container-product-cart {
+        grid-template-columns: auto;
+    }
 }

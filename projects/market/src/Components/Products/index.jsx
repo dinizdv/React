@@ -7,13 +7,15 @@ import orange from '../../assets/orange.svg';
 
 const Products = () => {
     const [products, setProducts] = useState({
-        apple: { name: 'Maçã', price: 3.99, qtd: 4 },
-        banana: { name: 'Banana', price: 2.99, qtd: 5 },
-        grape: { name: 'Uva', price: 3.49, qtd: 10 },
-        orange: { name: 'Laranja', price: 4.29, qtd: 3 }
+        apple: { name: 'Maçã', price: 4, qtd: 4 },
+        banana: { name: 'Banana', price: 3, qtd: 5 },
+        grape: { name: 'Uva', price: 4, qtd: 10 },
+        orange: { name: 'Laranja', price: 5, qtd: 3 }
     });
 
     const [cartItems, setCartItems] = useState({});
+    const [total, setTotal] = useState(0)
+    const [valueReceived, setValueReceived] = useState(0)
 
     const addToCart = (productId) => {
         setCartItems(prevItems => {
@@ -29,7 +31,9 @@ const Products = () => {
     const calculateTotal = () => {
         return Object.values(cartItems).reduce((total, quantity) => {
             const product = products[Object.keys(cartItems).find(key => cartItems[key] === quantity)];
-            return total + quantity * product.price;
+            const result = total + quantity * product.price;
+            return result;
+            setTotal(result)
         }, 0);
     };
 
@@ -55,7 +59,7 @@ const Products = () => {
                                     console.log(`Total para ${product.name}: R$ ${(newQuantity * product.price).toFixed(2)}`);
                                 }}>
                                     {[...Array(product.qtd)].map((_, index) => (
-                                        <option key={index} value={index + 1}>{index + 1}</option>
+                                        <option key={index} value={index}>{index} unidade(s)</option>
                                     ))}
                                 </select>
                             </div>
@@ -86,6 +90,23 @@ const Products = () => {
                     </div>
                     <div className="container-bills">
                                     <label htmlFor=""><b>Total:</b>R$ {calculateTotal().toFixed(2)}</label>
+                                    <label htmlFor="">
+                    <b>Valor recebido:</b>
+                    <input 
+                        id="received-value-input"
+                        value={valueReceived}
+                        onChange={(e) => setValueReceived(e.target.value)}
+                    />
+                </label>
+                {valueReceived && valueReceived !== '' && parseFloat(valueReceived) > calculateTotal() ? (
+    <>
+        <label id='change'><b>Troco:</b>R$ {(parseFloat(valueReceived) - calculateTotal()).toFixed(2)}</label>
+    </>
+) : valueReceived && valueReceived === calculateTotal().toFixed(2) ? (
+    <label id='correct'>Valor pago correto!</label>
+) : (
+    <label id='missing'>Está faltando R$ {(calculateTotal() - parseFloat(valueReceived)).toFixed(2)}</label>
+)}
                                 </div>
 
                 </div>
