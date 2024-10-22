@@ -58,8 +58,8 @@ export default function Main(){
             <main>
                 <section className="section-main-text">
                     <h1>Nós fazemos o melhor</h1>
-                    <p>Nós temos o melhor cookie do mercado feito com muito carinho para você!</p>
-                    <a className="btn-main" href='#cookies'>Comprar cookies</a>
+                    <p>Nós temos a melhor surpresa de uva do mercado feito com muito carinho para você!</p>
+                    <a className="btn-main" href='#cookies'>Comprar surpresas</a>
                 </section>
 
                 <section className="section-main-img">
@@ -102,7 +102,7 @@ export default function Main(){
                         
                         </div>
                         <div className="container-description-card">
-                        <p className="price-card">R$8,00</p>
+                        <p className="price-card">R$9,00</p>
                         <Link to='/surpresa-de-uva' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ export default function Main(){
                         
                         </div>
                         <div className="container-description-card">
-                        <p className="price-card">R$8,00</p>
+                        <p className="price-card">R$9,00</p>
                         <Link to='/surpresa-de-uva' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
@@ -128,7 +128,7 @@ export default function Main(){
                         
                         </div>
                         <div className="container-description-card">
-                        <p className="price-card">R$8,00</p>
+                        <p className="price-card">R$9,00</p>
                         <Link to='/surpresa-de-uva' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>

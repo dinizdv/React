@@ -31,7 +31,7 @@ export default function TraditionalGrape(){
                         </div>
                         <div className="container-description-card">
                         <h3 className='title-card'>Surpresa de Uva</h3>
-                        <p className="price-card">R$8,00</p>
+                        <p className="price-card">R$9,00</p>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@ export default function TraditionalGrape(){
 
                 <div className="container-pix-text">
                 <strong>Pix copia e cola:</strong>
-                    <p id='code-pix'>00020126330014BR.GOV.BCB.PIX01115464325581152040000530398654048.005802BR5901N6001C62140510SweetGrape6304FEA4</p>
+                    <p id='code-pix'>00020126330014BR.GOV.BCB.PIX01115464325581152040000530398654049.005802BR5901N6001C62140510SweetGrape63043877</p>
                     <button id='btn-copyCode' onClick={copyCode}>Copiar código</button>
                 </div>
                 <Link to='/' className='back-link'>Voltar à home</Link>
