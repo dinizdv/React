@@ -2,6 +2,7 @@ import Logo from '../../assets/logo.png'
 import grape1 from '../../assets/grape1.jpg'
 import grape2 from '../../assets/grape2.jpg'
 import grape3 from '../../assets/grape3.jpg'
+import grapeMain from '../../assets/grapeMain.png'
 import { Link  } from 'react-router-dom'
 import './main.css'
 
@@ -26,7 +27,7 @@ export default function Main(){
                         <li className="li-header"><a href="#" className="a-header"><i class="fa-solid fa-x closeSidebar"  onClick={hideSidebar}></i></a></li>
                         <li className="li-header"><a href="#" className="a-header">Home</a></li>
                         <li className="li-header"><a href="#about" className="a-header">Sobre</a></li>
-                        <li className="li-header"><a href="#cookies" className="a-header">Cookies</a></li>
+                        <li className="li-header"><a href="#cookies" className="a-header">Surpresas de uva</a></li>
                         <li className="li-header"><a href="#footer" className="a-header">Contato</a></li>
                         <ul className="ul-header">
                         <img src={Logo} alt="Logo da Shine Cookies" />
@@ -40,12 +41,12 @@ export default function Main(){
                     <ul className="ul-header ul-headers-icons">
                         <li className="li-header hideOnMobile"><a href="#" className="a-header">Home</a></li>
                         <li className="li-header hideOnMobile"><a href="#about" className="a-header">Sobre</a></li>
-                        <li className="li-header hideOnMobile"><a href="#cookies" className="a-header">Cookies</a></li>
+                        <li className="li-header hideOnMobile"><a href="#cookies" className="a-header">Surpresas de uva</a></li>
                         <li className="li-header hideOnMobile"><a href="#footer" className="a-header">Contato</a></li>
                     
                     </ul>
                     <div className="container-btn-explore">
-                    <ul className="ul-header"><a className="btn-header" id='btn-explore' href='#cookies'>Explorar cookies</a></ul>
+                    <ul className="ul-header"><a className="btn-header" id='btn-explore' href='#cookies'>Explorar surpresas</a></ul>
                     </div>
                     <li><a href="#" className="link-header" id='menuIcon'><i class="fa-solid fa-bars menu-btn" onClick={showSidebar}></i></a></li>
 
@@ -62,7 +63,7 @@ export default function Main(){
                 </section>
 
                 <section className="section-main-img">
-                    <img src={grape1} className='cookie-main' alt="" />
+                    <img src={grapeMain} className='cookie-main' alt="" />
                 </section>
             </main>
 
@@ -71,9 +72,9 @@ export default function Main(){
                 <h2>Por que nos escolher?</h2>
                 <div className="container-choose">
                     <div className="choose">
-                    <i class="fa-solid fa-cookie"></i>
-                    <h3>Cookies deliciosos</h3>
-                    <p>Nossos cookies são extremamente saborosos, recheados e crocantes</p>
+                    <i class="fa-solid fa-candy-cane"></i>
+                    <h3>Surpresas de uva deleciosas</h3>
+                    <p>Nossos produtos são extremamente saborosos, recheados e crocantes</p>
                     </div>
                     
                     <div className="choose">
@@ -102,7 +103,7 @@ export default function Main(){
                         </div>
                         <div className="container-description-card">
                         <p className="price-card">R$8,00</p>
-                        <Link to='/cookie_tradicional' className='btn-comprar'>Comprar</Link>
+                        <Link to='/surpresa-de-uva' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
 
@@ -115,7 +116,7 @@ export default function Main(){
                         </div>
                         <div className="container-description-card">
                         <p className="price-card">R$8,00</p>
-                        <Link to='/cookie_tradicional' className='btn-comprar'>Comprar</Link>
+                        <Link to='/surpresa-de-uva' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
 
@@ -128,7 +129,7 @@ export default function Main(){
                         </div>
                         <div className="container-description-card">
                         <p className="price-card">R$8,00</p>
-                        <Link to='/cookie_tradicional' className='btn-comprar'>Comprar</Link>
+                        <Link to='/surpresa-de-uva' className='btn-comprar'>Comprar</Link>
                         </div>
                     </div>
 
@@ -139,7 +140,7 @@ export default function Main(){
                     {/* footer */}
         <footer id='footer'>
             <h2>Contate-nos</h2>
-            <p>Entre em contato conosco! Abaixo estão as mídias sociais da Shine Cookies para que, além do site, nós possamos fornecer um atendimento exclusivo e esclarecer dúvidas</p>
+            <p>Entre em contato conosco! Abaixo estão as mídias sociais da Sweet Grape para que, além do site, nós possamos fornecer um atendimento exclusivo e esclarecer dúvidas</p>
             <nav className="nav-links-footer">
                 <a target='blank' href='https://api.whatsapp.com/send?phone=5511989779948&text=Ol%C3%A1,%20Sweet%20Grape!
 '><i class="fa-brands fa-whatsapp"></i></a>

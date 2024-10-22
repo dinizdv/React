@@ -21,7 +21,7 @@ export default function TraditionalGrape(){
         <div className='container-pix'>
 
             <main className='main-pix'>
-                <h1>Tradicional</h1>
+                <h1>Surpresa de uva</h1>
                 <div className="container-pix-img">
                 <div className="card-product">
                         {/* infos */}
