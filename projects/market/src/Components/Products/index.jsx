@@ -9,7 +9,7 @@ const Products = () => {
     const [products, setProducts] = useState({
         apple: { name: 'Maçã', price: 4, qtd: 4 },
         banana: { name: 'Banana', price: 3, qtd: 5 },
-        grape: { name: 'Lobo', price: 10, qtd: 10 },
+        grape: { name: 'Bolo', price: 10, qtd: 10 },
         orange: { name: 'Laranja', price: 5, qtd: 3 }
     });
 
