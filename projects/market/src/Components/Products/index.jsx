@@ -28,14 +28,14 @@ const Products = () => {
         });
     };
 
-    const calculateTotal = () => {
-        return Object.values(cartItems).reduce((total, quantity) => {
-            const product = products[Object.keys(cartItems).find(key => cartItems[key] === quantity)];
-            const result = total + quantity * product.price;
-            return result;
-            setTotal(result)
-        }, 0);
-    };
+    // const calculateTotal = () => {
+    //     return Object.values(cartItems).reduce((total, quantity) => {
+    //         const product = products[Object.keys(cartItems).find(key => cartItems[key] === quantity)];
+    //         const result = total + quantity * product.price;
+    //         return result;
+    //         setTotal(result)
+    //     }, 0);
+    // };
 
     return (
         <div className='container'>
@@ -88,7 +88,7 @@ const Products = () => {
                         )}
                         
                     </div>
-                    <div className="container-bills">
+{/*                     <div className="container-bills">
                                     <label htmlFor=""><b>Total:</b>R$ {calculateTotal().toFixed(2)}</label>
                                     <label htmlFor="">
                     <b>Valor recebido:</b>
@@ -108,7 +108,7 @@ const Products = () => {
     <label id='missing'>Está faltando R$ {(calculateTotal() - parseFloat(valueReceived)).toFixed(2)}</label>
 )}
                                 </div>
-
+ */}
                 </div>
         </div>
     );
