@@ -4,7 +4,6 @@
     margin: calc(var(--m-32) * 3) auto 0 auto;
 }
 
-/* header */
 header {
     display: flex;
     position: fixed;
@@ -51,7 +50,6 @@ header button:hover {
     background-color: var(--primary-color);
 }
 
-/* sidebar */
 .sidebar {
     display: none;
     position: fixed;
@@ -69,29 +67,28 @@ header button:hover {
     color: var(--tertiary-color);
   }
   
-  .sidebar i {
+.sidebar i {
     color: var(--tertiary-color);
     padding-left: var(--p-8);
-  }
+}
 
-  .sidebar li {
+.sidebar li {
     display: flex;
     flex-direction: column;
-  }
-  
-  .closeSidebar {
-    margin: var(--m-16) 0 0 0;
-  }
-  
-  .sidebar .sidebar-a:hover {
-    padding-right: var(--p-16);
-  }
-  
-  .menu-btn {
-      display: none;
-  }
+}
 
-/* main */
+.closeSidebar {
+    margin: var(--m-16) 0 0 0;
+}
+
+.sidebar .sidebar-a:hover {
+    padding-right: var(--p-16);
+}
+
+.menu-btn {
+    display: none;
+}
+
 .section-main {
     display: flex;
     justify-content: space-between;
@@ -214,10 +211,6 @@ header button:hover {
     border-radius: 50%;
 }
 
-
-
-
-/* secure */
 .section-secure {
     display: flex;
     justify-content: center;
@@ -311,10 +304,6 @@ header button:hover {
     font-weight: bold;
 }
 
-
-
-
-/* customer */
 .section-customer {
     display: flex;
     justify-content: space-between;
@@ -326,9 +315,6 @@ header button:hover {
 .section-customer .container-img-customer, .container-text-customer {
     width: 50%;
 }
-
-/* .container-img-customer {
-} */
 
 .container-text-customer h2 {
     text-transform: capitalize;
@@ -351,8 +337,6 @@ header button:hover {
     width: 70%;
 }
 
-
-/* pricing */
 .section-pricing {
     display: flex;
     flex-direction: column;
@@ -402,7 +386,6 @@ header button:hover {
     margin-left: var(--m-16);
 }
 
-/* cards */
 .container-cards {
     display: flex;
     justify-content: space-between;
@@ -525,15 +508,7 @@ footer nav a:hover {
     color: var(--primary-color);
 }
 
-
-
-
-
-
-
-/* responsive interface */
 @media (max-width: 1270px){
-    /* customer */
     .section-customer .container-img-customer  {
         width: 40%;
     }
@@ -546,14 +521,12 @@ footer nav a:hover {
         font-size: var(--fs-large);
     }
 
-        /* secure */
-        .rectangle-secure {
-            height: 340px;
-        }
+    .rectangle-secure {
+        height: 340px;
+    }
 }
 
 @media (max-width: 1088px){
-    /* main */
     .section-main {
         display: flex;
         justify-content: center;
@@ -572,33 +545,26 @@ footer nav a:hover {
         flex-direction: column;
     }
 
-    /* pricing */
-/* .section-pricing {
-    display: flex;
-    flex-direction: column;
-} */
+    .container-mini-cards {
+        display: none;
+    }
 
-.container-mini-cards {
-    display: none;
-}
+    .section-pricing h2 {
+        text-align: center;
+        font-size: calc(var(--fs-large) * 1.5);
+        margin-bottom: var(--m-8);
+    }
 
-.section-pricing h2 {
-    text-align: center;
-    font-size: calc(var(--fs-large) * 1.5);
-    margin-bottom: var(--m-8);
-}
+    .section-pricing .description-pricing {
+        text-align: center;
+        margin-bottom: var(--m-16);
+    }
 
-.section-pricing .description-pricing {
-    text-align: center;
-    margin-bottom: var(--m-16);
-}
-
-/* cards */
-.container-cards {
-    justify-content: center;
-    flex-direction: column;    
-    margin: 0 auto var(--m-16) auto;
-}
+    .container-cards {
+        justify-content: center;
+        flex-direction: column;    
+        margin: 0 auto var(--m-16) auto;
+    }
 }
 
 @media (max-width: 1015px){
@@ -621,7 +587,6 @@ footer nav a:hover {
 }
 
 @media (max-width: 947px){
-    /* secure */
     .container-secure {
         flex-direction: column;
     }
@@ -633,7 +598,6 @@ footer nav a:hover {
 }
 
 @media (max-width: 850px){
-    /* main */
     .section-texts-main h1 {
         text-align: center;
     }
@@ -664,18 +628,15 @@ footer nav a:hover {
         justify-content: center;
         flex-direction: column;
     }
-    
 }
 
 @media (min-width: 768px){
-    /* sidebar */
     .sidebar {
         display: none!important;
     }
 }
 
 @media (max-width: 768px){
-    /* sidebar */
     .ul-nav-header a:hover {
         color: var(--green);
       }
@@ -706,7 +667,6 @@ footer nav a:hover {
 }
 
 @media (max-width: 400px){
-    /* titles */
     .section-texts-main h1, .section-secure h2, .container-text-customer h2, .section-pricing h2, footer h2 {
         font-size: calc(var(--fs-large) - .2rem);
     }
@@ -715,7 +675,6 @@ footer nav a:hover {
         font-size: calc(var(--fs-medium) - .2rem);
     }
 
-    /* header */
     header .logo-header {
         font-size: calc(var(--fs-large) - .6rem);
     }

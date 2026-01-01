@@ -14,7 +14,6 @@
   --input-color: rgba(226, 226, 226, 0.170);
 
   /* widths */
-  /* --img-main: 400px; */
   --member: 60px;
   --circle-icon: 70px;
   --link-footer: 36px;
@@ -50,7 +49,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-family: Lexend, Manrope, Arial, Helvetica, sans-serif; */
 }
 
 html, body, #root {
@@ -65,10 +63,6 @@ body {
 a {
   text-decoration: none;
 }
-
-/* ul {
-  list-style: none;
-} */
 
 button {
   font-weight: 600;
