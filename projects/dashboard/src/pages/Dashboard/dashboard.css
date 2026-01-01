@@ -19,7 +19,7 @@
 }
 
 .ul-sidebar > li {
-  text-align: center; /* first element */
+  text-align: center;
   font-size: 1.6rem;
 }
 
@@ -36,7 +36,7 @@
   color: var(--tertiary-color);
 }
 
-.sidebar a {
+.sidebar button {
   color: var(--tertiary-color);
 }
 
@@ -56,27 +56,6 @@
   background-color: var(--a-hover-color);
 }
 
-/* Firefox scroll */
-* {
-  scrollbar-width: var(--scroll-w);
-  scrollbar-color: var(--scroll-color) var(--secondary-color);
-}
-
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: var(--scroll-w);
-  height: 4px;
-}
-
-*::-webkit-scrollbar-track {
-  background-color: var(--secondary-color);
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-color);
-}
-
-/* main */
 main {
   background-color: var(--tertiary-color);
   height: 100vh;
@@ -160,7 +139,6 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
-/* profile photo + label ('Bruno Diniz') */
 .container-profile {
   display: flex;
   align-items: center;
@@ -189,7 +167,6 @@ input[type="text"]:focus {
   background-color: var(--top-hover-color);
 }
 
-/* cards */
 .container-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(calc(80% / 4), 1fr));
@@ -248,7 +225,6 @@ input[type="text"]:focus {
 }
   
 
-/* graph */
 .container-graph {
   display: flex;
   justify-content: space-between;
@@ -274,7 +250,6 @@ input[type="text"]:focus {
   height: var(--graph-h);
 }
 
-/* table */
 .container-table {
   padding: var(--p-32);
 }
@@ -318,7 +293,7 @@ td {
 
 th:last-child,
 td:last-child {
-  text-align: end; /* fixing the interface */
+  text-align: end;
 }
 
 table tr {
@@ -351,9 +326,29 @@ table tr {
   border: 1px solid var(--overdue-text-color);
 }
 
-/* responsive interface */
+
+/* Firefox scroll */
+* {
+  scrollbar-width: var(--scroll-w);
+  scrollbar-color: var(--scroll-color) var(--secondary-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: var(--scroll-w);
+  height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-color);
+}
+
+
 @media (max-width: 1895px) {
-  /* graph */
   .pie-chart-container {
     height: calc(var(--graph-h) * 0.9);
   }
@@ -364,7 +359,6 @@ table tr {
 }
 
 @media (max-width: 1795px) {
-  /* graph */
   .pie-chart-container {
     height: calc(var(--graph-h) * 0.8);
   }
@@ -375,7 +369,6 @@ table tr {
 }
 
 @media (max-width: 1590px) {
-  /* graph */
   .pie-chart-container {
     height: calc(var(--graph-h) * 0.7);
   }
@@ -386,7 +379,6 @@ table tr {
 }
 
 @media (max-width: 1490px) {
-  /* graph */
   .pie-chart-container {
     height: calc(var(--graph-h) * 0.6);
   }
@@ -395,12 +387,10 @@ table tr {
     height: calc(var(--graph-h) * 0.6);
   }
 
-  /* cards */
   .container-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* table */
   table tr {
     gap: var(--p-32);
   }
@@ -429,16 +419,15 @@ table tr {
 
 @media (max-width: 1120px) {
   .sidebar {
-    width: auto; /* according by icons spacement */
+    width: auto;
   }
 
-  /* texts */
-  .sidebar a {
+  .sidebar button {
     display: none;
   }
 
   .sidebar i {
-    padding-right: 0; /* fixing desktop spacement */
+    padding-right: 0;
   }
 
   .ul-sidebar li {
@@ -487,12 +476,10 @@ table tr {
 }
 
 @media (max-width: 640px) {
-  /* cards */
   .container-cards {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  /* for better mobile spacement */
   .top,
   .container-cards,
   .container-table {
@@ -513,6 +500,6 @@ table tr {
   }
 
   .profile-top {
-    margin-left: 0; /* fixing of the desktop; auto to 0 */
+    margin-left: 0;
   }
 }
